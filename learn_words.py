@@ -60,6 +60,26 @@ def learn_associations(word, freq, assoc, eta=0.0):
         form_association(word, f"*{word[-1]}", freq, assoc) # end marker
 
 
+def normalize_to_probabilities(assoc):
+    """
+    Adds a 'prob' field to each association in the existing dictionary to represent normalized probabilities.
+
+    Args:
+        assoc (dict): The dictionary of associations with frequency counts.
+    """
+    for word_stem, entries in assoc.items():
+        # Calculate the total frequency for the stem
+        total_freq = sum(entry["freq"] for entry in entries)
+        if total_freq > 0:
+            # Add the normalized probability to each word's entry
+            for entry in entries:
+                entry["prob"] = entry["freq"] / total_freq
+        else:
+            # Assign 0 probability to all entries
+            for entry in entries:
+                entry["prob"] = 0.0
+
+
 def learn_words_from_corpus(eta=0.0, corpus_path="data/thorndike_corpus.csv", output_path="data/word_associations.json"):
     """
     Learns associations from a word-frequency corpus and saves them to a file.
@@ -81,6 +101,9 @@ def learn_words_from_corpus(eta=0.0, corpus_path="data/thorndike_corpus.csv", ou
             print(f"row {i}: {row}")
             continue
 
+    # Normalize frequencies to probabilities
+    normalize_to_probabilities(assoc)
+
     # print summary and save the associations to a file
     print(f"{sum(len(entry) for entry in assoc.values())} associations learned.")
     with open(output_path, "w") as file:
@@ -98,5 +121,5 @@ def test():
 
 if __name__ == "__main__":
     #test()
-    learn_words_from_corpus(eta=0.0, output_path="data/word_associations_00.json")
+    #learn_words_from_corpus(eta=0.0, output_path="data/word_associations_00.json")
     learn_words_from_corpus(eta=0.6, output_path="data/word_associations_06.json")
