@@ -1,0 +1,60 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Ignore environment and configuration files
+.env
+.env.local
+*.env.*
+
+# Ignore IDE/editor settings
+.idea/
+/.vscode/
+/*.iml
+
+# Ignore Python-specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore JavaScript/TypeScript cache
+*.cache
+.nyc_output/
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+*.~*
+*.orig
+
+# Ignore archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Ignore macOS Finder attributes
+._*
+
+# Ignore system-generated files
+*.pid
+*.seed
+*.pid.lock
+
+# Other
+*.json
+*.txt
+*.pdf
