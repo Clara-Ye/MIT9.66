@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 
-def form_association(word, word_stem, freq, assoc):
+def form_association(word, word_stem, freq, assoc, position, nu=0.9):
     """
     Inserts or updates an association between a word and a word stem.
 
@@ -17,14 +17,17 @@ def form_association(word, word_stem, freq, assoc):
     # get current associations for the word stem, or initialize an empty list
     curr_assoc = assoc[word_stem] if word_stem in assoc else []
 
+    # compute attention weight based on word frequency and word stem serial position:
+    attention_weight = freq * (nu ** (position - 1))
+
     # add a new entry if the word is already associated with the word stem
     if not any(entry["word"] == word for entry in curr_assoc):
-        curr_assoc.append({"word": word, "length": len(word), "freq": freq})
+        curr_assoc.append({"word": word, "length": len(word), "freq": attention_weight})
     # update the frequency if the word is already associated
     else:
         for entry in curr_assoc:
             if entry["word"] == word:
-                entry["freq"] += freq
+                entry["freq"] += attention_weight
                 break
 
     # update the associations dictionary in-place
@@ -51,13 +54,13 @@ def learn_associations(word, freq, assoc, eta=0.0):
             word_stem = word[i:j]
             # form association with probability
             if (np.random.rand() < p_assoc):
-                form_association(word, word_stem, freq, assoc)
+                form_association(word, word_stem, freq, assoc, position=i+1)
 
     # special associations for the start and end of the word
     if (np.random.rand() < p_assoc):
-        form_association(word, f"{word[0]}*", freq, assoc) # start marker
+        form_association(word, f"{word[0]}*", freq, assoc, position=1) # start marker
     if (np.random.rand() < p_assoc):
-        form_association(word, f"*{word[-1]}", freq, assoc) # end marker
+        form_association(word, f"*{word[-1]}", freq, assoc, position=len(word)) # end marker
 
 
 def normalize_to_probabilities(assoc):
@@ -121,5 +124,7 @@ def test():
 
 if __name__ == "__main__":
     #test()
-    #learn_words_from_corpus(eta=0.0, output_path="data/word_associations_00.json")
+    learn_words_from_corpus(eta=0.0, output_path="data/word_associations_00.json")
+    learn_words_from_corpus(eta=0.2, output_path="data/word_associations_02.json")
+    learn_words_from_corpus(eta=0.4, output_path="data/word_associations_04.json")
     learn_words_from_corpus(eta=0.6, output_path="data/word_associations_06.json")
