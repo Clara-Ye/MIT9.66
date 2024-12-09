@@ -117,10 +117,10 @@ def retrieve_next_valid(word_stems, words, probs, searched_words, prob_threshold
             return word, searched_words
 
     print("No valid answer retrieved.")
-    return None, None
+    return None, searched_words
 
 
-def find_answer(word_stems, candidate_probs, ground_truth, prob_threshold=0.0, max_search=float('inf')):
+def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -128,32 +128,38 @@ def find_answer(word_stems, candidate_probs, ground_truth, prob_threshold=0.0, m
         word_stems (list): List of word stems that must be present in the word.
         candidate_probs (dict): Dictionary of candidate words with their probabilities.
         ground_truth (str): The correct answer to find.
-        prob_threshold (float): Minimum probability threshold for a candidate to be considered.
+        prob_threshold (float): Minimum probability threshold for a candidate to be considered; if no word has activation beyond the threshold, a random word satisfying the length constraint will be retrieved.
 
     Returns:
         str: The correct answer, if found, or None if no valid answer could be retrieved.
     """
     # Split dictionary into separate lists for words and probabilities
+    target_length = len(ground_truth)
+    candidate_probs = compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5)
     words, probs = zip(*candidate_probs.items())
 
-    # Sort words and probabilities outside the loop
+    # Sort words and probabilities in descending order
     sorted_indices = sorted(range(len(probs)), key=lambda i: probs[i], reverse=True)
     sorted_words = [words[i] for i in sorted_indices]
     sorted_probs = [probs[i] for i in sorted_indices]
 
     # Initialize set to track searched words
     searched_words = set()
-    
-    while len(searched_words) < max_search:
-        next_word, searched_words = retrieve_next_valid(word_stems, sorted_words, sorted_probs, searched_words, prob_threshold)
-        if not next_word:
-            print("Failed to retrieve a valid answer.")
-            return None
 
-        # Check if the retrieved word matches the ground truth
-        if next_word == ground_truth:
-            print(f"Correct answer retrieved after {len(searched_words)} attempts: {next_word}")
+    while True:
+        # Attempt to find the next valid word
+        next_word, searched_words = retrieve_next_valid(
+            word_stems, sorted_words, sorted_probs, searched_words, prob_threshold
+        )
+        if next_word:
+            print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
             return next_word
+        else:
+            # No valid word found; use a random length-matching word
+            for word in searched_words:
+                if len(word) == target_length:
+                    print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
+                    return word
 
 
 def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
@@ -188,4 +194,4 @@ if __name__ == "__main__":
     candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
 
-    find_answer(word_stems, candidate_probs, "CLOUD")
+    find_answer(word_stems, "CLOUD", associations)
