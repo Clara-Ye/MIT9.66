@@ -122,7 +122,7 @@ def retrieve_next_valid(word_stems, target_length, words, probs, searched_words,
     return None, searched_words
 
 
-def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
+def find_answer(word_stems, ground_truth, associations, searched_words=None, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -151,7 +151,8 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
     sorted_probs = [probs[i] for i in sorted_indices]
 
     # Initialize set to track searched words
-    searched_words = set()
+    if not searched_words:
+        searched_words = set()
 
     while True:
         # Attempt to find the next valid word
@@ -160,18 +161,18 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
         )
         if next_word:
             print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
-            return next_word
+            return next_word, searched_words
         
         # No valid word found; use a random length-matching word
         for i, word in enumerate(sorted_words):
             if (len(word) == target_length) and (probs[i] >= prob_threshold):
                 print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
-                return word
+                return word, searched_words
                 
         # No recallable word has matching target length; use random alphabetical characters
         random_string = ''.join(random.sample(string.ascii_uppercase, target_length))
         print(f"No recallable word has matching target length; using random string: {random_string}")
-        return random_string
+        return random_string, searched_words
 
 
 def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
