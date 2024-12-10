@@ -1,6 +1,7 @@
 import json
-import numpy as np
+import random
 import pprint
+import numpy as np
 
 
 def adjust_probabilities_by_length(candidate_probs, target_length):
@@ -78,7 +79,7 @@ def compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5
     return candidate_probs
 
 
-def retrieve_next_valid(word_stems, words, probs, searched_words, prob_threshold=0.0):
+def retrieve_next_valid(word_stems, target_length, words, probs, searched_words, prob_threshold=0.0):
     """
     Retrieves the next valid word using parallel lists for words and probabilities.
 
@@ -109,7 +110,7 @@ def retrieve_next_valid(word_stems, words, probs, searched_words, prob_threshold
                 if not word.endswith(word_stem[1:]):
                     is_valid = False
                     break
-            elif word_stem not in word:  # general case
+            elif (word_stem not in word) or (len(word) != target_length):  # general case
                 is_valid = False
                 break
 
@@ -133,6 +134,10 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
     Returns:
         str: The correct answer, if found, or None if no valid answer could be retrieved.
     """
+    # If no word stem is provided (e.g., first guess), sample a vowel as the starting word stem
+    if len(word_stems) == 0:
+        word_stems.append(random.choice(["A", "E", "I", "O", "U"]))
+
     # Split dictionary into separate lists for words and probabilities
     target_length = len(ground_truth)
     candidate_probs = compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5)
@@ -149,7 +154,7 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
     while True:
         # Attempt to find the next valid word
         next_word, searched_words = retrieve_next_valid(
-            word_stems, sorted_words, sorted_probs, searched_words, prob_threshold
+            word_stems, target_length, sorted_words, sorted_probs, searched_words, prob_threshold
         )
         if next_word:
             print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
@@ -195,3 +200,4 @@ if __name__ == "__main__":
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
 
     find_answer(word_stems, "CLOUD", associations)
+    find_answer([], "CLOUD", associations)
