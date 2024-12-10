@@ -1,4 +1,5 @@
 import json
+import string
 import random
 import pprint
 import numpy as np
@@ -136,6 +137,7 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
     """
     # If no word stem is provided (e.g., first guess), sample a vowel as the starting word stem
     if len(word_stems) == 0:
+        word_stems = word_stems.copy() # make a copy to avoid list aliasing
         word_stems.append(random.choice(["A", "E", "I", "O", "U"]))
 
     # Split dictionary into separate lists for words and probabilities
@@ -159,12 +161,17 @@ def find_answer(word_stems, ground_truth, associations, prob_threshold=0.001):
         if next_word:
             print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
             return next_word
-        else:
-            # No valid word found; use a random length-matching word
-            for word in searched_words:
-                if len(word) == target_length:
-                    print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
-                    return word
+        
+        # No valid word found; use a random length-matching word
+        for i, word in enumerate(sorted_words):
+            if (len(word) == target_length) and (probs[i] >= prob_threshold):
+                print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
+                return word
+                
+        # No recallable word has matching target length; use random alphabetical characters
+        random_string = ''.join(random.sample(string.ascii_uppercase, target_length))
+        print(f"No recallable word has matching target length; using random string: {random_string}")
+        return random_string
 
 
 def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
