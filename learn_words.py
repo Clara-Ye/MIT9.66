@@ -4,6 +4,23 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 
+
+def load_corpus(file_path):
+    return pd.read_csv(file_path, na_values=[], keep_default_na=False)
+
+
+def extract_word_stems(word):
+    # bigrams or shorter word stems (max length: 2)
+    wl = len(word)
+    word = word.upper()
+    word_stems = dict()
+    for i in range(wl):
+        for j in range(i+1, min(wl+1, i+3)):
+            word_stem = word[i:j]
+            word_stems[word_stem] = i
+    return word_stems
+
+
 def form_association(word, word_stem, freq, assoc, position, nu=0.9):
     """
     Inserts or updates an association between a word and a word stem.
@@ -49,12 +66,11 @@ def learn_associations(word, freq, assoc, eta=0.0):
     p_assoc = np.clip(p_assoc, 0.0, 1.0) # ensure valid probability
 
     # bigrams or shorter word stems (max length: 2)
-    for i in range(wl):
-        for j in range(i+1, min(wl+1, i+3)):
-            word_stem = word[i:j]
-            # form association with probability
-            if (np.random.rand() < p_assoc):
-                form_association(word, word_stem, freq, assoc, position=i+1)
+    word_stems = extract_word_stems(word)
+    for word_stem, position in word_stems.items():
+        # form association with probability
+        if (np.random.rand() < p_assoc):
+            form_association(word, word_stem, freq, assoc, position)
 
     # special associations for the start and end of the word
     if (np.random.rand() < p_assoc):
@@ -93,7 +109,7 @@ def learn_words_from_corpus(eta=0.0, corpus_path="data/thorndike_corpus.csv", ou
     """    
     assoc = dict()
     # load the corpus, treating "NULL" or other values as valid strings
-    corpus = pd.read_csv(corpus_path, na_values=[], keep_default_na=False)
+    corpus = load_corpus(corpus_path)
 
     # learn associations for each word
     for i, row in tqdm(corpus.iterrows()):
@@ -121,6 +137,7 @@ def test():
     pprint.pprint(claire)
     with open("test.json", "w") as file:
         json.dump(claire, file, indent=4)
+
 
 if __name__ == "__main__":
     #test()
