@@ -66,9 +66,9 @@ def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=
         for entry in associations[word_stem_key]:
             word = entry["word"]
             # Check if the stem's position aligns with the rough position
-            rough_position = word_stem_key.split("|")[1]
-            if (rough_position == "FIRST_HALF" and len(word) // 2 <= entry["length"]) or \
-               (rough_position == "SECOND_HALF" and len(word) // 2 > entry["length"]):
+            word_stem, rough_position = word_stem_key.split("|")
+            if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
+               (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
                 # Penalize if the position does not align
                 candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5)
             else:
