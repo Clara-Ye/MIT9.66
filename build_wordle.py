@@ -24,7 +24,7 @@ def filter_corpus(corpus_path, min_length, max_length, min_freq):
             if (min_length <= len(row["Word"]) <= max_length) and (row["Frequency"] >= min_freq)
         ]
 
-def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=3, max_word_length=7, min_frequency=10, associations=None, prob_threshold=0.001):
+def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=4, max_word_length=7, min_frequency=10, associations=None, prob_threshold=0.001):
     """
     Simulates a Wordle-like game.
 
@@ -98,5 +98,6 @@ if __name__ == "__main__":
         associations = json.load(f)
 
     # Run the Wordle game
-    wordle_game(corpus_path, ground_truth="CLOUD", associations=associations, prob_threshold=0.001)
-    wordle_game(corpus_path, ground_truth="WAGON", associations=associations, prob_threshold=0.001)
+    #wordle_game(corpus_path, ground_truth="CLOUD", associations=associations, prob_threshold=0.001)
+    #wordle_game(corpus_path, ground_truth="WAGON", associations=associations, prob_threshold=0.001)
+    wordle_game(corpus_path, associations=associations, prob_threshold=0.01)
