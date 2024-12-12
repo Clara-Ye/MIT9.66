@@ -43,15 +43,15 @@ def normalize(candidate_probs):
             candidate_probs[word] = 0
 
 
-def compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5):
+def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5):
     """
-    Computes candidate scores based on orthographic stems and probabilities.
+    Computes candidate scores based on orthographic stems, probabilities, and rough position alignment.
 
     Args:
-        word_stems (list): List of word stems to consider.
+        word_stem_keys (list): List of word stems with rough positions to consider (e.g., ['HE|FIRST_HALF']).
         target_length (int): Target word length.
         associations (dict): Precomputed word-stem associations.
-        smoothing (float): Smoothing constant to avoid zero probabilities.
+        sigma (float): Smoothing constant to avoid zero probabilities.
 
     Returns:
         dict: Candidate words and their scores.
@@ -59,19 +59,26 @@ def compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5
     candidate_probs = {}
 
     # Aggregate probabilities across all stems
-    for stem in word_stems:
-        if (stem not in associations):
-            print(f"Stem '{stem}' has no associations.")
+    for word_stem_key in word_stem_keys:
+        if word_stem_key not in associations:
+            print(f"Stem '{word_stem_key}' has no associations.")
             continue
-        for entry in associations[stem]:
+        for entry in associations[word_stem_key]:
             word = entry["word"]
-            candidate_probs[word] = candidate_probs.get(word, 1) * entry["prob"]
+            # Check if the stem's position aligns with the rough position
+            rough_position = word_stem_key.split("|")[1]
+            if (rough_position == "FIRST_HALF" and len(word) // 2 <= entry["length"]) or \
+               (rough_position == "SECOND_HALF" and len(word) // 2 > entry["length"]):
+                # Penalize if the position does not align
+                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5)
+            else:
+                candidate_probs[word] = candidate_probs.get(word, 1) * entry["prob"]
 
     # Apply smoothing and normalize by number of stems
-    n_stems = len(word_stems)
+    n_stems = len(word_stem_keys)
     candidate_probs = {
         word: (prob + sigma) ** (1 / n_stems) for word, prob in candidate_probs.items()
-        }
+    }
 
     # Adjust by length and normalize
     adjust_probabilities_by_length(candidate_probs, target_length)
@@ -80,12 +87,13 @@ def compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5
     return candidate_probs
 
 
-def retrieve_next_valid(word_stems, target_length, words, probs, searched_words, prob_threshold=0.0):
+def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_words, prob_threshold=0.0):
     """
-    Retrieves the next valid word using parallel lists for words and probabilities.
+    Retrieves the next valid word using rough positional alignment.
 
     Args:
-        word_stems (list): List of word stems that must be present in the word.
+        word_stem_keys (list): List of word stems with rough positions (e.g., ['HE|FIRST_HALF']).
+        target_length (int): Target word length.
         words (list): List of candidate words.
         probs (list): List of probabilities corresponding to the candidate words.
         searched_words (set): Set of words already searched and validated.
@@ -94,15 +102,15 @@ def retrieve_next_valid(word_stems, target_length, words, probs, searched_words,
         str: The next valid word that matches the criteria, or None if no valid answer is found.
     """
     for word, prob in zip(words, probs):
-        # Skip already searched words or those below the probability threshold
         if word in searched_words or prob < prob_threshold:
             continue
 
-        searched_words.add(word)  # mark this word as searched
+        searched_words.add(word)  # Mark this word as searched
 
         # Check if the word matches all required word stems
         is_valid = True
-        for word_stem in word_stems:
+        for word_stem_key in word_stem_keys:
+            word_stem = word_stem_key.split("|")[0]
             if word_stem.endswith("*"):  # handle starting letter match (e.g., "X*")
                 if not word.startswith(word_stem[:-1]):
                     is_valid = False
@@ -122,12 +130,12 @@ def retrieve_next_valid(word_stems, target_length, words, probs, searched_words,
     return None, searched_words
 
 
-def find_answer(word_stems, ground_truth, associations, searched_words=None, prob_threshold=0.001):
+def find_answer(word_stem_keys, ground_truth, associations, searched_words=None, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
     Args:
-        word_stems (list): List of word stems that must be present in the word.
+        word_stem_keys (list): List of word stem keys that must be present in the word.
         candidate_probs (dict): Dictionary of candidate words with their probabilities.
         ground_truth (str): The correct answer to find.
         prob_threshold (float): Minimum probability threshold for a candidate to be considered; if no word has activation beyond the threshold, a random word satisfying the length constraint will be retrieved.
@@ -135,14 +143,16 @@ def find_answer(word_stems, ground_truth, associations, searched_words=None, pro
     Returns:
         str: The correct answer, if found, or None if no valid answer could be retrieved.
     """
-    # If no word stem is provided (e.g., first guess), sample a vowel as the starting word stem
-    if len(word_stems) == 0:
-        word_stems = word_stems.copy() # make a copy to avoid list aliasing
-        word_stems.append(random.choice(["A", "E", "I", "O", "U"]))
+    # If no word stems are provided (e.g., first guess), sample a vowel as the starting word stem key
+    if len(word_stem_keys) == 0:
+        word_stem_keys = word_stem_keys.copy()  # make a copy to avoid list aliasing
+        word_stem_keys.append(random.choice([
+            "A|FIRST_HALF", "E|FIRST_HALF", "I|FIRST_HALF", "O|FIRST_HALF", "U|FIRST_HALF",
+            "A|SECOND_HALF", "E|SECOND_HALF", "I|SECOND_HALF", "O|SECOND_HALF", "U|SECOND_HALF"]))
 
     # Split dictionary into separate lists for words and probabilities
     target_length = len(ground_truth)
-    candidate_probs = compute_candidate_scores(word_stems, target_length, associations, sigma=1e-5)
+    candidate_probs = compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5)
     words, probs = zip(*candidate_probs.items())
 
     # Sort words and probabilities in descending order
@@ -157,18 +167,18 @@ def find_answer(word_stems, ground_truth, associations, searched_words=None, pro
     while True:
         # Attempt to find the next valid word
         next_word, searched_words = retrieve_next_valid(
-            word_stems, target_length, sorted_words, sorted_probs, searched_words, prob_threshold
+            word_stem_keys, target_length, sorted_words, sorted_probs, searched_words, prob_threshold
         )
         if next_word:
             print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
             return next_word, searched_words
-        
+
         # No valid word found; use a random length-matching word
         for i, word in enumerate(sorted_words):
             if (len(word) == target_length) and (probs[i] >= prob_threshold):
                 print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
                 return word, searched_words
-                
+
         # No recallable word has matching target length; use random alphabetical characters
         random_string = ''.join(random.sample(string.ascii_uppercase, target_length))
         print(f"No recallable word has matching target length; using random string: {random_string}")
@@ -199,13 +209,16 @@ def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
 
 
 if __name__ == "__main__":
-    with open("data/word_associations_06.json", "r") as file:
+    with open("data/word_associations_with_pos_06.json", "r") as file:
         associations = json.load(file)
 
-    word_stems = ["C*", "OU"]
+    word_stems = ["C*|FIRST_HALF", "OU|SECOND_HALF"]
     target_length = 5
     candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
+    print()
 
     find_answer(word_stems, "CLOUD", associations)
+    print()
+
     find_answer([], "CLOUD", associations)
