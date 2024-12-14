@@ -130,7 +130,7 @@ def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_wo
     return None, searched_words
 
 
-def process_hints(green_letters, word_length):
+def process_hints(green_letters, yellow_letters, word_length):
     """
     Converts wordle hints into word stems that can be used for retrieval (e.g., U|FIRST_HALF).
 
@@ -151,10 +151,22 @@ def process_hints(green_letters, word_length):
             else:
                 word_stem_keys.append(f"{char}|SECOND_HALF")
 
+    for (char, invalid_pos) in yellow_letters.items():
+        if char not in green_letters:
+            # sample one of the possible positions
+            valid_pos = [i for i in range(word_length) if i not in invalid_pos]
+            pos = random.choice(valid_pos)
+            if pos < midpoint:
+                word_stem_keys.append(f"{char}|FIRST_HALF")
+            else:
+                word_stem_keys.append(f"{char}|SECOND_HALF")
+    
+    print(f"word_stem_keys: {word_stem_keys}")
+
     return word_stem_keys
 
 
-def find_answer(green_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
+def find_answer(green_letters, yellow_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -169,7 +181,7 @@ def find_answer(green_letters, ground_truth, associations, searched_words=None, 
     """
     # Turn hints into word stems
     target_length = len(ground_truth)
-    word_stem_keys = process_hints(green_letters, target_length)
+    word_stem_keys = process_hints(green_letters, yellow_letters, target_length)
 
     # If no word stems are provided (e.g., first guess), sample a vowel as the starting word stem key
     if len(word_stem_keys) == 0:
@@ -246,6 +258,6 @@ if __name__ == "__main__":
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
     print()
 
-    find_answer([None, None, "O", "U", None], "CLOUD", associations)
+    find_answer([None, None, "O", "U", None], {"L": {0}}, "CLOUD", associations)
     print()
-    find_answer([], "CLOUD", associations)
+    find_answer([], dict(), "CLOUD", associations)

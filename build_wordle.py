@@ -46,6 +46,7 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
 
     attempts = 0
     green_letters = [None for _ in range(target_length)]
+    yellow_letters = dict()
     searched_words = set()
     while attempts < attempt_limit:
         attempts += 1
@@ -56,9 +57,8 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         if guess == "":
             if associations:
                 guess, searched_words = find_answer(
-                    green_letters, ground_truth, associations,
-                    searched_words=searched_words,
-                    prob_threshold=prob_threshold)
+                    green_letters, yellow_letters, ground_truth, associations,
+                    searched_words=searched_words, prob_threshold=prob_threshold)
                 prob_threshold /= 2
             else:
                 print("No model associations provided. User inputs only.")
@@ -84,11 +84,14 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         green_letters = [green_letters[i] if green_letters[i] is not None else new_green_letters[i] for i in range(target_length)]
         print(f"All past exact matches: {green_letters}")
 
-        # Generate and display matching word stems
-        ground_truth_stems = extract_word_stems(ground_truth)
-        guessed_word_stems = extract_word_stems(guess)
-        matching_stems = list(set(ground_truth_stems) & set(guessed_word_stems))
-        print(f"Matching word stems: {matching_stems}")
+        # Check for correct-letter-wrong-position matches
+        for (i, char) in enumerate(guess.upper()):
+            if char in ground_truth.upper() and char != ground_truth[i]:
+                if char in yellow_letters:
+                    yellow_letters[char].add(i)
+                else:
+                    yellow_letters[char] = {i}
+        print(f"Yellow letters: {yellow_letters}")
 
     # Reveal the correct answer if attempts are exhausted
     print(f"Sorry, you've used all {attempt_limit} attempts. The correct word was: {ground_truth}\n")
