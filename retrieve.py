@@ -130,7 +130,31 @@ def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_wo
     return None, searched_words
 
 
-def find_answer(word_stem_keys, ground_truth, associations, searched_words=None, prob_threshold=0.001):
+def process_hints(green_letters, word_length):
+    """
+    Converts wordle hints into word stems that can be used for retrieval (e.g., U|FIRST_HALF).
+
+    Args:
+        green_letters (list): A list of positions with correct letter matches.
+        word_length (int): Length of the word.
+
+    Returns:
+        dict: Mapping of letters to rough positional tags.
+    """
+    midpoint = word_length // 2
+    word_stem_keys = []
+
+    for pos, char in enumerate(green_letters):
+        if char is not None:
+            if pos < midpoint:
+                word_stem_keys.append(f"{char}|FIRST_HALF")
+            else:
+                word_stem_keys.append(f"{char}|SECOND_HALF")
+
+    return word_stem_keys
+
+
+def find_answer(green_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -143,15 +167,19 @@ def find_answer(word_stem_keys, ground_truth, associations, searched_words=None,
     Returns:
         str: The correct answer, if found, or None if no valid answer could be retrieved.
     """
+    # Turn hints into word stems
+    target_length = len(ground_truth)
+    word_stem_keys = process_hints(green_letters, target_length)
+
     # If no word stems are provided (e.g., first guess), sample a vowel as the starting word stem key
     if len(word_stem_keys) == 0:
         word_stem_keys = word_stem_keys.copy()  # make a copy to avoid list aliasing
         word_stem_keys.append(random.choice([
-            "A|FIRST_HALF", "E|FIRST_HALF", "I|FIRST_HALF", "O|FIRST_HALF", "U|FIRST_HALF",
-            "A|SECOND_HALF", "E|SECOND_HALF", "I|SECOND_HALF", "O|SECOND_HALF", "U|SECOND_HALF"]))
+            "A|FIRST_HALF", "A|SECOND_HALF", "E|FIRST_HALF", "E|SECOND_HALF",
+            "I|FIRST_HALF", "I|SECOND_HALF", "O|FIRST_HALF", "O|SECOND_HALF", 
+            "U|FIRST_HALF", "U|SECOND_HALF"]))
 
     # Split dictionary into separate lists for words and probabilities
-    target_length = len(ground_truth)
     candidate_probs = compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5)
     words, probs = zip(*candidate_probs.items())
 
@@ -218,7 +246,6 @@ if __name__ == "__main__":
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
     print()
 
-    find_answer(word_stems, "CLOUD", associations)
+    find_answer([None, None, "O", "U", None], "CLOUD", associations)
     print()
-
     find_answer([], "CLOUD", associations)

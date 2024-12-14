@@ -25,30 +25,6 @@ def filter_corpus(corpus_path, min_length, max_length, min_freq):
         ]
 
 
-def convert_exact_to_rough_positions(exact_positions, word_length):
-    """
-    Converts exact match positions into rough positional tags (e.g., FIRST_HALF, SECOND_HALF).
-
-    Args:
-        exact_positions (list): A list of positions with correct letter matches.
-        word_length (int): Length of the word.
-
-    Returns:
-        dict: Mapping of letters to rough positional tags.
-    """
-    midpoint = word_length // 2
-    rough_positions = {}
-
-    for pos, char in enumerate(exact_positions):
-        if char is not None:  # If there's a match
-            if pos < midpoint:
-                rough_positions[char] = "FIRST_HALF"
-            else:
-                rough_positions[char] = "SECOND_HALF"
-
-    return rough_positions
-
-
 def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=4, max_word_length=7, min_frequency=10, associations=None, prob_threshold=0.001):
     """
     Simulates a Wordle-like game.
@@ -69,7 +45,7 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
     print(f"The target word has {target_length} letters. You have {attempt_limit} attempts.")
 
     attempts = 0
-    word_stem_keys = []
+    green_letters = [None for _ in range(target_length)]
     searched_words = set()
     while attempts < attempt_limit:
         attempts += 1
@@ -80,7 +56,7 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         if guess == "":
             if associations:
                 guess, searched_words = find_answer(
-                    word_stem_keys, ground_truth, associations,
+                    green_letters, ground_truth, associations,
                     searched_words=searched_words,
                     prob_threshold=prob_threshold)
                 prob_threshold /= 2
@@ -97,26 +73,22 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         # Keep track of user input guessed word
         searched_words.add(guess.upper())
 
-        # Check for exact matches and generate positional information
-        exact_matches = [g if g == t else None for g, t in zip(guess.upper(), ground_truth.upper())]
-        rough_positions = convert_exact_to_rough_positions(exact_matches, target_length)
-        
-        print(f"Exact matches: {exact_matches}")
-        print(f"Rough positional information: {rough_positions}")
-
         # Check if the guessed word matches the ground truth
         if guess.upper() == ground_truth.upper():
             print(f"Congratulations! You guessed the correct word: {ground_truth}\n")
             return
+
+        # Check for exact matches and generate positional information
+        new_green_letters = [g if g == t else None for g, t in zip(guess.upper(), ground_truth.upper())]
+        print(f"Exact matches: {new_green_letters}")        
+        green_letters = [green_letters[i] if green_letters[i] is not None else new_green_letters[i] for i in range(target_length)]
+        print(f"All past exact matches: {green_letters}")
 
         # Generate and display matching word stems
         ground_truth_stems = extract_word_stems(ground_truth)
         guessed_word_stems = extract_word_stems(guess)
         matching_stems = list(set(ground_truth_stems) & set(guessed_word_stems))
         print(f"Matching word stems: {matching_stems}")
-        
-        word_stem_keys = list(set(word_stem_keys) | set(matching_stems))
-        print(f"All past matching word stems: {word_stem_keys}")
 
     # Reveal the correct answer if attempts are exhausted
     print(f"Sorry, you've used all {attempt_limit} attempts. The correct word was: {ground_truth}\n")
