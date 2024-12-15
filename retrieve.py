@@ -45,7 +45,7 @@ def compute_gray_penalty(word, gray_letters, gray_penalty_factor):
     return gray_penalty
 
 
-def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associations, sigma=1e-5, gray_penalty_factor=0.7, pos_penalty_factor=0.3):
+def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5, pos_penalty=0.3):
     """
     Computes candidate scores based on orthographic stems and rough positional alignment.
 
@@ -70,24 +70,18 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
                 word = entry["word"]
                 word_stem, rough_position = word_stem_key.split("|")
                 
-                # Calculate gray letter penalty
-                gray_penalty = compute_gray_penalty(word, gray_letters, gray_penalty_factor)
-                
                 # Check rough positional alignment
                 if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
                 (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
-                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * pos_penalty_factor * gray_penalty)
+                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * pos_penalty)
                 else:
-                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * gray_penalty)
+                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"])
     else:
         # If no word stems, consider all words in associations
         for word_stem_key, assoc in associations.items():
             for entry in assoc:
                 word, prob = entry["word"], entry["prob"]
-                if (len(word) == target_length):  # Ensure matching length
-                    # Calculate gray letter penalty
-                    gray_penalty = compute_gray_penalty(word, gray_letters, gray_penalty_factor)
-                    candidate_probs[word] = prob * gray_penalty
+                candidate_probs[word] = prob
 
     # Apply smoothing and normalize by number of stems
     n_stems = max(1, len(word_stem_keys))  # Avoid division by zero
@@ -102,7 +96,7 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
     return candidate_probs
 
 
-def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_words, prob_threshold=0.0):
+def retrieve_next_valid(green_letters, yellow_letters, gray_letters, target_length, words, probs, searched_words, prob_threshold=0.0, valid_threshold=1e-6):
     """
     Retrieves the next valid word using rough positional alignment.
 
@@ -118,29 +112,44 @@ def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_wo
         tuple: The next valid word and updated searched words.
     """
     for word, prob in zip(words, probs):
-        if word in searched_words or prob < prob_threshold:
+        if (word in searched_words) or (prob < prob_threshold):
             continue
 
         searched_words.add(word)
 
-        # Check if the word matches all required word stems
-        is_valid = True
-        for word_stem_key in word_stem_keys:
-            word_stem = word_stem_key.split("|")[0]
-            # Word start token
-            if (word_stem.endswith("*")) and (not word.startswith(word_stem[:-1])):
-                is_valid = False
-                break
-            # Word end token
-            elif (word_stem.startswith("*")) and (not word.endswith(word_stem[1:])):
-                is_valid = False
-                break
-            # General case word stem presence and word length
-            elif (word_stem not in word) or (len(word) != target_length):
-                is_valid = False
-                break
+        # Ensure valid word length
+        if (len(word) != target_length):
+            continue
 
-        if is_valid:
+        # Check if the word matches all hints
+        validity = 1.0
+        # Green letters
+        for i, char in enumerate(green_letters):
+            # Valid to try out more different characters
+            if (char is not None) and (char not in word):
+                validity *= 0.4
+            # Invalid to ignore the hint
+            elif (char is not None) and (word[i] != char):
+                validity *= 0.1
+
+        # Yellow letters
+        for char, invalid_pos in yellow_letters.items():
+            # The letter should be present
+            if (char not in word):
+                validity *= 0.2
+            # The letter should not appear in a recorded wrong position
+            for i in invalid_pos:
+                if (word[i] == char):
+                    validity *= 0.1
+
+        # Gray letters
+        for char in gray_letters:
+            # The letter should not appear in the word
+            if (char in word):
+                validity *= 0.1
+
+        # Select the word based on validity
+        if (validity > valid_threshold) and (random.random() < validity):
             return word, searched_words
 
     print("No valid answer retrieved.")
@@ -178,7 +187,7 @@ def process_hints(green_letters, yellow_letters, word_length):
     return word_stem_keys
 
 
-def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, gray_penalty=0.7, pos_penalty=0.3, start_strategy="vowels"):
+def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, valid_threshold=1e-6, pos_penalty=0.3, start_strategy="vowels"):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -217,8 +226,7 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
 
     # Split dictionary into separate lists for words and probabilities
     candidate_probs = compute_candidate_scores(
-        word_stem_keys, gray_letters, target_length, associations, sigma=1e-5, 
-        gray_penalty_factor=gray_penalty, pos_penalty_factor=pos_penalty)
+        word_stem_keys, target_length, associations, pos_penalty=pos_penalty)
     words, probs = zip(*candidate_probs.items())
 
     # Sort words and probabilities in descending order
@@ -233,16 +241,17 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
     while True:
         # Attempt to find the next valid word
         next_word, searched_words = retrieve_next_valid(
-            word_stem_keys, target_length, sorted_words, sorted_probs, searched_words, prob_threshold
-        )
+            green_letters, yellow_letters, gray_letters, target_length,
+            sorted_words, sorted_probs, searched_words, prob_threshold,
+            valid_threshold=valid_threshold)
         if next_word:
-            print(f"Word matching all word stems found after {len(searched_words)} attempts: {next_word}")
+            print(f"Word matching most of the hints found after {len(searched_words)} attempts: {next_word}")
             return next_word, searched_words
 
         # No valid word found; use a random length-matching word
         for i, word in enumerate(sorted_words):
             if (len(word) == target_length) and (probs[i] >= prob_threshold):
-                print(f"No valid word matching all criteria found; choosing a length-matching word: {word}")
+                print(f"No reasonably valid word found; choosing a length-matching word: {word}")
                 return word, searched_words
 
         # No recallable word has matching target length; use random alphabetical characters
@@ -265,7 +274,7 @@ def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
         list: List of top candidate words and their probabilities.
     """
     # Compute candidate scores
-    candidate_probs = compute_candidate_scores(word_stems, set(), target_length, associations)
+    candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
 
     # Sort and select top candidates
     sorted_candidates = sorted(candidate_probs.items(), key=lambda x: x[1], reverse=True)
@@ -280,7 +289,7 @@ if __name__ == "__main__":
 
     word_stems = ["C*|FIRST_HALF", "OU|SECOND_HALF"]
     target_length = 5
-    candidate_probs = compute_candidate_scores(word_stems, set(), target_length, associations)
+    candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
     print()
 
