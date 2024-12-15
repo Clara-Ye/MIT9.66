@@ -49,7 +49,8 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
     # Initialize trackers
     attempts = 0
     green_letters = [None] * target_length # Exact matches
-    yellow_letters = dict()  # Misplaced letters: {char: set(invalid_positions)}
+    yellow_letters = dict() # Misplaced letters: {char: set(invalid_positions)}
+    gray_letters = set() # Letters not in the target word
     searched_words = set()
 
     # Main game loop
@@ -64,7 +65,7 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         if (not guess):
             if (associations):
                 guess, searched_words = find_answer(
-                    green_letters, yellow_letters, ground_truth,
+                    green_letters, yellow_letters, gray_letters, ground_truth,
                     associations, searched_words, prob_threshold)
                 prob_threshold /= 2 # Consider some less familiar words
             else:
@@ -93,11 +94,14 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
             old or new for old, new in zip(green_letters, new_green_letters)]
         print(f"Exact matches (green): {green_letters}")
 
-        # Check for misplaced letters
+        # Check for misplaced (yellow) and missed letters (gray)
         for i, char in enumerate(guess):
             if (char in ground_truth) and (char != ground_truth[i]):
                 yellow_letters.setdefault(char, set()).add(i)
+            elif (char not in ground_truth):
+                gray_letters.add(char)
         print(f"Yellow letters (misplaced): {yellow_letters}")
+        print(f"Gray letters (not in word): {gray_letters}")
 
     # Reveal the answer if all attempts are exhausted
     print(f"Sorry, you've used all {attempt_limit} attempts. The correct word was: {ground_truth}\n")

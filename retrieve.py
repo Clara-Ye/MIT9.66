@@ -39,7 +39,7 @@ def normalize(candidate_probs):
             candidate_probs[word] = 0
 
 
-def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5):
+def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associations, sigma=1e-5):
     """
     Computes candidate scores based on orthographic stems and rough positional alignment.
 
@@ -62,12 +62,17 @@ def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=
         for entry in associations[word_stem_key]:
             word = entry["word"]
             word_stem, rough_position = word_stem_key.split("|")
+            
+            # Calculate gray letter penalty
+            gray_count = sum(1 for char in word if char in gray_letters)
+            gray_penalty = 0.7 ** gray_count
+            
             # Check rough positional alignment
             if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
                (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
-                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5)
+                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5 * gray_penalty)
             else:
-                candidate_probs[word] = candidate_probs.get(word, 1) * entry["prob"]
+                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * gray_penalty)
 
     # Apply smoothing and normalize by number of stems
     n_stems = len(word_stem_keys)
@@ -158,7 +163,7 @@ def process_hints(green_letters, yellow_letters, word_length):
     return word_stem_keys
 
 
-def find_answer(green_letters, yellow_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
+def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -184,7 +189,8 @@ def find_answer(green_letters, yellow_letters, ground_truth, associations, searc
             "U|FIRST_HALF", "U|SECOND_HALF"]))
 
     # Split dictionary into separate lists for words and probabilities
-    candidate_probs = compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5)
+    candidate_probs = compute_candidate_scores(
+        word_stem_keys, gray_letters, target_length, associations, sigma=1e-5)
     words, probs = zip(*candidate_probs.items())
 
     # Sort words and probabilities in descending order
@@ -231,7 +237,7 @@ def retrieve_top_candidates(word_stems, target_length, associations, top_n=10):
         list: List of top candidate words and their probabilities.
     """
     # Compute candidate scores
-    candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
+    candidate_probs = compute_candidate_scores(word_stems, set(), target_length, associations)
 
     # Sort and select top candidates
     sorted_candidates = sorted(candidate_probs.items(), key=lambda x: x[1], reverse=True)
@@ -246,10 +252,10 @@ if __name__ == "__main__":
 
     word_stems = ["C*|FIRST_HALF", "OU|SECOND_HALF"]
     target_length = 5
-    candidate_probs = compute_candidate_scores(word_stems, target_length, associations)
+    candidate_probs = compute_candidate_scores(word_stems, set(), target_length, associations)
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
     print()
 
-    find_answer([None, None, "O", None, None], {"L": {0}}, "CLOUD", associations)
+    find_answer([None, None, "O", None, None], {"L": {0}}, set("A"), "CLOUD", associations)
     print()
-    find_answer([], dict(), "CLOUD", associations)
+    find_answer([], dict(), set(), "CLOUD", associations)
