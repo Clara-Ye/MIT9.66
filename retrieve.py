@@ -39,6 +39,12 @@ def normalize(candidate_probs):
             candidate_probs[word] = 0
 
 
+def compute_gray_penalty(word, gray_letters):
+    gray_count = sum(1 for char in word if char in gray_letters)
+    gray_penalty = 0.7 ** gray_count
+    return gray_penalty
+
+
 def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associations, sigma=1e-5):
     """
     Computes candidate scores based on orthographic stems and rough positional alignment.
@@ -54,28 +60,37 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
     """
     candidate_probs = {}
 
-    # Aggregate probabilities across all stems
-    for word_stem_key in word_stem_keys:
-        if word_stem_key not in associations:
-            print(f"Stem '{word_stem_key}' has no associations.")
-            continue
-        for entry in associations[word_stem_key]:
-            word = entry["word"]
-            word_stem, rough_position = word_stem_key.split("|")
-            
-            # Calculate gray letter penalty
-            gray_count = sum(1 for char in word if char in gray_letters)
-            gray_penalty = 0.7 ** gray_count
-            
-            # Check rough positional alignment
-            if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
-               (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
-                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5 * gray_penalty)
-            else:
-                candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * gray_penalty)
+    if (word_stem_keys):
+        # Aggregate probabilities across all stems
+        for word_stem_key in word_stem_keys:
+            if (word_stem_key not in associations):
+                print(f"Stem '{word_stem_key}' has no associations.")
+                continue
+            for entry in associations[word_stem_key]:
+                word = entry["word"]
+                word_stem, rough_position = word_stem_key.split("|")
+                
+                # Calculate gray letter penalty
+                gray_penalty = compute_gray_penalty(word, gray_letters)
+                
+                # Check rough positional alignment
+                if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
+                (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
+                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5 * gray_penalty)
+                else:
+                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * gray_penalty)
+    else:
+        # If no word stems, consider all words in associations
+        for word_stem_key, assoc in associations.items():
+            for entry in assoc:
+                word, prob = entry["word"], entry["prob"]
+                if (len(word) == target_length):  # Ensure matching length
+                    # Calculate gray letter penalty
+                    gray_penalty = compute_gray_penalty(word, gray_letters)
+                    candidate_probs[word] = prob * gray_penalty
 
     # Apply smoothing and normalize by number of stems
-    n_stems = len(word_stem_keys)
+    n_stems = max(1, len(word_stem_keys)) # Avoid division by zero
     candidate_probs = {
         word: (prob + sigma) ** (1 / n_stems) for word, prob in candidate_probs.items()
     }
