@@ -90,7 +90,7 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
                     candidate_probs[word] = prob * gray_penalty
 
     # Apply smoothing and normalize by number of stems
-    n_stems = max(1, len(word_stem_keys)) # Avoid division by zero
+    n_stems = max(1, len(word_stem_keys))  # Avoid division by zero
     candidate_probs = {
         word: (prob + sigma) ** (1 / n_stems) for word, prob in candidate_probs.items()
     }
@@ -178,7 +178,7 @@ def process_hints(green_letters, yellow_letters, word_length):
     return word_stem_keys
 
 
-def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001):
+def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, start_strategy="vowels"):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -191,17 +191,29 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
     Returns:
         str: The correct answer, if found, or None if no valid answer could be retrieved.
     """
-    # Turn hints into word stems
     target_length = len(ground_truth)
-    word_stem_keys = process_hints(green_letters, yellow_letters, target_length)
 
-    # If no word stems are provided (e.g., first guess), sample a vowel as the starting word stem key
-    if len(word_stem_keys) == 0:
-        word_stem_keys = word_stem_keys.copy()  # make a copy to avoid list aliasing
-        word_stem_keys.append(random.choice([
-            "A|FIRST_HALF", "A|SECOND_HALF", "E|FIRST_HALF", "E|SECOND_HALF",
-            "I|FIRST_HALF", "I|SECOND_HALF", "O|FIRST_HALF", "O|SECOND_HALF", 
-            "U|FIRST_HALF", "U|SECOND_HALF"]))
+    # Handle starting word strategies
+    if (green_letters == [None] * target_length) and (not yellow_letters) and (not gray_letters):
+        if (start_strategy == "vowels"):
+            start_word = random.choice(["AUDIO", "ADIEU"])
+        elif (start_strategy == "optimal"):
+            start_word = random.choice(["SLATE", "CRANE", "TRACE"])
+        elif (start_strategy == "random"):
+            # Sample a word stem
+            start_word_stem = random.choice(list(associations.keys()))
+            start_word = ""
+            # Sample a length-matching word
+            while (len(start_word) != target_length):
+                start_word = random.choice(associations[start_word_stem])["word"]
+        else:
+            raise ValueError("Unrecognized starting strategy.")
+
+        print(f"Choosing starting word {start_word} under strategy '{start_strategy}'.")
+        return start_word, searched_words
+
+    # Turn hints into word stems
+    word_stem_keys = process_hints(green_letters, yellow_letters, target_length)
 
     # Split dictionary into separate lists for words and probabilities
     candidate_probs = compute_candidate_scores(
@@ -273,4 +285,5 @@ if __name__ == "__main__":
 
     find_answer([None, None, "O", None, None], {"L": {0}}, set("A"), "CLOUD", associations)
     print()
-    find_answer([], dict(), set(), "CLOUD", associations)
+    find_answer([None, None, None, None, None], dict(), set(), "CLOUD", associations, start_strategy="vowels")
+    
