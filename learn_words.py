@@ -6,12 +6,13 @@ from tqdm import tqdm
 
 
 def load_corpus(file_path):
+    """Loads the word corpus from a CSV file."""
     return pd.read_csv(file_path, na_values=[], keep_default_na=False)
 
 
 def extract_word_stems(word):
     """
-    Extracts word stems with rough positional tagging (e.g., 'FIRST_HALF', 'SECOND_HALF').
+    Extracts word stems with rough positional tagging.
 
     Args:
         word (str): The input word.
@@ -21,22 +22,13 @@ def extract_word_stems(word):
     """
     wl = len(word)
     word = word.upper()
-    word_stems = dict()
+    word_stems = {}
 
-    # Split the word into two halves
     midpoint = wl // 2
-
     for i in range(wl):
         for j in range(i + 1, min(wl + 1, i + 3)):  # Extract stems of length 1 or 2
             word_stem = word[i:j]
-
-            # Determine rough position
-            if i < midpoint:
-                position_tag = "FIRST_HALF"
-            else:
-                position_tag = "SECOND_HALF"
-
-            # Use "|"-joined strings as keys
+            position_tag = "FIRST_HALF" if i < midpoint else "SECOND_HALF"
             word_stems[f"{word_stem}|{position_tag}"] = i
 
     return word_stems
@@ -44,34 +36,32 @@ def extract_word_stems(word):
 
 def form_association(word, word_stem_key, freq, assoc, position, nu=0.9):
     """
-    Inserts or updates an association between a word and a word stem with rough positions.
+    Inserts or updates an association between a word and its stem with rough positions.
 
     Args:
         word (str): The complete word.
-        word_stem (tuple): The word stem and its rough position (e.g., ('HE', 'FIRST_HALF')).
+        word_stem_key (str): The word stem key with position tag.
         freq (int): Frequency of the word in the corpus.
         assoc (dict): The dictionary storing associations.
+        position (int): Position of the stem in the word.
+        nu (float): Decay factor for positional weighting.
     """
     curr_assoc = assoc.get(word_stem_key, [])
-
-    # Compute attention weight based on word frequency and position
     attention_weight = freq * (nu ** (position - 1))
 
-    # Check if word already associated with the stem
-    if not any(entry["word"] == word for entry in curr_assoc):
-        curr_assoc.append({"word": word, "length": len(word), "freq": attention_weight})
+    for entry in curr_assoc:
+        if entry["word"] == word:
+            entry["freq"] += attention_weight
+            break
     else:
-        for entry in curr_assoc:
-            if entry["word"] == word:
-                entry["freq"] += attention_weight
-                break
+        curr_assoc.append({"word": word, "length": len(word), "freq": attention_weight})
 
     assoc[word_stem_key] = curr_assoc
 
 
 def learn_associations(word, freq, assoc, eta=0.0):
     """
-    Learns associations between a word and its stems with rough positions.
+    Learns associations between a word and its stems.
 
     Args:
         word (str): The word to analyze.
@@ -97,13 +87,12 @@ def learn_associations(word, freq, assoc, eta=0.0):
 
 def normalize_to_probabilities(assoc):
     """
-    Adds a 'prob' field to each association in the existing dictionary to represent normalized probabilities.
+    Normalizes frequencies to probabilities in the association dictionary.
 
     Args:
-        assoc (dict): The dictionary of associations with frequency counts.
+        assoc (dict): Dictionary of word-stem associations.
     """
-    for word_stem, entries in assoc.items():
-        # Calculate the total frequency for the stem
+    for _, entries in assoc.items():
         total_freq = sum(entry["freq"] for entry in entries)
         if total_freq > 0:
             # Add the normalized probability to each word's entry
@@ -117,17 +106,17 @@ def normalize_to_probabilities(assoc):
 
 def learn_words_from_corpus(eta=0.0, corpus_path="data/thorndike_corpus.csv", output_path="data/word_associations.json"):
     """
-    Learns associations from a word-frequency corpus and saves them to a file.
+    Learns word-stem associations from a corpus and saves them to a file.
 
     Args:
-        corpus_path (str): Path to the input CSV file containing the corpus.
-        output_path (str): Path to save the resulting associations JSON file.
-    """    
-    assoc = dict()
-    # load the corpus, treating "NULL" or other values as valid strings
+        eta (float): Decay factor for association formation.
+        corpus_path (str): Path to the corpus CSV file.
+        output_path (str): Path to save the learned associations as JSON.
+    """
+    assoc = {}
     corpus = load_corpus(corpus_path)
 
-    # learn associations for each word
+    # Learn associations for each word
     for i, row in tqdm(corpus.iterrows()):
         try: 
             learn_associations(row["Word"], row["Frequency"], assoc, eta=eta)

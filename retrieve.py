@@ -1,6 +1,6 @@
 import json
-import string
 import random
+import string
 import pprint
 import numpy as np
 
@@ -14,7 +14,7 @@ def adjust_probabilities_by_length(candidate_probs, target_length):
         target_length (int): Target word length to favor.
     """
     target_length_log = np.log(target_length)
-    for word, prob in candidate_probs.items():
+    for word, _ in candidate_probs.items():
         word_length_log = np.log(len(word))
         length_diff = abs(word_length_log - target_length_log)
         if length_diff == 0:
@@ -29,12 +29,8 @@ def normalize(candidate_probs):
 
     Args:
         candidate_probs (dict): Dictionary of candidate words with their raw probabilities.
-
-    Returns:
-        dict: Normalized probabilities.
     """
     total_prob = sum(candidate_probs.values())
-
     if total_prob > 0:
         for word in candidate_probs:
             candidate_probs[word] /= total_prob
@@ -45,10 +41,10 @@ def normalize(candidate_probs):
 
 def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=1e-5):
     """
-    Computes candidate scores based on orthographic stems, probabilities, and rough position alignment.
+    Computes candidate scores based on orthographic stems and rough positional alignment.
 
     Args:
-        word_stem_keys (list): List of word stems with rough positions to consider (e.g., ['HE|FIRST_HALF']).
+        word_stem_keys (list): List of word stems with rough positions (e.g., ['HE|FIRST_HALF']).
         target_length (int): Target word length.
         associations (dict): Precomputed word-stem associations.
         sigma (float): Smoothing constant to avoid zero probabilities.
@@ -65,11 +61,10 @@ def compute_candidate_scores(word_stem_keys, target_length, associations, sigma=
             continue
         for entry in associations[word_stem_key]:
             word = entry["word"]
-            # Check if the stem's position aligns with the rough position
             word_stem, rough_position = word_stem_key.split("|")
+            # Check rough positional alignment
             if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
                (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
-                # Penalize if the position does not align
                 candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5)
             else:
                 candidate_probs[word] = candidate_probs.get(word, 1) * entry["prob"]
@@ -97,29 +92,31 @@ def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_wo
         words (list): List of candidate words.
         probs (list): List of probabilities corresponding to the candidate words.
         searched_words (set): Set of words already searched and validated.
+        prob_threshold (float): Minimum probability threshold for valid candidates.
 
     Returns:
-        str: The next valid word that matches the criteria, or None if no valid answer is found.
+        tuple: The next valid word and updated searched words.
     """
     for word, prob in zip(words, probs):
         if word in searched_words or prob < prob_threshold:
             continue
 
-        searched_words.add(word)  # Mark this word as searched
+        searched_words.add(word)
 
         # Check if the word matches all required word stems
         is_valid = True
         for word_stem_key in word_stem_keys:
             word_stem = word_stem_key.split("|")[0]
-            if word_stem.endswith("*"):  # handle starting letter match (e.g., "X*")
-                if not word.startswith(word_stem[:-1]):
-                    is_valid = False
-                    break
-            elif word_stem.startswith("*"):  # handle ending letter match (e.g., "*X")
-                if not word.endswith(word_stem[1:]):
-                    is_valid = False
-                    break
-            elif (word_stem not in word) or (len(word) != target_length):  # general case
+            # Word start token
+            if (word_stem.endswith("*")) and (not word.startswith(word_stem[:-1])):
+                is_valid = False
+                break
+            # Word end token
+            elif (word_stem.startswith("*")) and (not word.endswith(word_stem[1:])):
+                is_valid = False
+                break
+            # General case word stem presence and word length
+            elif (word_stem not in word) or (len(word) != target_length):
                 is_valid = False
                 break
 
@@ -132,36 +129,31 @@ def retrieve_next_valid(word_stem_keys, target_length, words, probs, searched_wo
 
 def process_hints(green_letters, yellow_letters, word_length):
     """
-    Converts wordle hints into word stems that can be used for retrieval (e.g., U|FIRST_HALF).
+    Converts Wordle hints into word stems usable for retrieval.
 
     Args:
-        green_letters (list): A list of positions with correct letter matches.
-        word_length (int): Length of the word.
+        green_letters (list): Exact matches (green letters).
+        yellow_letters (dict): Misplaced letters as {char: set(invalid_positions)}.
+        word_length (int): Length of the target word.
 
     Returns:
-        dict: Mapping of letters to rough positional tags.
+        list: Word stems with positional tags (e.g., ['HE|FIRST_HALF']).
     """
     midpoint = word_length // 2
     word_stem_keys = []
 
+    # Add green letter stems
     for pos, char in enumerate(green_letters):
         if char is not None:
-            if pos < midpoint:
-                word_stem_keys.append(f"{char}|FIRST_HALF")
-            else:
-                word_stem_keys.append(f"{char}|SECOND_HALF")
+            tag = "FIRST_HALF" if pos < midpoint else "SECOND_HALF"
+            word_stem_keys.append(f"{char}|{tag}")
 
-    for (char, invalid_pos) in yellow_letters.items():
-        if char not in green_letters:
-            # sample one of the possible positions
-            valid_pos = [i for i in range(word_length) if i not in invalid_pos]
-            pos = random.choice(valid_pos)
-            if pos < midpoint:
-                word_stem_keys.append(f"{char}|FIRST_HALF")
-            else:
-                word_stem_keys.append(f"{char}|SECOND_HALF")
-    
-    print(f"word_stem_keys: {word_stem_keys}")
+    # Add yellow letter stems, avoiding invalid positions
+    for char, invalid_positions in yellow_letters.items():
+        valid_positions = [i for i in range(word_length) if i not in invalid_positions]
+        for pos in valid_positions:
+            tag = "FIRST_HALF" if (pos < midpoint) else "SECOND_HALF"
+            word_stem_keys.append(f"{char}|{tag}")
 
     return word_stem_keys
 
@@ -258,6 +250,6 @@ if __name__ == "__main__":
     pprint.pprint(retrieve_top_candidates(word_stems, target_length, associations, top_n=20))
     print()
 
-    find_answer([None, None, "O", "U", None], {"L": {0}}, "CLOUD", associations)
+    find_answer([None, None, "O", None, None], {"L": {0}}, "CLOUD", associations)
     print()
     find_answer([], dict(), "CLOUD", associations)
