@@ -25,7 +25,7 @@ def filter_corpus(corpus_path, min_word_length, max_word_length, min_frequency):
     ]
 
 
-def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=4, max_word_length=7, min_frequency=10, associations=None, prob_threshold=0.001, start_strategy="vowels"):
+def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=4, max_word_length=6, min_frequency=10, associations=None, prob_threshold=0.001, gray_penalty=0.7, pos_penalty=0.3, start_strategy="vowels"):
     """
     Simulates a Wordle-like game with feedback for green (exact) and yellow (present but misplaced) matches.
 
@@ -66,7 +66,8 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
             if (associations):
                 guess, searched_words = find_answer(
                     green_letters, yellow_letters, gray_letters, ground_truth,
-                    associations, searched_words, prob_threshold, start_strategy)
+                    associations, searched_words, prob_threshold, 
+                    gray_penalty, pos_penalty, start_strategy)
                 prob_threshold /= 2 # Consider some less familiar words
             else:
                 print("No model associations provided. Please input manually.")
@@ -116,4 +117,4 @@ if __name__ == "__main__":
     # Run Wordle games with example ground truth
     wordle_game(corpus_path, ground_truth="CLOUD", associations=associations, prob_threshold=0.001)
     wordle_game(corpus_path, ground_truth="WAGON", associations=associations, prob_threshold=0.001)
-    #wordle_game(corpus_path, associations=associations, prob_threshold=0.01)
+    #wordle_game(corpus_path, associations=associations, prob_threshold=0.01, start_strategy="random")

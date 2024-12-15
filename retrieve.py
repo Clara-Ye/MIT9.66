@@ -31,7 +31,7 @@ def normalize(candidate_probs):
         candidate_probs (dict): Dictionary of candidate words with their raw probabilities.
     """
     total_prob = sum(candidate_probs.values())
-    if total_prob > 0:
+    if (total_prob > 0):
         for word in candidate_probs:
             candidate_probs[word] /= total_prob
     else:
@@ -39,13 +39,13 @@ def normalize(candidate_probs):
             candidate_probs[word] = 0
 
 
-def compute_gray_penalty(word, gray_letters):
+def compute_gray_penalty(word, gray_letters, gray_penalty_factor):
     gray_count = sum(1 for char in word if char in gray_letters)
-    gray_penalty = 0.7 ** gray_count
+    gray_penalty = gray_penalty_factor ** gray_count
     return gray_penalty
 
 
-def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associations, sigma=1e-5):
+def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associations, sigma=1e-5, gray_penalty_factor=0.7, pos_penalty_factor=0.3):
     """
     Computes candidate scores based on orthographic stems and rough positional alignment.
 
@@ -71,12 +71,12 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
                 word_stem, rough_position = word_stem_key.split("|")
                 
                 # Calculate gray letter penalty
-                gray_penalty = compute_gray_penalty(word, gray_letters)
+                gray_penalty = compute_gray_penalty(word, gray_letters, gray_penalty_factor)
                 
                 # Check rough positional alignment
                 if (rough_position == "FIRST_HALF" and word.find(word_stem) <= len(word) // 2) or \
                 (rough_position == "SECOND_HALF" and word.find(word_stem) > len(word) // 2):
-                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * 0.5 * gray_penalty)
+                    candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * pos_penalty_factor * gray_penalty)
                 else:
                     candidate_probs[word] = candidate_probs.get(word, 1) * (entry["prob"] * gray_penalty)
     else:
@@ -86,7 +86,7 @@ def compute_candidate_scores(word_stem_keys, gray_letters, target_length, associ
                 word, prob = entry["word"], entry["prob"]
                 if (len(word) == target_length):  # Ensure matching length
                     # Calculate gray letter penalty
-                    gray_penalty = compute_gray_penalty(word, gray_letters)
+                    gray_penalty = compute_gray_penalty(word, gray_letters, gray_penalty_factor)
                     candidate_probs[word] = prob * gray_penalty
 
     # Apply smoothing and normalize by number of stems
@@ -178,7 +178,7 @@ def process_hints(green_letters, yellow_letters, word_length):
     return word_stem_keys
 
 
-def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, start_strategy="vowels"):
+def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, gray_penalty=0.7, pos_penalty=0.3, start_strategy="vowels"):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
 
@@ -195,9 +195,9 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
 
     # Handle starting word strategies
     if (green_letters == [None] * target_length) and (not yellow_letters) and (not gray_letters):
-        if (start_strategy == "vowels"):
+        if (target_length == 5) and (start_strategy == "vowels"):
             start_word = random.choice(["AUDIO", "ADIEU"])
-        elif (start_strategy == "optimal"):
+        elif (target_length == 5) and (start_strategy == "optimal"):
             start_word = random.choice(["SLATE", "CRANE", "TRACE"])
         elif (start_strategy == "random"):
             # Sample a word stem
@@ -217,7 +217,8 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
 
     # Split dictionary into separate lists for words and probabilities
     candidate_probs = compute_candidate_scores(
-        word_stem_keys, gray_letters, target_length, associations, sigma=1e-5)
+        word_stem_keys, gray_letters, target_length, associations, sigma=1e-5, 
+        gray_penalty_factor=gray_penalty, pos_penalty_factor=pos_penalty)
     words, probs = zip(*candidate_probs.items())
 
     # Sort words and probabilities in descending order
