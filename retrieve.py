@@ -1,5 +1,4 @@
 import json
-import random
 import string
 import pprint
 import numpy as np
@@ -149,7 +148,7 @@ def retrieve_next_valid(green_letters, yellow_letters, gray_letters, target_leng
                 validity *= 0.1
 
         # Select the word based on validity
-        if (validity > valid_threshold) and (random.random() < validity):
+        if (validity > valid_threshold) and (np.random.random() < validity):
             return word, searched_words
 
     print("No valid answer retrieved.")
@@ -220,7 +219,7 @@ def generate_random_word(green_letters, yellow_letters, gray_letters, target_len
         valid_chars.append(pool)
 
     # Generate the random word
-    random_word = ''.join(random.choice(list(chars)) for chars in valid_chars)
+    random_word = ''.join(np.random.choice(list(chars)) for chars in valid_chars)
 
     return random_word
 
@@ -243,16 +242,23 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
     # Handle starting word strategies
     if (green_letters == [None] * target_length) and (not yellow_letters) and (not gray_letters):
         if (target_length == 5) and (start_strategy == "vowels"):
-            start_word = random.choice(["AUDIO", "ADIEU"])
+            start_word = np.random.choice(["AUDIO", "ADIEU"])
         elif (target_length == 5) and (start_strategy == "optimal"):
-            start_word = random.choice(["SLATE", "CRANE", "TRACE"])
+            start_word = np.random.choice(["SLATE", "CRANE", "TRACE"])
+        elif (start_strategy == "popular"):
+            start_word = np.random.choice([
+                "STARE", "RAISE", "ARISE", "IRATE", "TRAIN", "GREAT",
+                "HEART", "AROSE", "HOUSE", "AISLE", "STEAM", "LEAST",
+                "CRATE", "TEARS", "SALET", "DREAM"],
+                p=[0.215, 0.155, 0.09, 0.07, 0.07, 0.045, 0.045, 0.04,
+                   0.04, 0.04, 0.04, 0.03, 0.03, 0.03, 0.03, 0.03])
         elif (start_strategy == "random"):
-            # Sample a word stem
-            start_word_stem = random.choice(list(associations.keys()))
-            start_word = ""
-            # Sample a length-matching word
-            while (len(start_word) != target_length):
-                start_word = random.choice(associations[start_word_stem])["word"]
+            # Flatten the dictionary into a list of all word objects
+            word_pool = [word_obj for entry in associations.values() for word_obj in entry]
+            # Filter the pool for words with the target length
+            word_pool = [word_obj for word_obj in word_pool if len(word_obj["word"]) == target_length]
+            # Sample a random word
+            start_word = np.random.choice(word_pool)["word"]
         else:
             raise ValueError("Unrecognized starting strategy.")
 
@@ -327,5 +333,5 @@ if __name__ == "__main__":
 
     find_answer([None, None, "O", None, None], {"L": {0}}, set("A"), "CLOUD", associations)
     print()
-    find_answer([None, None, None, None, None], dict(), set(), "CLOUD", associations, start_strategy="vowels")
+    find_answer([None, None, None, None, None], dict(), set(), "CLOUD", associations, start_strategy="popular")
     
