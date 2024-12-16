@@ -1,0 +1,21 @@
+Association Level,Strategy,Success Rate (%),Average Turns
+associations00,optimal,75.0,5.133333333333334
+associations00,popular,65.0,5.0
+associations00,random,65.0,5.076923076923077
+associations00,vowels,60.0,5.0
+associations02,optimal,70.0,5.214285714285714
+associations02,popular,75.0,5.266666666666667
+associations02,random,75.0,5.133333333333334
+associations02,vowels,80.0,5.0625
+associations04,optimal,70.0,5.285714285714286
+associations04,popular,75.0,4.8
+associations04,random,75.0,5.2
+associations04,vowels,80.0,4.9375
+associations06,optimal,80.0,4.8125
+associations06,popular,65.0,4.923076923076923
+associations06,random,80.0,5.0
+associations06,vowels,70.0,4.571428571428571
+associations08,optimal,75.0,4.466666666666667
+associations08,popular,65.0,5.0
+associations08,random,75.0,4.533333333333333
+associations08,vowels,75.0,4.666666666666667
