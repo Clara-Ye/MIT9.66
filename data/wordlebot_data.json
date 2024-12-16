@@ -1,0 +1,1561 @@
+{
+    "DROOL": {
+        "average_turns": 4.1,
+        "optimal_solution": ["CRANE", "PILOT", "DROOL"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.5},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "RAISE", "percentage": 2.8},
+                {"rank": 5, "word": "CRANE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "PROUD", "percentage": 4.5},
+                {"rank": 2, "word": "ROUND", "percentage": 2.4},
+                {"rank": 3, "word": "DROOL", "percentage": 1.8},
+                {"rank": 4, "word": "DROWN", "percentage": 1.6},
+                {"rank": 5, "word": "DRONE", "percentage": 1.5},
+                {"rank": 6, "word": "CLOUD", "percentage": 1.5},
+                {"rank": 7, "word": "BROIL", "percentage": 1.4},
+                {"rank": 8, "word": "DRINK", "percentage": 1.0},
+                {"rank": 9, "word": "DROPS", "percentage": 1.0},
+                {"rank": 10, "word": "CROWD", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "DROOL", "percentage": 19.4},
+                {"rank": 2, "word": "DROLL", "percentage": 8.0},
+                {"rank": 3, "word": "DROOP", "percentage": 6.0},
+                {"rank": 4, "word": "DROWN", "percentage": 5.3},
+                {"rank": 5, "word": "GROWL", "percentage": 3.5},
+                {"rank": 6, "word": "BROIL", "percentage": 2.5},
+                {"rank": 7, "word": "PROWL", "percentage": 2.3},
+                {"rank": 8, "word": "PROUD", "percentage": 2.2},
+                {"rank": 9, "word": "DROPS", "percentage": 1.9},
+                {"rank": 10, "word": "TROLL", "percentage": 1.7}
+            ],
+            "4": [
+                {"rank": 1, "word": "DROOL", "percentage": 59.0},
+                {"rank": 2, "word": "DROLL", "percentage": 11.3},
+                {"rank": 3, "word": "DROOP", "percentage": 3.8},
+                {"rank": 4, "word": "GROWL", "percentage": 1.9},
+                {"rank": 5, "word": "BROIL", "percentage": 1.7},
+                {"rank": 6, "word": "DROWN", "percentage": 1.3},
+                {"rank": 7, "word": "TROLL", "percentage": 1.1},
+                {"rank": 8, "word": "BROOD", "percentage": 1.1},
+                {"rank": 9, "word": "PROWL", "percentage": 1.0},
+                {"rank": 10, "word": "DROIL", "percentage": 1.0}
+            ],
+            "5": [
+                {"rank": 1, "word": "DROOL", "percentage": 88.3},
+                {"rank": 2, "word": "DROLL", "percentage": 4.5},
+                {"rank": 3, "word": "DROOP", "percentage": 0.9},
+                {"rank": 4, "word": "DROIL", "percentage": 0.8},
+                {"rank": 5, "word": "BROOD", "percentage": 0.3},
+                {"rank": 6, "word": "BROIL", "percentage": 0.3},
+                {"rank": 7, "word": "GROWL", "percentage": 0.3},
+                {"rank": 8, "word": "BROOM", "percentage": 0.2},
+                {"rank": 9, "word": "DROID", "percentage": 0.2},
+                {"rank": 10, "word": "TROLL", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "DROOL", "percentage": 98.0},
+                {"rank": 2, "word": "DROLL", "percentage": 0.8},
+                {"rank": 3, "word": "DROIL", "percentage": 0.2},
+                {"rank": 4, "word": "DROOP", "percentage": 0.1},
+                {"rank": 5, "word": "BROOD", "percentage": 0.1},
+                {"rank": 6, "word": "DORVE", "percentage": 0.1},
+                {"rank": 7, "word": "DROID", "percentage": 0.1},
+                {"rank": 8, "word": "GROWL", "percentage": 0.1},
+                {"rank": 9, "word": "DROWN", "percentage": 0.1},
+                {"rank": 10, "word": "BROIL", "percentage": 0.1}
+            ]
+        }
+    },
+    "VYING": {
+        "average_turns": 4.8,
+        "optimal_solution": ["CRANE", "GLUTS", "DOING", "VYING"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.5},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.5},
+                {"rank": 4, "word": "RAISE", "percentage": 2.7},
+                {"rank": 5, "word": "CRANE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "HEART", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "POINT", "percentage": 2.6},
+                {"rank": 2, "word": "CLOUD", "percentage": 1.9},
+                {"rank": 3, "word": "POUND", "percentage": 1.8},
+                {"rank": 4, "word": "THINK", "percentage": 1.2},
+                {"rank": 5, "word": "BRING", "percentage": 1.1},
+                {"rank": 6, "word": "FLING", "percentage": 1.0},
+                {"rank": 7, "word": "BLINK", "percentage": 1.0},
+                {"rank": 8, "word": "VYING", "percentage": 1.0},
+                {"rank": 9, "word": "THING", "percentage": 1.0},
+                {"rank": 10, "word": "STING", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "FLING", "percentage": 5.2},
+                {"rank": 2, "word": "VYING", "percentage": 4.2},
+                {"rank": 3, "word": "BRING", "percentage": 3.2},
+                {"rank": 4, "word": "DYING", "percentage": 3.0},
+                {"rank": 5, "word": "LYING", "percentage": 2.9},
+                {"rank": 6, "word": "BLING", "percentage": 2.8},
+                {"rank": 7, "word": "BLINK", "percentage": 2.5},
+                {"rank": 8, "word": "THING", "percentage": 2.2},
+                {"rank": 9, "word": "WHINY", "percentage": 2.2},
+                {"rank": 10, "word": "SWING", "percentage": 2.2}
+            ],
+            "4": [
+                {"rank": 1, "word": "VYING", "percentage": 22.7},
+                {"rank": 2, "word": "DYING", "percentage": 11.2},
+                {"rank": 3, "word": "LYING", "percentage": 4.6},
+                {"rank": 4, "word": "FLING", "percentage": 4.1},
+                {"rank": 5, "word": "CHING", "percentage": 3.7},
+                {"rank": 6, "word": "SWING", "percentage": 3.1},
+                {"rank": 7, "word": "GOING", "percentage": 2.9},
+                {"rank": 8, "word": "WHINY", "percentage": 2.7},
+                {"rank": 9, "word": "DOING", "percentage": 2.5},
+                {"rank": 10, "word": "BRING", "percentage": 2.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "VYING", "percentage": 59.4},
+                {"rank": 2, "word": "DYING", "percentage": 8.9},
+                {"rank": 3, "word": "LYING", "percentage": 2.2},
+                {"rank": 4, "word": "ICING", "percentage": 2.1},
+                {"rank": 5, "word": "TYING", "percentage": 2.0},
+                {"rank": 6, "word": "GOING", "percentage": 1.9},
+                {"rank": 7, "word": "CHING", "percentage": 1.7},
+                {"rank": 8, "word": "NYING", "percentage": 1.4},
+                {"rank": 9, "word": "SWING", "percentage": 1.4},
+                {"rank": 10, "word": "FLING", "percentage": 1.3}
+            ],
+            "6": [
+                {"rank": 1, "word": "VYING", "percentage": 86.4},
+                {"rank": 2, "word": "DYING", "percentage": 2.7},
+                {"rank": 3, "word": "NYING", "percentage": 1.3},
+                {"rank": 4, "word": "ICING", "percentage": 0.8},
+                {"rank": 5, "word": "HYING", "percentage": 0.7},
+                {"rank": 6, "word": "GOING", "percentage": 0.6},
+                {"rank": 7, "word": "TYING", "percentage": 0.6},
+                {"rank": 8, "word": "LYING", "percentage": 0.5},
+                {"rank": 9, "word": "EYING", "percentage": 0.4},
+                {"rank": 10, "word": "FLING", "percentage": 0.4}
+            ]
+        }
+    },
+    "PLUMB": {
+        "average_turns": 4.1,
+        "optimal_solution": ["CRANE", "SLOTH", "BLUFF", "PLUMB"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.5},
+                {"rank": 4, "word": "CRANE", "percentage": 2.6},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "HEART", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "CLOUD", "percentage": 3.6},
+                {"rank": 2, "word": "PLUMB", "percentage": 2.4},
+                {"rank": 3, "word": "POUND", "percentage": 2.3},
+                {"rank": 4, "word": "PLUCK", "percentage": 1.4},
+                {"rank": 5, "word": "MOUND", "percentage": 1.1},
+                {"rank": 6, "word": "PLUME", "percentage": 1.1},
+                {"rank": 7, "word": "POINT", "percentage": 1.0},
+                {"rank": 8, "word": "SOUND", "percentage": 1.0},
+                {"rank": 9, "word": "MOUNT", "percentage": 0.9},
+                {"rank": 10, "word": "STORY", "percentage": 0.8}
+            ],
+            "3": [
+                {"rank": 1, "word": "PLUMB", "percentage": 20.1},
+                {"rank": 2, "word": "PLUCK", "percentage": 7.9},
+                {"rank": 3, "word": "PLUMP", "percentage": 7.6},
+                {"rank": 4, "word": "PLUME", "percentage": 2.8},
+                {"rank": 5, "word": "PLUNK", "percentage": 2.7},
+                {"rank": 6, "word": "CLUMP", "percentage": 2.7},
+                {"rank": 7, "word": "PLUMY", "percentage": 2.1},
+                {"rank": 8, "word": "PLUMS", "percentage": 2.1},
+                {"rank": 9, "word": "PLUSH", "percentage": 1.6},
+                {"rank": 10, "word": "SLUMP", "percentage": 1.5}
+            ],
+            "4": [
+                {"rank": 1, "word": "PLUMB", "percentage": 58.0},
+                {"rank": 2, "word": "PLUMP", "percentage": 14.8},
+                {"rank": 3, "word": "PLUMY", "percentage": 5.4},
+                {"rank": 4, "word": "PLUCK", "percentage": 2.6},
+                {"rank": 5, "word": "PLUME", "percentage": 2.2},
+                {"rank": 6, "word": "PLUMS", "percentage": 2.1},
+                {"rank": 7, "word": "CLUMP", "percentage": 1.0},
+                {"rank": 8, "word": "PLUSH", "percentage": 0.8},
+                {"rank": 9, "word": "PLUFF", "percentage": 0.7},
+                {"rank": 10, "word": "PLUNK", "percentage": 0.7}
+            ],
+            "5": [
+                {"rank": 1, "word": "PLUMB", "percentage": 85.3},
+                {"rank": 2, "word": "PLUMP", "percentage": 6.2},
+                {"rank": 3, "word": "PLUMY", "percentage": 3.7},
+                {"rank": 4, "word": "PLUMS", "percentage": 0.9},
+                {"rank": 5, "word": "PLUME", "percentage": 0.7},
+                {"rank": 6, "word": "PLUFF", "percentage": 0.4},
+                {"rank": 7, "word": "PLUCK", "percentage": 0.3},
+                {"rank": 8, "word": "PLUNG", "percentage": 0.2},
+                {"rank": 9, "word": "PLUGS", "percentage": 0.1},
+                {"rank": 10, "word": "PLUSH", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "PLUMB", "percentage": 96.8},
+                {"rank": 2, "word": "PLUMP", "percentage": 1.5},
+                {"rank": 3, "word": "PLUMY", "percentage": 0.8},
+                {"rank": 4, "word": "PLUMS", "percentage": 0.2},
+                {"rank": 5, "word": "PLUME", "percentage": 0.2},
+                {"rank": 6, "word": "PLUFF", "percentage": 0.1},
+                {"rank": 7, "word": "PLUCK", "percentage": 0.1},
+                {"rank": 8, "word": "PLUNG", "percentage": 0.1},
+                {"rank": 9, "word": "PLUGS", "percentage": 0.1},
+                {"rank": 10, "word": "PLUNK", "percentage": 0.1}
+            ]
+        }
+    },
+    "PATIO": {
+        "average_turns": 3.6,
+        "optimal_solution": ["CRANE", "TOILS", "PATIO"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "AUDIO", "percentage": 4.8},
+                {"rank": 3, "word": "STARE", "percentage": 4.8},
+                {"rank": 4, "word": "RAISE", "percentage": 2.7},
+                {"rank": 5, "word": "CRANE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "HEART", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "PATIO", "percentage": 6.2},
+                {"rank": 2, "word": "PAINT", "percentage": 2.6},
+                {"rank": 3, "word": "RATIO", "percentage": 2.3},
+                {"rank": 4, "word": "PARTY", "percentage": 1.4},
+                {"rank": 5, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 6, "word": "PLAIN", "percentage": 1.3},
+                {"rank": 7, "word": "STAIN", "percentage": 1.2},
+                {"rank": 8, "word": "POINT", "percentage": 1.1},
+                {"rank": 9, "word": "PANIC", "percentage": 1.0},
+                {"rank": 10, "word": "PATCH", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "PATIO", "percentage": 38.8},
+                {"rank": 2, "word": "BATON", "percentage": 2.1},
+                {"rank": 3, "word": "RATIO", "percentage": 2.1},
+                {"rank": 4, "word": "PATCH", "percentage": 1.8},
+                {"rank": 5, "word": "PAINT", "percentage": 1.7},
+                {"rank": 6, "word": "PATTY", "percentage": 1.7},
+                {"rank": 7, "word": "SATIN", "percentage": 1.3},
+                {"rank": 8, "word": "PATIN", "percentage": 1.3},
+                {"rank": 9, "word": "PANIC", "percentage": 1.1},
+                {"rank": 10, "word": "HABIT", "percentage": 1.0}
+            ],
+            "4": [
+                {"rank": 1, "word": "PATIO", "percentage": 75.9},
+                {"rank": 2, "word": "RATIO", "percentage": 1.6},
+                {"rank": 3, "word": "PATIN", "percentage": 1.2},
+                {"rank": 4, "word": "BATON", "percentage": 0.9},
+                {"rank": 5, "word": "PATTY", "percentage": 0.8},
+                {"rank": 6, "word": "PATCH", "percentage": 0.8},
+                {"rank": 7, "word": "BATIK", "percentage": 0.7},
+                {"rank": 8, "word": "PAINT", "percentage": 0.5},
+                {"rank": 9, "word": "SATIN", "percentage": 0.4},
+                {"rank": 10, "word": "GAOR", "percentage": 0.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "PATIO", "percentage": 93.8},
+                {"rank": 2, "word": "RATIO", "percentage": 0.6},
+                {"rank": 3, "word": "PATIN", "percentage": 0.4},
+                {"rank": 4, "word": "PATIA", "percentage": 0.3},
+                {"rank": 5, "word": "BATIK", "percentage": 0.2},
+                {"rank": 6, "word": "BATON", "percentage": 0.2},
+                {"rank": 7, "word": "PATTY", "percentage": 0.2},
+                {"rank": 8, "word": "PATCH", "percentage": 0.1},
+                {"rank": 9, "word": "OATHS", "percentage": 0.1},
+                {"rank": 10, "word": "PAINT", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "PATIO", "percentage": 98.7},
+                {"rank": 2, "word": "RATIO", "percentage": 0.1},
+                {"rank": 3, "word": "PATIA", "percentage": 0.1},
+                {"rank": 4, "word": "PATIN", "percentage": 0.1},
+                {"rank": 5, "word": "PATTY", "percentage": 0.1},
+                {"rank": 6, "word": "PATCH", "percentage": 0.1},
+                {"rank": 7, "word": "BATIK", "percentage": 0.1},
+                {"rank": 8, "word": "MATZO", "percentage": 0.1},
+                {"rank": 9, "word": "BATON", "percentage": 0.1},
+                {"rank": 10, "word": "PAINT", "percentage": 0.1}
+            ]
+        }
+    },
+    "FLUNG": {
+        "average_turns": 4.1,
+        "optimal_solution": ["CRANE", "GLUTS", "FLUNG"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "STARE", "percentage": 4.9},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "CRANE", "percentage": 2.7},
+                {"rank": 5, "word": "RAISE", "percentage": 2.7},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "HEART", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "CLOUD", "percentage": 3.4},
+                {"rank": 2, "word": "POUND", "percentage": 2.1},
+                {"rank": 3, "word": "FLUNG", "percentage": 1.4},
+                {"rank": 4, "word": "SOUND", "percentage": 1.1},
+                {"rank": 5, "word": "POINT", "percentage": 1.0},
+                {"rank": 6, "word": "MOUND", "percentage": 1.0},
+                {"rank": 7, "word": "MOUNT", "percentage": 0.8},
+                {"rank": 8, "word": "BLUNT", "percentage": 0.8},
+                {"rank": 9, "word": "STORY", "percentage": 0.8},
+                {"rank": 10, "word": "FOUND", "percentage": 0.8}
+            ],
+            "3": [
+                {"rank": 1, "word": "FLUNG", "percentage": 16.1},
+                {"rank": 2, "word": "FLUNK", "percentage": 7.3},
+                {"rank": 3, "word": "CLUNG", "percentage": 3.5},
+                {"rank": 4, "word": "BLUNT", "percentage": 3.3},
+                {"rank": 5, "word": "PLUNK", "percentage": 3.2},
+                {"rank": 6, "word": "CHUNK", "percentage": 2.6},
+                {"rank": 7, "word": "SLUNG", "percentage": 2.5},
+                {"rank": 8, "word": "CLUNK", "percentage": 2.2},
+                {"rank": 9, "word": "PLUNG", "percentage": 1.7},
+                {"rank": 10, "word": "FLING", "percentage": 1.5}
+            ],
+            "4": [
+                {"rank": 1, "word": "FLUNG", "percentage": 59.1},
+                {"rank": 2, "word": "FLUNK", "percentage": 8.8},
+                {"rank": 3, "word": "CLUNG", "percentage": 4.0},
+                {"rank": 4, "word": "FLUFF", "percentage": 2.4},
+                {"rank": 5, "word": "PLUNG", "percentage": 2.3},
+                {"rank": 6, "word": "SLUNG", "percentage": 2.2},
+                {"rank": 7, "word": "BLUNT", "percentage": 2.1},
+                {"rank": 8, "word": "PLUNK", "percentage": 1.2},
+                {"rank": 9, "word": "BLUFF", "percentage": 1.1},
+                {"rank": 10, "word": "CLUNK", "percentage": 1.0}
+            ],
+            "5": [
+                {"rank": 1, "word": "FLUNG", "percentage": 88.7},
+                {"rank": 2, "word": "FLUNK", "percentage": 2.6},
+                {"rank": 3, "word": "FLUFF", "percentage": 1.4},
+                {"rank": 4, "word": "CLUNG", "percentage": 1.0},
+                {"rank": 5, "word": "PLUNG", "percentage": 0.6},
+                {"rank": 6, "word": "SLUNG", "percentage": 0.5},
+                {"rank": 7, "word": "FLUKY", "percentage": 0.3},
+                {"rank": 8, "word": "BLUNT", "percentage": 0.3},
+                {"rank": 9, "word": "FLUID", "percentage": 0.3},
+                {"rank": 10, "word": "FLUMP", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "FLUNG", "percentage": 97.5},
+                {"rank": 2, "word": "FLUNK", "percentage": 0.5},
+                {"rank": 3, "word": "FLUFF", "percentage": 0.3},
+                {"rank": 4, "word": "CLUNG", "percentage": 0.1},
+                {"rank": 5, "word": "PLUNG", "percentage": 0.1},
+                {"rank": 6, "word": "FLUID", "percentage": 0.1},
+                {"rank": 7, "word": "FLUMP", "percentage": 0.1},
+                {"rank": 8, "word": "FLUKY", "percentage": 0.1},
+                {"rank": 9, "word": "FLURR", "percentage": 0.1},
+                {"rank": 10, "word": "SLUNG", "percentage": 0.1}
+            ]
+        }
+    },
+    "ENDOW": {
+        "average_turns": 4.2,
+        "optimal_solution": ["CRANE", "TOWEL", "ENDOW"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 5.0},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "RAISE", "percentage": 2.7},
+                {"rank": 5, "word": "CRANE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "DRONE", "percentage": 1.4},
+                {"rank": 2, "word": "ENDOW", "percentage": 1.4},
+                {"rank": 3, "word": "CLOUD", "percentage": 1.1},
+                {"rank": 4, "word": "BLEND", "percentage": 1.0},
+                {"rank": 5, "word": "MODEL", "percentage": 0.9},
+                {"rank": 6, "word": "POUND", "percentage": 0.9},
+                {"rank": 7, "word": "ORDER", "percentage": 0.8},
+                {"rank": 8, "word": "STORY", "percentage": 0.7},
+                {"rank": 9, "word": "DEMON", "percentage": 0.7},
+                {"rank": 10, "word": "DROVE", "percentage": 0.6}
+            ],
+            "3": [
+                {"rank": 1, "word": "ENDOW", "percentage": 14.4},
+                {"rank": 2, "word": "DEMON", "percentage": 4.3},
+                {"rank": 3, "word": "ENJOY", "percentage": 2.3},
+                {"rank": 4, "word": "ENVOY", "percentage": 1.6},
+                {"rank": 5, "word": "OWNED", "percentage": 1.5},
+                {"rank": 6, "word": "MONEY", "percentage": 1.3},
+                {"rank": 7, "word": "BENDY", "percentage": 1.1},
+                {"rank": 8, "word": "VENOM", "percentage": 1.0},
+                {"rank": 9, "word": "DECOY", "percentage": 0.9},
+                {"rank": 10, "word": "BONED", "percentage": 0.9}
+            ],
+            "4": [
+                {"rank": 1, "word": "ENDOW", "percentage": 52.9},
+                {"rank": 2, "word": "ENJOY", "percentage": 3.2},
+                {"rank": 3, "word": "DEMON", "percentage": 2.5},
+                {"rank": 4, "word": "ENVOY", "percentage": 2.0},
+                {"rank": 5, "word": "OWNED", "percentage": 1.8},
+                {"rank": 6, "word": "ENDED", "percentage": 1.2},
+                {"rank": 7, "word": "DEVON", "percentage": 0.8},
+                {"rank": 8, "word": "ODEON", "percentage": 0.7},
+                {"rank": 9, "word": "ELBOW", "percentage": 0.6},
+                {"rank": 10, "word": "VENOM", "percentage": 0.6}
+            ],
+            "5": [
+                {"rank": 1, "word": "ENDOW", "percentage": 84.2},
+                {"rank": 2, "word": "ENJOY", "percentage": 1.5},
+                {"rank": 3, "word": "OWNED", "percentage": 0.8},
+                {"rank": 4, "word": "ENVOY", "percentage": 0.8},
+                {"rank": 5, "word": "ENDED", "percentage": 0.7},
+                {"rank": 6, "word": "DEMON", "percentage": 0.4},
+                {"rank": 7, "word": "ODEON", "percentage": 0.3},
+                {"rank": 8, "word": "DEVON", "percentage": 0.3},
+                {"rank": 9, "word": "ELBOW", "percentage": 0.2},
+                {"rank": 10, "word": "ENDER", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "ENDOW", "percentage": 95.7},
+                {"rank": 2, "word": "ENJOY", "percentage": 0.4},
+                {"rank": 3, "word": "OWNED", "percentage": 0.2},
+                {"rank": 4, "word": "ENDED", "percentage": 0.2},
+                {"rank": 5, "word": "ENVOY", "percentage": 0.2},
+                {"rank": 6, "word": "ENDER", "percentage": 0.1},
+                {"rank": 7, "word": "NOWED", "percentage": 0.1},
+                {"rank": 8, "word": "DEMON", "percentage": 0.1},
+                {"rank": 9, "word": "ODEON", "percentage": 0.1},
+                {"rank": 10, "word": "ENTER", "percentage": 0.1}
+            ]
+        }
+    },
+    "CRYPT": {
+        "average_turns": 3.6,
+        "optimal_solution": ["CRANE", "STOOP", "CRYPT"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.3},
+                {"rank": 4, "word": "CRANE", "percentage": 2.8},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "CRYPT", "percentage": 2.5},
+                {"rank": 2, "word": "TROUT", "percentage": 2.2},
+                {"rank": 3, "word": "CRUST", "percentage": 1.8},
+                {"rank": 4, "word": "PROUD", "percentage": 1.7},
+                {"rank": 5, "word": "PRINT", "percentage": 1.7},
+                {"rank": 6, "word": "TRICK", "percentage": 1.7},
+                {"rank": 7, "word": "GROUT", "percentage": 1.6},
+                {"rank": 8, "word": "STORY", "percentage": 1.6},
+                {"rank": 9, "word": "TRUCK", "percentage": 1.1},
+                {"rank": 10, "word": "CROWD", "percentage": 0.9}
+            ],
+            "3": [
+                {"rank": 1, "word": "CRYPT", "percentage": 33.9},
+                {"rank": 2, "word": "PRINT", "percentage": 3.5},
+                {"rank": 3, "word": "TRYST", "percentage": 3.3},
+                {"rank": 4, "word": "CRUST", "percentage": 2.4},
+                {"rank": 5, "word": "CROFT", "percentage": 1.6},
+                {"rank": 6, "word": "CREPT", "percentage": 1.6},
+                {"rank": 7, "word": "CRIMP", "percentage": 1.3},
+                {"rank": 8, "word": "ERUPT", "percentage": 1.0},
+                {"rank": 9, "word": "CRUMB", "percentage": 0.9},
+                {"rank": 10, "word": "CROUT", "percentage": 0.9}
+            ],
+            "4": [
+                {"rank": 1, "word": "CRYPT", "percentage": 81.0},
+                {"rank": 2, "word": "TRYST", "percentage": 1.1},
+                {"rank": 3, "word": "CREPT", "percentage": 1.0},
+                {"rank": 4, "word": "CRUST", "percentage": 0.7},
+                {"rank": 5, "word": "ERUPT", "percentage": 0.7},
+                {"rank": 6, "word": "CROFT", "percentage": 0.6},
+                {"rank": 7, "word": "GRYPT", "percentage": 0.4},
+                {"rank": 8, "word": "DROPT", "percentage": 0.3},
+                {"rank": 9, "word": "PRINT", "percentage": 0.3},
+                {"rank": 10, "word": "CRAFT", "percentage": 0.3}
+            ],
+            "5": [
+                {"rank": 1, "word": "CRYPT", "percentage": 96.3},
+                {"rank": 2, "word": "GRYPT", "percentage": 0.2},
+                {"rank": 3, "word": "TRYST", "percentage": 0.2},
+                {"rank": 4, "word": "CREPT", "percentage": 0.2},
+                {"rank": 5, "word": "ERUPT", "percentage": 0.1},
+                {"rank": 6, "word": "CRUST", "percentage": 0.1},
+                {"rank": 7, "word": "CRYER", "percentage": 0.1},
+                {"rank": 8, "word": "CRAFT", "percentage": 0.1},
+                {"rank": 9, "word": "PRINT", "percentage": 0.1},
+                {"rank": 10, "word": "CROPS", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "CRYPT", "percentage": 98.9},
+                {"rank": 2, "word": "GRYPT", "percentage": 0.1},
+                {"rank": 3, "word": "CREPT", "percentage": 0.1},
+                {"rank": 4, "word": "TRYST", "percentage": 0.1},
+                {"rank": 5, "word": "CRUST", "percentage": 0.1},
+                {"rank": 6, "word": "CRYER", "percentage": 0.1},
+                {"rank": 7, "word": "CRAFT", "percentage": 0.1},
+                {"rank": 8, "word": "ERUPT", "percentage": 0.1},
+                {"rank": 9, "word": "CROPS", "percentage": 0.1},
+                {"rank": 10, "word": "PRINT", "percentage": 0.1}
+            ]
+        }
+    },
+    "MAUVE": {
+        "average_turns": 4.3,
+        "optimal_solution": ["CRANE", "TALUS", "GAUGE", "MAUVE"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 4.9},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.2},
+                {"rank": 4, "word": "RAISE", "percentage": 2.8},
+                {"rank": 5, "word": "SLATE", "percentage": 2.6},
+                {"rank": 6, "word": "CRANE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "MAUVE", "percentage": 2.4},
+                {"rank": 2, "word": "PAUSE", "percentage": 1.9},
+                {"rank": 3, "word": "DANCE", "percentage": 1.7},
+                {"rank": 4, "word": "MAPLE", "percentage": 1.4},
+                {"rank": 5, "word": "PLACE", "percentage": 1.2},
+                {"rank": 6, "word": "PLANE", "percentage": 1.1},
+                {"rank": 7, "word": "CAUSE", "percentage": 1.0},
+                {"rank": 8, "word": "SAUCE", "percentage": 0.9},
+                {"rank": 9, "word": "GAUGE", "percentage": 0.8},
+                {"rank": 10, "word": "PLATE", "percentage": 0.8}
+            ],
+            "3": [
+                {"rank": 1, "word": "MAUVE", "percentage": 15.5},
+                {"rank": 2, "word": "GAUGE", "percentage": 4.3},
+                {"rank": 3, "word": "MAPLE", "percentage": 3.0},
+                {"rank": 4, "word": "MANGE", "percentage": 2.5},
+                {"rank": 5, "word": "GAUZE", "percentage": 2.3},
+                {"rank": 6, "word": "PAUSE", "percentage": 1.8},
+                {"rank": 7, "word": "MAYBE", "percentage": 1.7},
+                {"rank": 8, "word": "CACHE", "percentage": 1.7},
+                {"rank": 9, "word": "MACHE", "percentage": 1.6},
+                {"rank": 10, "word": "BADGE", "percentage": 1.5}
+            ],
+            "4": [
+                {"rank": 1, "word": "MAUVE", "percentage": 46.8},
+                {"rank": 2, "word": "GAUGE", "percentage": 4.5},
+                {"rank": 3, "word": "MAYBE", "percentage": 3.2},
+                {"rank": 4, "word": "GAUZE", "percentage": 2.2},
+                {"rank": 5, "word": "MAIZE", "percentage": 2.0},
+                {"rank": 6, "word": "MANGE", "percentage": 1.9},
+                {"rank": 7, "word": "MACHE", "percentage": 1.9},
+                {"rank": 8, "word": "MAPLE", "percentage": 1.8},
+                {"rank": 9, "word": "VAGUE", "percentage": 1.4},
+                {"rank": 10, "word": "MATTE", "percentage": 1.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "MAUVE", "percentage": 78.3},
+                {"rank": 2, "word": "MAYBE", "percentage": 2.2},
+                {"rank": 3, "word": "MAIZE", "percentage": 1.5},
+                {"rank": 4, "word": "GAUGE", "percentage": 1.3},
+                {"rank": 5, "word": "FAUVE", "percentage": 1.0},
+                {"rank": 6, "word": "MACHE", "percentage": 0.9},
+                {"rank": 7, "word": "MANGE", "percentage": 0.7},
+                {"rank": 8, "word": "GAUZE", "percentage": 0.7},
+                {"rank": 9, "word": "MATTE", "percentage": 0.6},
+                {"rank": 10, "word": "MAPLE", "percentage": 0.6}
+            ],
+            "6": [
+                {"rank": 1, "word": "MAUVE", "percentage": 93.9},
+                {"rank": 2, "word": "MAYBE", "percentage": 0.7},
+                {"rank": 3, "word": "MAIZE", "percentage": 0.5},
+                {"rank": 4, "word": "FAUVE", "percentage": 0.4},
+                {"rank": 5, "word": "MACHE", "percentage": 0.2},
+                {"rank": 6, "word": "GAUGE", "percentage": 0.2},
+                {"rank": 7, "word": "MANGE", "percentage": 0.2},
+                {"rank": 8, "word": "MAPLE", "percentage": 0.2},
+                {"rank": 9, "word": "MATTE", "percentage": 0.2},
+                {"rank": 10, "word": "MAJOE", "percentage": 0.2}
+            ]
+        }
+    },
+    "DOGMA": {
+        "average_turns": 4.2,
+        "optimal_solution": ["CRANE", "TOILS", "VODKA", "DOGMA"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.2},
+                {"rank": 4, "word": "RAISE", "percentage": 2.8},
+                {"rank": 5, "word": "SLATE", "percentage": 2.5},
+                {"rank": 6, "word": "CRANE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "BROAD", "percentage": 1.8},
+                {"rank": 2, "word": "BOARD", "percentage": 1.3},
+                {"rank": 3, "word": "DOGMA", "percentage": 1.2},
+                {"rank": 4, "word": "AUDIO", "percentage": 0.9},
+                {"rank": 5, "word": "ABOUT", "percentage": 0.8},
+                {"rank": 6, "word": "CLOUD", "percentage": 0.8},
+                {"rank": 7, "word": "STORY", "percentage": 0.8},
+                {"rank": 8, "word": "POUND", "percentage": 0.7},
+                {"rank": 9, "word": "POINT", "percentage": 0.7},
+                {"rank": 10, "word": "DAILY", "percentage": 0.7}
+            ],
+            "3": [
+                {"rank": 1, "word": "DOGMA", "percentage": 12.3},
+                {"rank": 2, "word": "MODAL", "percentage": 2.9},
+                {"rank": 3, "word": "NOMAD", "percentage": 2.7},
+                {"rank": 4, "word": "WOMAN", "percentage": 1.6},
+                {"rank": 5, "word": "FOAMY", "percentage": 1.4},
+                {"rank": 6, "word": "COMMA", "percentage": 1.3},
+                {"rank": 7, "word": "TODAY", "percentage": 1.2},
+                {"rank": 8, "word": "GONAD", "percentage": 1.1},
+                {"rank": 9, "word": "DOGGY", "percentage": 0.9},
+                {"rank": 10, "word": "BOARD", "percentage": 0.8}
+            ],
+            "4": [
+                {"rank": 1, "word": "DOGMA", "percentage": 51.0},
+                {"rank": 2, "word": "MOMMA", "percentage": 2.0},
+                {"rank": 3, "word": "NOMAD", "percentage": 2.0},
+                {"rank": 4, "word": "MODAL", "percentage": 1.7},
+                {"rank": 5, "word": "COMMA", "percentage": 1.7},
+                {"rank": 6, "word": "WOMAN", "percentage": 1.2},
+                {"rank": 7, "word": "DOLMA", "percentage": 1.2},
+                {"rank": 8, "word": "DOUMA", "percentage": 1.1},
+                {"rank": 9, "word": "FOAMY", "percentage": 1.1},
+                {"rank": 10, "word": "VODKA", "percentage": 1.1}
+            ],
+            "5": [
+                {"rank": 1, "word": "DOGMA", "percentage": 84.7},
+                {"rank": 2, "word": "MOMMA", "percentage": 1.3},
+                {"rank": 3, "word": "DOUMA", "percentage": 0.9},
+                {"rank": 4, "word": "DOLMA", "percentage": 0.6},
+                {"rank": 5, "word": "COMMA", "percentage": 0.6},
+                {"rank": 6, "word": "DOGGY", "percentage": 0.4},
+                {"rank": 7, "word": "VODKA", "percentage": 0.4},
+                {"rank": 8, "word": "NOMAD", "percentage": 0.4},
+                {"rank": 9, "word": "DONNA", "percentage": 0.4},
+                {"rank": 10, "word": "MOCHA", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "DOGMA", "percentage": 96.6},
+                {"rank": 2, "word": "DOUMA", "percentage": 0.2},
+                {"rank": 3, "word": "MOMMA", "percentage": 0.2},
+                {"rank": 4, "word": "DOGGY", "percentage": 0.1},
+                {"rank": 5, "word": "DOLMA", "percentage": 0.1},
+                {"rank": 6, "word": "COMMA", "percentage": 0.1},
+                {"rank": 7, "word": "DONNA", "percentage": 0.1},
+                {"rank": 8, "word": "VODKA", "percentage": 0.1},
+                {"rank": 9, "word": "DOGGO", "percentage": 0.1},
+                {"rank": 10, "word": "DOOMS", "percentage": 0.1}
+            ]
+        }
+    },
+    "HIPPO": {
+        "average_turns": 4.0,
+        "optimal_solution": ["CRANE", "SLOTH", "HOBBY", "HIPPO"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.2},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.2},
+                {"rank": 4, "word": "RAISE", "percentage": 2.7},
+                {"rank": 5, "word": "CRANE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.2},
+                {"rank": 10, "word": "HEART", "percentage": 1.0}
+            ],
+            "2": [
+                {"rank": 1, "word": "HIPPO", "percentage": 2.4},
+                {"rank": 2, "word": "CLOUD", "percentage": 1.8},
+                {"rank": 3, "word": "POUND", "percentage": 1.8},
+                {"rank": 4, "word": "POINT", "percentage": 1.7},
+                {"rank": 5, "word": "SPOIL", "percentage": 1.4},
+                {"rank": 6, "word": "PINCH", "percentage": 1.3},
+                {"rank": 7, "word": "PILOT", "percentage": 1.2},
+                {"rank": 8, "word": "BINGO", "percentage": 1.2},
+                {"rank": 9, "word": "HOUND", "percentage": 1.0},
+                {"rank": 10, "word": "CHOIR", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "HIPPO", "percentage": 22.8},
+                {"rank": 2, "word": "HIPPY", "percentage": 3.7},
+                {"rank": 3, "word": "HOPPY", "percentage": 1.6},
+                {"rank": 4, "word": "CHOMP", "percentage": 1.1},
+                {"rank": 5, "word": "BINGO", "percentage": 1.1},
+                {"rank": 6, "word": "PINCH", "percentage": 1.1},
+                {"rank": 7, "word": "HILLY", "percentage": 1.0},
+                {"rank": 8, "word": "WIDOW", "percentage": 0.9},
+                {"rank": 9, "word": "BIPOD", "percentage": 0.9},
+                {"rank": 10, "word": "PIVOT", "percentage": 0.9}
+            ],
+            "4": [
+                {"rank": 1, "word": "HIPPO", "percentage": 68.8},
+                {"rank": 2, "word": "HIPPY", "percentage": 2.6},
+                {"rank": 3, "word": "ZIPPO", "percentage": 1.8},
+                {"rank": 4, "word": "PIVOT", "percentage": 0.7},
+                {"rank": 5, "word": "HOPPY", "percentage": 0.7},
+                {"rank": 6, "word": "BIPOD", "percentage": 0.7},
+                {"rank": 7, "word": "BINGO", "percentage": 0.6},
+                {"rank": 8, "word": "BIMBO", "percentage": 0.6},
+                {"rank": 9, "word": "WIDOW", "percentage": 0.5},
+                {"rank": 10, "word": "HILLY", "percentage": 0.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "HIPPO", "percentage": 92.4},
+                {"rank": 2, "word": "ZIPPO", "percentage": 1.2},
+                {"rank": 3, "word": "HIPPY", "percentage": 0.5},
+                {"rank": 4, "word": "PIVOT", "percentage": 0.2},
+                {"rank": 5, "word": "BIMBO", "percentage": 0.2},
+                {"rank": 6, "word": "BINGO", "percentage": 0.1},
+                {"rank": 7, "word": "BIPOD", "percentage": 0.1},
+                {"rank": 8, "word": "GIZMO", "percentage": 0.1},
+                {"rank": 9, "word": "VIDEO", "percentage": 0.1},
+                {"rank": 10, "word": "HOPPY", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "HIPPO", "percentage": 98.4},
+                {"rank": 2, "word": "ZIPPO", "percentage": 0.3},
+                {"rank": 3, "word": "HIPPY", "percentage": 0.1},
+                {"rank": 4, "word": "GIPPO", "percentage": 0.1},
+                {"rank": 5, "word": "BINGO", "percentage": 0.1},
+                {"rank": 6, "word": "WIZZO", "percentage": 0.1},
+                {"rank": 7, "word": "VIDEO", "percentage": 0.1},
+                {"rank": 8, "word": "PIANO", "percentage": 0.1},
+                {"rank": 9, "word": "POINT", "percentage": 0.1},
+                {"rank": 10, "word": "BIMBO", "percentage": 0.1}
+            ]
+        }
+    },
+    "CHOCK": {
+        "average_turns": 4.1,
+        "optimal_solution": ["CRANE", "HOKUM", "CHOCK"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.2},
+                {"rank": 2, "word": "STARE", "percentage": 4.7},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.1},
+                {"rank": 4, "word": "THANK", "percentage": 2.8},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "CRANE", "percentage": 2.6},
+                {"rank": 7, "word": "SLATE", "percentage": 2.5},
+                {"rank": 8, "word": "ARISE", "percentage": 1.8},
+                {"rank": 9, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 10, "word": "IRATE", "percentage": 1.2}
+            ],
+            "2": [
+                {"rank": 1, "word": "CLOUD", "percentage": 3.2},
+                {"rank": 2, "word": "SHOCK", "percentage": 1.9},
+                {"rank": 3, "word": "POUND", "percentage": 1.8},
+                {"rank": 4, "word": "STORY", "percentage": 1.7},
+                {"rank": 5, "word": "CHOIR", "percentage": 1.2},
+                {"rank": 6, "word": "CHOMP", "percentage": 1.2},
+                {"rank": 7, "word": "PROUD", "percentage": 1.1},
+                {"rank": 8, "word": "CHOCK", "percentage": 1.0},
+                {"rank": 9, "word": "MOUND", "percentage": 0.9},
+                {"rank": 10, "word": "POUCH", "percentage": 0.9}
+            ],
+            "3": [
+                {"rank": 1, "word": "CHOCK", "percentage": 15.4},
+                {"rank": 2, "word": "CHOMP", "percentage": 9.3},
+                {"rank": 3, "word": "SHOCK", "percentage": 3.8},
+                {"rank": 4, "word": "CLOCK", "percentage": 2.8},
+                {"rank": 5, "word": "BLOCK", "percentage": 2.7},
+                {"rank": 6, "word": "FLOCK", "percentage": 2.6},
+                {"rank": 7, "word": "CHUCK", "percentage": 2.5},
+                {"rank": 8, "word": "CHOKE", "percentage": 1.9},
+                {"rank": 9, "word": "CHICK", "percentage": 1.9},
+                {"rank": 10, "word": "PHONY", "percentage": 1.3}
+            ],
+            "4": [
+                {"rank": 1, "word": "CHOCK", "percentage": 62.5},
+                {"rank": 2, "word": "CHOOK", "percentage": 3.6},
+                {"rank": 3, "word": "CHOMP", "percentage": 3.5},
+                {"rank": 4, "word": "CHOKY", "percentage": 2.1},
+                {"rank": 5, "word": "CHOKE", "percentage": 1.7},
+                {"rank": 6, "word": "KNOCK", "percentage": 1.6},
+                {"rank": 7, "word": "SHOCK", "percentage": 1.5},
+                {"rank": 8, "word": "CHOCO", "percentage": 1.5},
+                {"rank": 9, "word": "CLOCK", "percentage": 1.5},
+                {"rank": 10, "word": "CHUCK", "percentage": 1.0}
+            ],
+            "5": [
+                {"rank": 1, "word": "CHOCK", "percentage": 89.4},
+                {"rank": 2, "word": "CHOOK", "percentage": 2.4},
+                {"rank": 3, "word": "CHOKY", "percentage": 1.0},
+                {"rank": 4, "word": "CHOWK", "percentage": 0.9},
+                {"rank": 5, "word": "CHOCO", "percentage": 0.8},
+                {"rank": 6, "word": "CHOKE", "percentage": 0.6},
+                {"rank": 7, "word": "CHOMP", "percentage": 0.4},
+                {"rank": 8, "word": "CLOCK", "percentage": 0.3},
+                {"rank": 9, "word": "KNOCK", "percentage": 0.3},
+                {"rank": 10, "word": "SHOCK", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "CHOCK", "percentage": 97.4},
+                {"rank": 2, "word": "CHOOK", "percentage": 0.8},
+                {"rank": 3, "word": "CHOWK", "percentage": 0.4},
+                {"rank": 4, "word": "CHOKY", "percentage": 0.2},
+                {"rank": 5, "word": "CHOCO", "percentage": 0.2},
+                {"rank": 6, "word": "CHOKE", "percentage": 0.1},
+                {"rank": 7, "word": "CLOCK", "percentage": 0.1},
+                {"rank": 8, "word": "CHOMP", "percentage": 0.1},
+                {"rank": 9, "word": "SHOCK", "percentage": 0.1},
+                {"rank": 10, "word": "CHOKO", "percentage": 0.1}
+            ]
+        }
+    },
+    "SLANG": {
+        "average_turns": 3.8,
+        "optimal_solution": ["CRANE", "GHOST", "SLANG"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.2},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.2},
+                {"rank": 4, "word": "CRANE", "percentage": 2.7},
+                {"rank": 5, "word": "RAISE", "percentage": 2.7},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "SLACK", "percentage": 3.6},
+                {"rank": 2, "word": "SLANG", "percentage": 3.4},
+                {"rank": 3, "word": "SLANT", "percentage": 2.5},
+                {"rank": 4, "word": "PLANT", "percentage": 2.4},
+                {"rank": 5, "word": "SLAIN", "percentage": 1.7},
+                {"rank": 6, "word": "STAND", "percentage": 1.6},
+                {"rank": 7, "word": "SPANK", "percentage": 1.6},
+                {"rank": 8, "word": "SHACK", "percentage": 1.3},
+                {"rank": 9, "word": "PLANE", "percentage": 1.2},
+                {"rank": 10, "word": "PLANK", "percentage": 1.2}
+            ],
+            "3": [
+                {"rank": 1, "word": "SLANG", "percentage": 26.6},
+                {"rank": 2, "word": "SLANT", "percentage": 5.6},
+                {"rank": 3, "word": "SLACK", "percentage": 4.4},
+                {"rank": 4, "word": "SLAIN", "percentage": 3.5},
+                {"rank": 5, "word": "SPANK", "percentage": 2.3},
+                {"rank": 6, "word": "SHANK", "percentage": 1.9},
+                {"rank": 7, "word": "SNACK", "percentage": 1.8},
+                {"rank": 8, "word": "BLAND", "percentage": 1.8},
+                {"rank": 9, "word": "SNAIL", "percentage": 1.6},
+                {"rank": 10, "word": "CLANG", "percentage": 1.5}
+            ],
+            "4": [
+                {"rank": 1, "word": "SLANG", "percentage": 66.2},
+                {"rank": 2, "word": "SLANT", "percentage": 3.5},
+                {"rank": 3, "word": "SLAIN", "percentage": 2.8},
+                {"rank": 4, "word": "SLACK", "percentage": 2.1},
+                {"rank": 5, "word": "SLANK", "percentage": 1.6},
+                {"rank": 6, "word": "SWANG", "percentage": 1.2},
+                {"rank": 7, "word": "SLASH", "percentage": 1.2},
+                {"rank": 8, "word": "CLANG", "percentage": 1.1},
+                {"rank": 9, "word": "SNAIL", "percentage": 0.9},
+                {"rank": 10, "word": "GLAND", "percentage": 0.8}
+            ],
+            "5": [
+                {"rank": 1, "word": "SLANG", "percentage": 91.1},
+                {"rank": 2, "word": "SLANT", "percentage": 1.0},
+                {"rank": 3, "word": "SLAIN", "percentage": 0.8},
+                {"rank": 4, "word": "SLANK", "percentage": 0.8},
+                {"rank": 5, "word": "SLACK", "percentage": 0.5},
+                {"rank": 6, "word": "SWANG", "percentage": 0.4},
+                {"rank": 7, "word": "SLASH", "percentage": 0.4},
+                {"rank": 8, "word": "SLABS", "percentage": 0.3},
+                {"rank": 9, "word": "SLAMS", "percentage": 0.3},
+                {"rank": 10, "word": "CLANG", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "SLANG", "percentage": 98.3},
+                {"rank": 2, "word": "SLANT", "percentage": 0.2},
+                {"rank": 3, "word": "SLANK", "percentage": 0.2},
+                {"rank": 4, "word": "SLAIN", "percentage": 0.1},
+                {"rank": 5, "word": "SLABS", "percentage": 0.1},
+                {"rank": 6, "word": "SLACK", "percentage": 0.1},
+                {"rank": 7, "word": "SLAMS", "percentage": 0.1},
+                {"rank": 8, "word": "SLASH", "percentage": 0.1},
+                {"rank": 9, "word": "SLAYS", "percentage": 0.1},
+                {"rank": 10, "word": "SLAGS", "percentage": 0.1}
+            ]
+        }
+    },
+    "WITCH": {
+        "average_turns": 4.5,
+        "optimal_solution": ["CRANE", "SPOIL", "WHICH", "WITCH"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.2},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.3},
+                {"rank": 4, "word": "RAISE", "percentage": 2.7},
+                {"rank": 5, "word": "CRANE", "percentage": 2.7},
+                {"rank": 6, "word": "SLATE", "percentage": 2.5},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "THINK", "percentage": 2.5},
+                {"rank": 2, "word": "WITCH", "percentage": 2.4},
+                {"rank": 3, "word": "PITCH", "percentage": 1.9},
+                {"rank": 4, "word": "TOUCH", "percentage": 1.8},
+                {"rank": 5, "word": "POINT", "percentage": 1.7},
+                {"rank": 6, "word": "THING", "percentage": 1.2},
+                {"rank": 7, "word": "STICK", "percentage": 1.2},
+                {"rank": 8, "word": "PINCH", "percentage": 1.1},
+                {"rank": 9, "word": "THICK", "percentage": 1.1},
+                {"rank": 10, "word": "TRICK", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "WITCH", "percentage": 15.5},
+                {"rank": 2, "word": "PITCH", "percentage": 9.9},
+                {"rank": 3, "word": "DITCH", "percentage": 5.2},
+                {"rank": 4, "word": "HITCH", "percentage": 4.4},
+                {"rank": 5, "word": "THICK", "percentage": 2.7},
+                {"rank": 6, "word": "BITCH", "percentage": 2.0},
+                {"rank": 7, "word": "WIDTH", "percentage": 1.8},
+                {"rank": 8, "word": "FILTH", "percentage": 1.6},
+                {"rank": 9, "word": "PITHY", "percentage": 1.6},
+                {"rank": 10, "word": "WITTY", "percentage": 1.6}
+            ],
+            "4": [
+                {"rank": 1, "word": "WITCH", "percentage": 45.6},
+                {"rank": 2, "word": "PITCH", "percentage": 11.3},
+                {"rank": 3, "word": "DITCH", "percentage": 9.3},
+                {"rank": 4, "word": "HITCH", "percentage": 8.9},
+                {"rank": 5, "word": "BITCH", "percentage": 3.1},
+                {"rank": 6, "word": "WIDTH", "percentage": 1.1},
+                {"rank": 7, "word": "FIFTH", "percentage": 1.1},
+                {"rank": 8, "word": "WITTY", "percentage": 0.8},
+                {"rank": 9, "word": "FITCH", "percentage": 0.7},
+                {"rank": 10, "word": "PITHY", "percentage": 0.6}
+            ],
+            "5": [
+                {"rank": 1, "word": "WITCH", "percentage": 74.8},
+                {"rank": 2, "word": "DITCH", "percentage": 6.2},
+                {"rank": 3, "word": "PITCH", "percentage": 5.5},
+                {"rank": 4, "word": "HITCH", "percentage": 5.1},
+                {"rank": 5, "word": "BITCH", "percentage": 2.2},
+                {"rank": 6, "word": "FITCH", "percentage": 0.6},
+                {"rank": 7, "word": "MITCH", "percentage": 0.5},
+                {"rank": 8, "word": "WIDTH", "percentage": 0.3},
+                {"rank": 9, "word": "TITCH", "percentage": 0.3},
+                {"rank": 10, "word": "SITCH", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "WITCH", "percentage": 93.1},
+                {"rank": 2, "word": "DITCH", "percentage": 1.8},
+                {"rank": 3, "word": "HITCH", "percentage": 1.5},
+                {"rank": 4, "word": "PITCH", "percentage": 1.3},
+                {"rank": 5, "word": "BITCH", "percentage": 0.8},
+                {"rank": 6, "word": "FITCH", "percentage": 0.4},
+                {"rank": 7, "word": "MITCH", "percentage": 0.2},
+                {"rank": 8, "word": "TITCH", "percentage": 0.1},
+                {"rank": 9, "word": "SITCH", "percentage": 0.1},
+                {"rank": 10, "word": "GITCH", "percentage": 0.1}
+            ]
+        }
+    },
+    "BROWN": {
+        "average_turns": 4.2,
+        "optimal_solution": ["CRANE", "GIBED", "BROWN"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.3},
+                {"rank": 4, "word": "CRANE", "percentage": 2.7},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "BROWN", "percentage": 4.1},
+                {"rank": 2, "word": "PROUD", "percentage": 3.8},
+                {"rank": 3, "word": "ROUND", "percentage": 2.8},
+                {"rank": 4, "word": "CROWN", "percentage": 2.1},
+                {"rank": 5, "word": "STORY", "percentage": 1.7},
+                {"rank": 6, "word": "GROIN", "percentage": 1.6},
+                {"rank": 7, "word": "GROWN", "percentage": 1.4},
+                {"rank": 8, "word": "FROWN", "percentage": 1.3},
+                {"rank": 9, "word": "DROWN", "percentage": 1.0},
+                {"rank": 10, "word": "CHOIR", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "BROWN", "percentage": 21.4},
+                {"rank": 2, "word": "CROWN", "percentage": 7.8},
+                {"rank": 3, "word": "FROWN", "percentage": 7.3},
+                {"rank": 4, "word": "GROWN", "percentage": 5.7},
+                {"rank": 5, "word": "DROWN", "percentage": 3.3},
+                {"rank": 6, "word": "WRONG", "percentage": 3.2},
+                {"rank": 7, "word": "BROOM", "percentage": 2.6},
+                {"rank": 8, "word": "GROIN", "percentage": 1.9},
+                {"rank": 9, "word": "CROON", "percentage": 1.5},
+                {"rank": 10, "word": "PRONG", "percentage": 1.3}
+            ],
+            "4": [
+                {"rank": 1, "word": "BROWN", "percentage": 48.9},
+                {"rank": 2, "word": "FROWN", "percentage": 11.6},
+                {"rank": 3, "word": "CROWN", "percentage": 7.9},
+                {"rank": 4, "word": "GROWN", "percentage": 6.7},
+                {"rank": 5, "word": "DROWN", "percentage": 4.1},
+                {"rank": 6, "word": "WRONG", "percentage": 2.2},
+                {"rank": 7, "word": "BROOM", "percentage": 1.8},
+                {"rank": 8, "word": "CROON", "percentage": 1.2},
+                {"rank": 9, "word": "GROIN", "percentage": 0.6},
+                {"rank": 10, "word": "BROTH", "percentage": 0.5}
+            ],
+            "5": [
+                {"rank": 1, "word": "BROWN", "percentage": 76.3},
+                {"rank": 2, "word": "FROWN", "percentage": 7.0},
+                {"rank": 3, "word": "GROWN", "percentage": 4.1},
+                {"rank": 4, "word": "CROWN", "percentage": 4.1},
+                {"rank": 5, "word": "DROWN", "percentage": 3.1},
+                {"rank": 6, "word": "BROOM", "percentage": 0.5},
+                {"rank": 7, "word": "WRONG", "percentage": 0.5},
+                {"rank": 8, "word": "BROWS", "percentage": 0.3},
+                {"rank": 9, "word": "BROCK", "percentage": 0.2},
+                {"rank": 10, "word": "BROIL", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "BROWN", "percentage": 94.7},
+                {"rank": 2, "word": "FROWN", "percentage": 1.5},
+                {"rank": 3, "word": "GROWN", "percentage": 1.0},
+                {"rank": 4, "word": "CROWN", "percentage": 1.0},
+                {"rank": 5, "word": "DROWN", "percentage": 0.9},
+                {"rank": 6, "word": "BROOM", "percentage": 0.1},
+                {"rank": 7, "word": "BROWS", "percentage": 0.1},
+                {"rank": 8, "word": "WRONG", "percentage": 0.1},
+                {"rank": 9, "word": "BROIL", "percentage": 0.1},
+                {"rank": 10, "word": "BROCK", "percentage": 0.1}
+            ]
+        }
+    },
+    "TWIST": {
+        "average_turns": 3.8,
+        "optimal_solution": ["CRANE", "SLOTH", "MIDST", "TWIST"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 4.7},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.2},
+                {"rank": 4, "word": "RAISE", "percentage": 2.8},
+                {"rank": 5, "word": "SLATE", "percentage": 2.6},
+                {"rank": 6, "word": "CRANE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "MOIST", "percentage": 3.5},
+                {"rank": 2, "word": "TWIST", "percentage": 3.3},
+                {"rank": 3, "word": "POINT", "percentage": 2.0},
+                {"rank": 4, "word": "HOIST", "percentage": 1.7},
+                {"rank": 5, "word": "THINK", "percentage": 1.6},
+                {"rank": 6, "word": "GHOST", "percentage": 1.3},
+                {"rank": 7, "word": "WRIST", "percentage": 1.3},
+                {"rank": 8, "word": "FIRST", "percentage": 1.2},
+                {"rank": 9, "word": "STICK", "percentage": 1.1},
+                {"rank": 10, "word": "THING", "percentage": 0.9}
+            ],
+            "3": [
+                {"rank": 1, "word": "TWIST", "percentage": 27.9},
+                {"rank": 2, "word": "WRIST", "percentage": 5.0},
+                {"rank": 3, "word": "WHIST", "percentage": 4.7},
+                {"rank": 4, "word": "MOIST", "percentage": 3.1},
+                {"rank": 5, "word": "BLIST", "percentage": 2.2},
+                {"rank": 6, "word": "SWIFT", "percentage": 1.3},
+                {"rank": 7, "word": "HOIST", "percentage": 1.3},
+                {"rank": 8, "word": "SHIFT", "percentage": 1.2},
+                {"rank": 9, "word": "TRIST", "percentage": 1.1},
+                {"rank": 10, "word": "GRIST", "percentage": 1.1}
+            ],
+            "4": [
+                {"rank": 1, "word": "TWIST", "percentage": 68.1},
+                {"rank": 2, "word": "WHIST", "percentage": 4.6},
+                {"rank": 3, "word": "WRIST", "percentage": 2.5},
+                {"rank": 4, "word": "BLIST", "percentage": 1.9},
+                {"rank": 5, "word": "QUIST", "percentage": 1.4},
+                {"rank": 6, "word": "MOIST", "percentage": 1.4},
+                {"rank": 7, "word": "SWIFT", "percentage": 1.1},
+                {"rank": 8, "word": "WAIST", "percentage": 0.9},
+                {"rank": 9, "word": "TRIST", "percentage": 0.7},
+                {"rank": 10, "word": "TWIGS", "percentage": 0.5}
+            ],
+            "5": [
+                {"rank": 1, "word": "TWIST", "percentage": 91.6},
+                {"rank": 2, "word": "WHIST", "percentage": 1.3},
+                {"rank": 3, "word": "QUIST", "percentage": 0.7},
+                {"rank": 4, "word": "WRIST", "percentage": 0.6},
+                {"rank": 5, "word": "BLIST", "percentage": 0.5},
+                {"rank": 6, "word": "WAIST", "percentage": 0.4},
+                {"rank": 7, "word": "MOIST", "percentage": 0.3},
+                {"rank": 8, "word": "EXIST", "percentage": 0.3},
+                {"rank": 9, "word": "SWIFT", "percentage": 0.2},
+                {"rank": 10, "word": "JOIST", "percentage": 0.2}
+            ],
+            "6": [
+                {"rank": 1, "word": "TWIST", "percentage": 98.3},
+                {"rank": 2, "word": "WHIST", "percentage": 0.2},
+                {"rank": 3, "word": "WRIST", "percentage": 0.1},
+                {"rank": 4, "word": "QUIST", "percentage": 0.1},
+                {"rank": 5, "word": "EXIST", "percentage": 0.1},
+                {"rank": 6, "word": "WAIST", "percentage": 0.1},
+                {"rank": 7, "word": "BLIST", "percentage": 0.1},
+                {"rank": 8, "word": "MOIST", "percentage": 0.1},
+                {"rank": 9, "word": "JOIST", "percentage": 0.1},
+                {"rank": 10, "word": "VISIT", "percentage": 0.1}
+            ]
+        }
+    },
+    "PEARL": {
+        "average_turns": 3.5,
+        "optimal_solution": ["CRANE", "BADLY", "PEARL"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.3},
+                {"rank": 2, "word": "STARE", "percentage": 4.9},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "CRANE", "percentage": 2.7},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "HEART", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "PEARL", "percentage": 7.8},
+                {"rank": 2, "word": "LEARN", "percentage": 4.9},
+                {"rank": 3, "word": "REACH", "percentage": 3.0},
+                {"rank": 4, "word": "READY", "percentage": 2.1},
+                {"rank": 5, "word": "BEARD", "percentage": 1.8},
+                {"rank": 6, "word": "REALM", "percentage": 1.7},
+                {"rank": 7, "word": "WEARY", "percentage": 1.4},
+                {"rank": 8, "word": "HEART", "percentage": 1.4},
+                {"rank": 9, "word": "STARE", "percentage": 1.3}
+            ],
+            "3": [
+                {"rank": 1, "word": "PEARL", "percentage": 40.2},
+                {"rank": 2, "word": "LEARN", "percentage": 8.1},
+                {"rank": 3, "word": "WEARY", "percentage": 3.0},
+                {"rank": 4, "word": "LEARY", "percentage": 2.6},
+                {"rank": 5, "word": "REALM", "percentage": 2.1},
+                {"rank": 6, "word": "BEARD", "percentage": 1.8},
+                {"rank": 7, "word": "PEARS", "percentage": 1.7},
+                {"rank": 8, "word": "REACH", "percentage": 1.2},
+                {"rank": 9, "word": "HEART", "percentage": 1.2},
+                {"rank": 10, "word": "PEALS", "percentage": 1.2}
+            ],
+            "4": [
+                {"rank": 1, "word": "PEARL", "percentage": 77.6},
+                {"rank": 2, "word": "LEARN", "percentage": 5.3},
+                {"rank": 3, "word": "LEARY", "percentage": 1.8},
+                {"rank": 4, "word": "WEARY", "percentage": 1.6},
+                {"rank": 5, "word": "PEARS", "percentage": 0.8},
+                {"rank": 6, "word": "BEARD", "percentage": 0.8},
+                {"rank": 7, "word": "REALM", "percentage": 0.6},
+                {"rank": 8, "word": "HEART", "percentage": 0.5},
+                {"rank": 9, "word": "HEARD", "percentage": 0.4},
+                {"rank": 10, "word": "PEART", "percentage": 0.3}
+            ],
+            "5": [
+                {"rank": 1, "word": "PEARL", "percentage": 95.0},
+                {"rank": 2, "word": "LEARN", "percentage": 1.4},
+                {"rank": 3, "word": "LEARY", "percentage": 0.4},
+                {"rank": 4, "word": "WEARY", "percentage": 0.3},
+                {"rank": 5, "word": "PEARS", "percentage": 0.2},
+                {"rank": 6, "word": "BEARD", "percentage": 0.2},
+                {"rank": 7, "word": "PEARE", "percentage": 0.1},
+                {"rank": 8, "word": "PEART", "percentage": 0.1},
+                {"rank": 9, "word": "HEART", "percentage": 0.1},
+                {"rank": 10, "word": "REALM", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "PEARL", "percentage": 99.2},
+                {"rank": 2, "word": "LEARN", "percentage": 0.2},
+                {"rank": 3, "word": "WEARY", "percentage": 0.1},
+                {"rank": 4, "word": "PEARE", "percentage": 0.1},
+                {"rank": 5, "word": "LEARY", "percentage": 0.1},
+                {"rank": 6, "word": "PEARS", "percentage": 0.1},
+                {"rank": 7, "word": "BEARD", "percentage": 0.1},
+                {"rank": 8, "word": "PEART", "percentage": 0.1},
+                {"rank": 9, "word": "HEARD", "percentage": 0.1},
+                {"rank": 10, "word": "HEART", "percentage": 0.1}
+            ]
+        }
+    },
+    "SPINE": {
+        "average_turns": 3.5,
+        "optimal_solution": ["CRANE", "WHIPS", "SPINE"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "STARE", "percentage": 4.9},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "CRANE", "percentage": 2.6},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "SPINE", "percentage": 8.1},
+                {"rank": 2, "word": "SHINE", "percentage": 7.7},
+                {"rank": 3, "word": "SPICE", "percentage": 1.9},
+                {"rank": 4, "word": "SPITE", "percentage": 1.8},
+                {"rank": 5, "word": "SPIKE", "percentage": 1.7},
+                {"rank": 6, "word": "SLIME", "percentage": 1.5},
+                {"rank": 7, "word": "STONE", "percentage": 1.3},
+                {"rank": 8, "word": "SPOKE", "percentage": 1.1},
+                {"rank": 9, "word": "SLICE", "percentage": 1.1},
+                {"rank": 10, "word": "SPIRE", "percentage": 1.0}
+            ],
+            "3": [
+                {"rank": 1, "word": "SPINE", "percentage": 42.3},
+                {"rank": 2, "word": "SHINE", "percentage": 8.2},
+                {"rank": 3, "word": "SPIKE", "percentage": 5.2},
+                {"rank": 4, "word": "SWINE", "percentage": 3.2},
+                {"rank": 5, "word": "SPICE", "percentage": 2.8},
+                {"rank": 6, "word": "SPITE", "percentage": 2.7},
+                {"rank": 7, "word": "SNIPE", "percentage": 2.6},
+                {"rank": 8, "word": "SWIPE", "percentage": 1.7},
+                {"rank": 9, "word": "SPIRE", "percentage": 1.3},
+                {"rank": 10, "word": "SLIME", "percentage": 1.1}
+            ],
+            "4": [
+                {"rank": 1, "word": "SPINE", "percentage": 76.9},
+                {"rank": 2, "word": "SPIKE", "percentage": 3.6},
+                {"rank": 3, "word": "SWINE", "percentage": 2.8},
+                {"rank": 4, "word": "SHINE", "percentage": 2.4},
+                {"rank": 5, "word": "SPICE", "percentage": 1.9},
+                {"rank": 6, "word": "SNIPE", "percentage": 1.5},
+                {"rank": 7, "word": "SPITE", "percentage": 1.4},
+                {"rank": 8, "word": "SWIPE", "percentage": 0.8},
+                {"rank": 9, "word": "SPIRE", "percentage": 0.7},
+                {"rank": 10, "word": "SNIDE", "percentage": 0.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "SPINE", "percentage": 93.6},
+                {"rank": 2, "word": "SPIKE", "percentage": 1.2},
+                {"rank": 3, "word": "SWINE", "percentage": 0.8},
+                {"rank": 4, "word": "SPICE", "percentage": 0.7},
+                {"rank": 5, "word": "SHINE", "percentage": 0.5},
+                {"rank": 6, "word": "SPITE", "percentage": 0.4},
+                {"rank": 7, "word": "SNIPE", "percentage": 0.4},
+                {"rank": 8, "word": "SPIRE", "percentage": 0.3},
+                {"rank": 9, "word": "SEINE", "percentage": 0.1},
+                {"rank": 10, "word": "SPINS", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "SPINE", "percentage": 98.7},
+                {"rank": 2, "word": "SPIKE", "percentage": 0.2},
+                {"rank": 3, "word": "SPICE", "percentage": 0.2},
+                {"rank": 4, "word": "SWINE", "percentage": 0.1},
+                {"rank": 5, "word": "SHINE", "percentage": 0.1},
+                {"rank": 6, "word": "SPITE", "percentage": 0.1},
+                {"rank": 7, "word": "SNIPE", "percentage": 0.1},
+                {"rank": 8, "word": "SPIRE", "percentage": 0.1},
+                {"rank": 9, "word": "SEINE", "percentage": 0.1},
+                {"rank": 10, "word": "SPIDE", "percentage": 0.1}
+            ]
+        }
+    },
+    "NICHE": {
+        "average_turns": 3.6,
+        "optimal_solution": ["CRANE", "HUMPS", "NICHE"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.2},
+                {"rank": 2, "word": "STARE", "percentage": 4.9},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.4},
+                {"rank": 4, "word": "CRANE", "percentage": 2.7},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.4},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "NICHE", "percentage": 3.9},
+                {"rank": 2, "word": "CHIME", "percentage": 2.3},
+                {"rank": 3, "word": "SHINE", "percentage": 1.5},
+                {"rank": 4, "word": "MINCE", "percentage": 1.5},
+                {"rank": 5, "word": "CLONE", "percentage": 1.2},
+                {"rank": 6, "word": "PIECE", "percentage": 1.1},
+                {"rank": 7, "word": "NIECE", "percentage": 1.0},
+                {"rank": 8, "word": "HINGE", "percentage": 0.8},
+                {"rank": 9, "word": "SINCE", "percentage": 0.8},
+                {"rank": 10, "word": "CLOUD", "percentage": 0.8}
+            ],
+            "3": [
+                {"rank": 1, "word": "NICHE", "percentage": 34.4},
+                {"rank": 2, "word": "MINCE", "percentage": 3.6},
+                {"rank": 3, "word": "NIECE", "percentage": 3.2},
+                {"rank": 4, "word": "HINGE", "percentage": 3.1},
+                {"rank": 5, "word": "WINCE", "percentage": 2.3},
+                {"rank": 6, "word": "CHIME", "percentage": 2.0},
+                {"rank": 7, "word": "BINGE", "percentage": 1.2},
+                {"rank": 8, "word": "WHINE", "percentage": 1.2},
+                {"rank": 9, "word": "PIECE", "percentage": 1.0},
+                {"rank": 10, "word": "FICHE", "percentage": 0.8}
+            ],
+            "4": [
+                {"rank": 1, "word": "NICHE", "percentage": 76.4},
+                {"rank": 2, "word": "NIECE", "percentage": 2.3},
+                {"rank": 3, "word": "HINGE", "percentage": 1.6},
+                {"rank": 4, "word": "WINCE", "percentage": 1.2},
+                {"rank": 5, "word": "MINCE", "percentage": 1.2},
+                {"rank": 6, "word": "FICHE", "percentage": 0.9},
+                {"rank": 7, "word": "NIGHT", "percentage": 0.5},
+                {"rank": 8, "word": "CHINE", "percentage": 0.5},
+                {"rank": 9, "word": "NICER", "percentage": 0.5},
+                {"rank": 10, "word": "MICHE", "percentage": 0.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "NICHE", "percentage": 94.2},
+                {"rank": 2, "word": "NIECE", "percentage": 0.7},
+                {"rank": 3, "word": "FICHE", "percentage": 0.4},
+                {"rank": 4, "word": "WINCE", "percentage": 0.2},
+                {"rank": 5, "word": "HINGE", "percentage": 0.2},
+                {"rank": 6, "word": "NIGHT", "percentage": 0.2},
+                {"rank": 7, "word": "MICHE", "percentage": 0.2},
+                {"rank": 8, "word": "MINCE", "percentage": 0.2},
+                {"rank": 9, "word": "NICER", "percentage": 0.1},
+                {"rank": 10, "word": "CHINE", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "NICHE", "percentage": 98.7},
+                {"rank": 2, "word": "NIECE", "percentage": 0.1},
+                {"rank": 3, "word": "FICHE", "percentage": 0.1},
+                {"rank": 4, "word": "MICHE", "percentage": 0.1},
+                {"rank": 5, "word": "NIGHT", "percentage": 0.1},
+                {"rank": 6, "word": "WINCE", "percentage": 0.1},
+                {"rank": 7, "word": "HINGE", "percentage": 0.1},
+                {"rank": 8, "word": "MINCE", "percentage": 0.1},
+                {"rank": 9, "word": "NICER", "percentage": 0.1},
+                {"rank": 10, "word": "CHINE", "percentage": 0.1}
+            ]
+        }
+    },
+    "GOING": {
+        "average_turns": 4.2,
+        "optimal_solution": ["CRANE", "GLUTS", "GOING"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.4},
+                {"rank": 2, "word": "STARE", "percentage": 4.8},
+                {"rank": 3, "word": "AUDIO", "percentage": 4.3},
+                {"rank": 4, "word": "CRANE", "percentage": 2.6},
+                {"rank": 5, "word": "RAISE", "percentage": 2.6},
+                {"rank": 6, "word": "SLATE", "percentage": 2.6},
+                {"rank": 7, "word": "ARISE", "percentage": 1.8},
+                {"rank": 8, "word": "TRAIN", "percentage": 1.3},
+                {"rank": 9, "word": "IRATE", "percentage": 1.3},
+                {"rank": 10, "word": "GREAT", "percentage": 0.9}
+            ],
+            "2": [
+                {"rank": 1, "word": "POINT", "percentage": 4.5},
+                {"rank": 2, "word": "GOING", "percentage": 2.3},
+                {"rank": 3, "word": "POUND", "percentage": 2.1},
+                {"rank": 4, "word": "CLOUD", "percentage": 2.0},
+                {"rank": 5, "word": "SOUND", "percentage": 1.1},
+                {"rank": 6, "word": "THINK", "percentage": 1.1},
+                {"rank": 7, "word": "MOUND", "percentage": 1.1},
+                {"rank": 8, "word": "ROUND", "percentage": 0.9},
+                {"rank": 9, "word": "BLINK", "percentage": 0.8},
+                {"rank": 10, "word": "PROUD", "percentage": 0.8}
+            ],
+            "3": [
+                {"rank": 1, "word": "GOING", "percentage": 19.5},
+                {"rank": 2, "word": "DOING", "percentage": 5.4},
+                {"rank": 3, "word": "BOING", "percentage": 4.8},
+                {"rank": 4, "word": "POINT", "percentage": 4.4},
+                {"rank": 5, "word": "BOINK", "percentage": 2.6},
+                {"rank": 6, "word": "JOINT", "percentage": 2.0},
+                {"rank": 7, "word": "COINS", "percentage": 1.7},
+                {"rank": 8, "word": "FLING", "percentage": 1.7},
+                {"rank": 9, "word": "BRING", "percentage": 1.3},
+                {"rank": 10, "word": "ONION", "percentage": 1.3}
+            ],
+            "4": [
+                {"rank": 1, "word": "GOING", "percentage": 53.6},
+                {"rank": 2, "word": "BOING", "percentage": 7.3},
+                {"rank": 3, "word": "DOING", "percentage": 7.2},
+                {"rank": 4, "word": "BOINK", "percentage": 2.8},
+                {"rank": 5, "word": "POINT", "percentage": 2.0},
+                {"rank": 6, "word": "JOINT", "percentage": 1.7},
+                {"rank": 7, "word": "OWING", "percentage": 1.0},
+                {"rank": 8, "word": "COINS", "percentage": 1.0},
+                {"rank": 9, "word": "FLING", "percentage": 0.9},
+                {"rank": 10, "word": "SWING", "percentage": 0.7}
+            ],
+            "5": [
+                {"rank": 1, "word": "GOING", "percentage": 82.1},
+                {"rank": 2, "word": "BOING", "percentage": 3.8},
+                {"rank": 3, "word": "DOING", "percentage": 3.7},
+                {"rank": 4, "word": "BOINK", "percentage": 0.8},
+                {"rank": 5, "word": "JOINT", "percentage": 0.7},
+                {"rank": 6, "word": "HOING", "percentage": 0.7},
+                {"rank": 7, "word": "OWING", "percentage": 0.6},
+                {"rank": 8, "word": "POINT", "percentage": 0.5},
+                {"rank": 9, "word": "COINS", "percentage": 0.3},
+                {"rank": 10, "word": "VYING", "percentage": 0.3}
+            ],
+            "6": [
+                {"rank": 1, "word": "GOING", "percentage": 95.7},
+                {"rank": 2, "word": "BOING", "percentage": 0.9},
+                {"rank": 3, "word": "DOING", "percentage": 0.9},
+                {"rank": 4, "word": "HOING", "percentage": 0.4},
+                {"rank": 5, "word": "JOINT", "percentage": 0.2},
+                {"rank": 6, "word": "OWING", "percentage": 0.2},
+                {"rank": 7, "word": "BOINK", "percentage": 0.2},
+                {"rank": 8, "word": "VYING", "percentage": 0.1},
+                {"rank": 9, "word": "POINT", "percentage": 0.1},
+                {"rank": 10, "word": "COINS", "percentage": 0.1}
+            ]
+        }
+    },
+    "BOAST": {
+        "average_turns": 3.7,
+        "optimal_solution": ["CRANE", "SPLIT", "BOAST"],
+        "turn_data": {
+            "1": [
+                {"rank": 1, "word": "ADIEU", "percentage": 7.5},
+                {"rank": 2, "word": "AUDIO", "percentage": 5.4},
+                {"rank": 3, "word": "STARE", "percentage": 4.6},
+                {"rank": 4, "word": "RAISE", "percentage": 3.1},
+                {"rank": 5, "word": "CRANE", "percentage": 2.4},
+                {"rank": 6, "word": "ARISE", "percentage": 2.0},
+                {"rank": 7, "word": "SLATE", "percentage": 1.5},
+                {"rank": 8, "word": "IRATE", "percentage": 1.2},
+                {"rank": 9, "word": "TRAIN", "percentage": 1.2},
+                {"rank": 10, "word": "HOUSE", "percentage": 1.1}
+            ],
+            "2": [
+                {"rank": 1, "word": "BLAST", "percentage": 8.3},
+                {"rank": 2, "word": "BOAST", "percentage": 5.0},
+                {"rank": 3, "word": "TOAST", "percentage": 2.8},
+                {"rank": 4, "word": "ROAST", "percentage": 2.2},
+                {"rank": 5, "word": "COAST", "percentage": 2.1},
+                {"rank": 6, "word": "PLANT", "percentage": 1.9},
+                {"rank": 7, "word": "STAMP", "percentage": 1.8},
+                {"rank": 8, "word": "TRASH", "percentage": 1.2},
+                {"rank": 9, "word": "STAIN", "percentage": 1.1},
+                {"rank": 10, "word": "BOATS", "percentage": 0.9}
+            ],
+            "3": [
+                {"rank": 1, "word": "BOAST", "percentage": 34.1},
+                {"rank": 2, "word": "TOAST", "percentage": 10.5},
+                {"rank": 3, "word": "BLAST", "percentage": 8.5},
+                {"rank": 4, "word": "COAST", "percentage": 5.9},
+                {"rank": 5, "word": "ROAST", "percentage": 3.2},
+                {"rank": 6, "word": "BOATS", "percentage": 1.7},
+                {"rank": 7, "word": "BEAST", "percentage": 1.4},
+                {"rank": 8, "word": "GHAST", "percentage": 1.0},
+                {"rank": 9, "word": "SHAFT", "percentage": 0.8},
+                {"rank": 10, "word": "BOOST", "percentage": 0.8}
+            ],
+            "4": [
+                {"rank": 1, "word": "BOAST", "percentage": 71.4},
+                {"rank": 2, "word": "TOAST", "percentage": 7.4},
+                {"rank": 3, "word": "COAST", "percentage": 5.2},
+                {"rank": 4, "word": "BLAST", "percentage": 2.6},
+                {"rank": 5, "word": "ROAST", "percentage": 2.3},
+                {"rank": 6, "word": "BEAST", "percentage": 0.8},
+                {"rank": 7, "word": "BOATS", "percentage": 0.7},
+                {"rank": 8, "word": "BOOST", "percentage": 0.6},
+                {"rank": 9, "word": "GHAST", "percentage": 0.5},
+                {"rank": 10, "word": "AGAST", "percentage": 0.4}
+            ],
+            "5": [
+                {"rank": 1, "word": "BOAST", "percentage": 92.4},
+                {"rank": 2, "word": "TOAST", "percentage": 2.3},
+                {"rank": 3, "word": "COAST", "percentage": 1.9},
+                {"rank": 4, "word": "ROAST", "percentage": 0.7},
+                {"rank": 5, "word": "BLAST", "percentage": 0.3},
+                {"rank": 6, "word": "HOAST", "percentage": 0.3},
+                {"rank": 7, "word": "BOATS", "percentage": 0.2},
+                {"rank": 8, "word": "BOOST", "percentage": 0.2},
+                {"rank": 9, "word": "BEAST", "percentage": 0.1},
+                {"rank": 10, "word": "AVAST", "percentage": 0.1}
+            ],
+            "6": [
+                {"rank": 1, "word": "BOAST", "percentage": 98.8},
+                {"rank": 2, "word": "COAST", "percentage": 0.4},
+                {"rank": 3, "word": "TOAST", "percentage": 0.3},
+                {"rank": 4, "word": "ROAST", "percentage": 0.1},
+                {"rank": 5, "word": "HOAST", "percentage": 0.1},
+                {"rank": 6, "word": "BLAST", "percentage": 0.1},
+                {"rank": 7, "word": "LOAST", "percentage": 0.1},
+                {"rank": 8, "word": "BOOST", "percentage": 0.1},
+                {"rank": 9, "word": "BOATS", "percentage": 0.1},
+                {"rank": 10, "word": "BEAST", "percentage": 0.1}
+            ]
+        }
+    }
+}
