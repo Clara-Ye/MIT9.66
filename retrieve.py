@@ -187,6 +187,44 @@ def process_hints(green_letters, yellow_letters, word_length):
     return word_stem_keys
 
 
+def generate_random_word(green_letters, yellow_letters, gray_letters, target_length):
+    """
+    Generates a random word avoiding gray letters and invalid yellow positions.
+
+    Args:
+        green_letters (list): Exact matches (green hints) with positions.
+        yellow_letters (dict): Misplaced letters as {char: set(invalid_positions)}.
+        gray_letters (set): Letters not in the target word (gray hints).
+        target_length (int): Length of the target word.
+
+    Returns:
+        str: A randomly generated word following the constraints.
+    """
+    valid_chars = []
+
+    # Create a pool of valid characters for each position
+    for i in range(target_length):
+        # Start with all alphabetic characters
+        pool = set(string.ascii_uppercase)
+
+        # Exclude green and gray letters
+        pool -= set(green_letters)
+        pool -= gray_letters
+
+        # Exclude yellow letters in invalid positions
+        for char, invalid_positions in yellow_letters.items():
+            if (i in invalid_positions) and (char in pool):
+                pool.remove(char)
+
+        # Add the filtered pool for this position
+        valid_chars.append(pool)
+
+    # Generate the random word
+    random_word = ''.join(random.choice(list(chars)) for chars in valid_chars)
+
+    return random_word
+
+
 def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, associations, searched_words=None, prob_threshold=0.001, valid_threshold=1e-6, pos_penalty=0.3, start_strategy="vowels"):
     """
     Loops until the correct answer is found using the retrieve_next_valid_parallel function.
@@ -248,15 +286,9 @@ def find_answer(green_letters, yellow_letters, gray_letters, ground_truth, assoc
             print(f"Word matching most of the hints found after {len(searched_words)} attempts: {next_word}")
             return next_word, searched_words
 
-        # No valid word found; use a random length-matching word
-        for i, word in enumerate(sorted_words):
-            if (len(word) == target_length) and (probs[i] >= prob_threshold):
-                print(f"No reasonably valid word found; choosing a length-matching word: {word}")
-                return word, searched_words
-
-        # No recallable word has matching target length; use random alphabetical characters
-        random_string = ''.join(random.sample(string.ascii_uppercase, target_length))
-        print(f"No recallable word has matching target length; using random string: {random_string}")
+        # No reasonable word found; use random alphabetical characters
+        random_string = generate_random_word(green_letters, yellow_letters, gray_letters, target_length)
+        print(f"No reasonable word given the hints found; using random string: {random_string}")
         return random_string, searched_words
 
 
