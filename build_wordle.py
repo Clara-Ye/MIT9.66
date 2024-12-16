@@ -100,21 +100,21 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6,
             attempts -= 1
             continue
 
-        # Check if the guess is correct
-        if (guess == ground_truth):
-            print(f"Congratulations! You guessed the correct word: {ground_truth}\n")
-            return guess_list
-
         # Record guess to avoid repeating attempts
         searched_words.add(guess)
         guess_list.append(guess)
+
+        # Check if the guess is correct
+        if (guess == ground_truth):
+            print(f"Congratulations! You guessed the correct word: {ground_truth}\n")
+            return guess_list, True
 
         # Check for exact matches
         new_green_letters = [
             g if (g == t) else None for g, t in zip(guess, ground_truth)]
         green_letters = [
             old or new for old, new in zip(green_letters, new_green_letters)]
-        print(f"Exact matches (green): {green_letters}")
+        #print(f"Exact matches (green): {green_letters}")
 
         # Check for misplaced (yellow) and missed letters (gray)
         for i, char in enumerate(guess):
@@ -122,13 +122,13 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6,
                 yellow_letters.setdefault(char, set()).add(i)
             elif (char not in ground_truth):
                 gray_letters.add(char)
-        print(f"Yellow letters (misplaced): {yellow_letters}")
-        print(f"Gray letters (not in word): {gray_letters}")
+        #print(f"Yellow letters (misplaced): {yellow_letters}")
+        #print(f"Gray letters (not in word): {gray_letters}")
 
     # Reveal the answer if all attempts are exhausted
     print(f"Sorry, you've used all {attempt_limit} attempts. The correct word was: {ground_truth}\n")
 
-    return guess_list
+    return guess_list, False
 
 
 if __name__ == "__main__":

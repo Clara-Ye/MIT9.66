@@ -55,6 +55,7 @@ __pycache__/
 *.pid.lock
 
 # Other
-*.json
+data/word_associations*.json
+test.json
 *.txt
 *.pdf

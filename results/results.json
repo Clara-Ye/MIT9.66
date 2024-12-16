@@ -1,0 +1,4138 @@
+{
+    "associations00_vowels": {
+        "DROOL": {
+            "guesses": [
+                "ADIEU",
+                "DRESS",
+                "FROCK",
+                "DOWNY",
+                "DROLL",
+                "VJJZQ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "BEING",
+                "STILL",
+                "RXZVF",
+                "QQPMK"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "AUDIO",
+                "UNCLE",
+                "TRUTH",
+                "ACUTE",
+                "BLUFF",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "ADIEU",
+                "GAZXC",
+                "FIYIM",
+                "TAKEN",
+                "HABIT",
+                "OASIS"
+            ],
+            "success": false
+        },
+        "FLUNG": {
+            "guesses": [
+                "ADIEU",
+                "YOUNG",
+                "CZLKW",
+                "TRUNK",
+                "SWUNG",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "ADIEU",
+                "LENFZ",
+                "NPWSR",
+                "AGENT",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "AUDIO",
+                "P+ERE",
+                "MPXTH",
+                "FAULT",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "ADIEU",
+                "QJRCB",
+                "YYKSS",
+                "THESE",
+                "FALSE",
+                "GAUGE"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "ADIEU",
+                "HZCAR",
+                "DOLLY",
+                "TABOO",
+                "DIANA",
+                "DODGE"
+            ],
+            "success": false
+        },
+        "HIPPO": {
+            "guesses": [
+                "AUDIO",
+                "KBLKX",
+                "WHICH",
+                "MERIT",
+                "HGZHZ",
+                "VVSNN"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "AUDIO",
+                "MMGVC",
+                "STORY",
+                "HENCE",
+                "FLOOD",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "AUDIO",
+                "MARRY",
+                "PLACE",
+                "THANK",
+                "BLANC",
+                "CLANG"
+            ],
+            "success": false
+        },
+        "WITCH": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "TGVZK",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "AUDIO",
+                "EGCPX",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "ADIEU",
+                "WHICH",
+                "STILL",
+                "PAINT",
+                "MOTIF",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "AUDIO",
+                "MARRY",
+                "ZXVTZ",
+                "PLACE",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "BEING",
+                "FRILL",
+                "SLEEK",
+                "SEIZE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "ADIEU",
+                "LZVNB",
+                "NHYMF",
+                "SCORE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "ADIEU",
+                "WHICH",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "ADIEU",
+                "MARRY",
+                "BLACK",
+                "CHAIN",
+                "STAFF",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations00_optimal": {
+        "DROOL": {
+            "guesses": [
+                "SLATE",
+                "LIGHT",
+                "WOULD",
+                "CLOCK",
+                "PROXY",
+                "ZBNDQ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "CRANE",
+                "THING",
+                "EXILE",
+                "PRIOR",
+                "SEINE",
+                "DYING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "SLATE",
+                "FLOOR",
+                "CLIMB",
+                "MUMMY",
+                "LLAMA",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "TRACE",
+                "UMPGZ",
+                "WNQNO",
+                "FAITH",
+                "NATAL",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "SLATE",
+                "FLOOR",
+                "FUNNY",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "SLATE",
+                "PUXEB",
+                "DRESS",
+                "FOUND",
+                "EDWIN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "TRACE",
+                "UXMQS",
+                "DPJWZ",
+                "PRONG",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "CRANE",
+                "PWFTF",
+                "WHOLE",
+                "ISSUE",
+                "MUDDY",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "TRACE",
+                "JOUGV",
+                "YKLXG",
+                "WEIGH",
+                "BONNY",
+                "MEDEA"
+            ],
+            "success": false
+        },
+        "HIPPO": {
+            "guesses": [
+                "CRANE",
+                "OUTDO",
+                "POLLY",
+                "WJFHQ",
+                "HVXZH",
+                "GSBBB"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "TRACE",
+                "WHICH",
+                "SHOOK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "SLATE",
+                "ALONG",
+                "CURMQ",
+                "BAKER",
+                "SHINY",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "CRANE",
+                "CLOUD",
+                "WHICH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "SLATE",
+                "P+ERE",
+                "RIGHT",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "TRACE",
+                "THING",
+                "BUILD",
+                "SKILL",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "CRANE",
+                "VIRLR",
+                "OPXPM",
+                "PEARY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "TRACE",
+                "HOUSE",
+                "BELLE",
+                "FISKE",
+                "WILDE",
+                "SHINE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "TRACE",
+                "NVBKQ",
+                "ZFLGM",
+                "GUIDE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "SLATE",
+                "BANJO",
+                "DRXCZ",
+                "WRING",
+                "YOUNG",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "TRACE",
+                "GLASS",
+                "BWZVM",
+                "SPAIN",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations00_popular": {
+        "DROOL": {
+            "guesses": [
+                "RAISE",
+                "BROWN",
+                "MOODY",
+                "BROOD",
+                "CROOK",
+                "DROOP"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "HOUSE",
+                "X-RAY",
+                "LYING",
+                "DYING",
+                "ZKCKC",
+                "BVPMB"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "RAISE",
+                "BANJO",
+                "BUILD",
+                "BELLE",
+                "CLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "STARE",
+                "KAWYK",
+                "TOUCH",
+                "LATIN",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "STARE",
+                "BOOZE",
+                "HAPPY",
+                "BLUFF",
+                "CLICK",
+                "GLENN"
+            ],
+            "success": false
+        },
+        "ENDOW": {
+            "guesses": [
+                "TRAIN",
+                "BOQBG",
+                "ODDLY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "AROSE",
+                "GREEN",
+                "DRIVE",
+                "TRUTH",
+                "ADMIT",
+                "FRUIT"
+            ],
+            "success": false
+        },
+        "MAUVE": {
+            "guesses": [
+                "RAISE",
+                "ABOUT",
+                "KVDKK",
+                "GAUNT",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "TRAIN",
+                "UCEFO",
+                "MGSXH",
+                "DROVE",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "GREAT",
+                "HOKUM",
+                "ODDLY",
+                "PIANO",
+                "WQXJQ",
+                "VPCCZ"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "STEAM",
+                "OUTDO",
+                "GOING",
+                "COLOR",
+                "TROTH",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "ARISE",
+                "SVOFX",
+                "HAQDD",
+                "STUCK",
+                "SLYLY",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "STEAM",
+                "THING",
+                "BXHRU",
+                "SPORT",
+                "HILLY",
+                "CIVIC"
+            ],
+            "success": false
+        },
+        "BROWN": {
+            "guesses": [
+                "RAISE",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "DREAM",
+                "SWUNG",
+                "ISLET",
+                "THEFT",
+                "TIPSY",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "ARISE",
+                "EXZJJ",
+                "PFAGL",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "IRATE",
+                "BUMLS",
+                "HICXQ",
+                "TEASE",
+                "SPILL",
+                "SPIKE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "HEART",
+                "CYWXE",
+                "BVOUG",
+                "MINCE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "STARE",
+                "BANJO",
+                "YWUYN",
+                "CHINK",
+                "FOUND",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "RAISE",
+                "ABOUT",
+                "PLQVK",
+                "MANGO",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations00_random": {
+        "DROOL": {
+            "guesses": [
+                "WOLFE",
+                "RHJBX",
+                "MSSPO",
+                "DRYAD",
+                "CROON",
+                "QTQIZ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "GUILD",
+                "POINT",
+                "SKIES",
+                "GULLY",
+                "BRINE",
+                "MFXXX"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "PARRY",
+                "POINT",
+                "PLUMP",
+                "POSSE",
+                "PLUCK",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "INFER",
+                "MIGHT",
+                "VOWQJ",
+                "OPTIC",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "QUOTH",
+                "UNDER",
+                "NUBIA",
+                "CANAL",
+                "JELLY",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "WOMEN",
+                "REORS",
+                "FDPZO",
+                "CANAL",
+                "GUIDE",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "PIOUS",
+                "PLACE",
+                "CHINA",
+                "POPPY",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "TABOR",
+                "LAUGH",
+                "EQUIP",
+                "FANCY",
+                "DWELL",
+                "JAMES"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "HEDGE",
+                "XOWBV",
+                "JOINT",
+                "POLLY",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "CACHE",
+                "THING",
+                "HOKUM",
+                "DROSS",
+                "XJJFZ",
+                "QLPII"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "SHEAF",
+                "WHICH",
+                "ALACK",
+                "THUMB",
+                "RHINE",
+                "SHOCK"
+            ],
+            "success": false
+        },
+        "SLANG": {
+            "guesses": [
+                "TABOR",
+                "ALONE",
+                "DYING",
+                "FLOWN",
+                "SMASH",
+                "SCALP"
+            ],
+            "success": false
+        },
+        "WITCH": {
+            "guesses": [
+                "CLASP",
+                "CROWD",
+                "WHICH",
+                "WENCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "ALTAR",
+                "IEPGX",
+                "CARRY",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "DUMAS",
+                "QTQGE",
+                "THICK",
+                "SWELL",
+                "SPOON",
+                "TWIRL"
+            ],
+            "success": false
+        },
+        "PEARL": {
+            "guesses": [
+                "CHANT",
+                "LEAVE",
+                "PDIUQ",
+                "WOOLY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "SOOTH",
+                "SMILE",
+                "CEASE",
+                "SPANK",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "TIPSY",
+                "SINCE",
+                "QUUNV",
+                "OFFER",
+                "LILLE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "QUILT",
+                "WHICH",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "CUBIT",
+                "TREAT",
+                "WXKQD",
+                "BLOOM",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations02_vowels": {
+        "DROOL": {
+            "guesses": [
+                "ADIEU",
+                "DRUNK",
+                "CROSS",
+                "PHOTO",
+                "DROLL",
+                "MBMXB"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "BLINK",
+                "CRIME",
+                "SWING",
+                "XVPQY"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "AUDIO",
+                "UNDER",
+                "TOUCH",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "ADIEU",
+                "XXCMM",
+                "HABIT",
+                "FRANK",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "ADIEU",
+                "YOUNG",
+                "CRUSH",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "ADIEU",
+                "CLONL",
+                "YTPRJ",
+                "DEVON",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "AUDIO",
+                "P+ERE",
+                "SPELL",
+                "HARRY",
+                "TROOP",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "AUDIO",
+                "NNLFV",
+                "MEZZE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "ADIEU",
+                "JJSNF",
+                "DAILY",
+                "CRAPE",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "ADIEU",
+                "MBRST",
+                "DYING",
+                "PIECE",
+                "LIMIT",
+                "HXZXK"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "AUDIO",
+                "THOSE",
+                "WHOOP",
+                "FROCK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "ADIEU",
+                "MARRY",
+                "HEART",
+                "BLACK",
+                "CLASS",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "ADIEU",
+                "MZFWL",
+                "WRONG",
+                "SIXTY",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "AUDIO",
+                "THOSE",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "ADIEU",
+                "THING",
+                "CLIMB",
+                "PRIOR",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "ADIEU",
+                "QTSFC",
+                "ERPWA",
+                "RANGE",
+                "JERRY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "ADIEU",
+                "THING",
+                "BRISK",
+                "VOICE",
+                "SMILE",
+                "SEINE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "KBCYI",
+                "MINER",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "AUDIO",
+                "WSYPW",
+                "VOICE",
+                "JOINT",
+                "FLING",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "AUDIO",
+                "EHXZJ",
+                "LABOR",
+                "NOISY",
+                "FLAKY",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations02_optimal": {
+        "DROOL": {
+            "guesses": [
+                "TRACE",
+                "BROWN",
+                "FLOOR",
+                "SMOKY",
+                "DROOP",
+                "LZGZG"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "SLATE",
+                "RUGBY",
+                "WRONG",
+                "DYING",
+                "KFJFV",
+                "ZMZMZ"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "TRACE",
+                "HOKUM",
+                "FLUNG",
+                "MIDDY",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "SLATE",
+                "FYJHX",
+                "MOKKP",
+                "INDIA",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "SLATE",
+                "CLIMB",
+                "FLOUR",
+                "FLUFF",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "CRANE",
+                "UZHTJ",
+                "YSQKP",
+                "WOMEN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "CRANE",
+                "TRUTH",
+                "BROOK",
+                "DWELT",
+                "GREET",
+                "PIVOT"
+            ],
+            "success": false
+        },
+        "MAUVE": {
+            "guesses": [
+                "CRANE",
+                "THERE",
+                "SMXUD",
+                "GUILE",
+                "ABBEY",
+                "MANSE"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "SLATE",
+                "DOOVG",
+                "JHXUK",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "SLATE",
+                "P+ERE",
+                "PRIOR",
+                "CLOCK",
+                "HUMID",
+                "NFQVJ"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "SLATE",
+                "OUTDO",
+                "GOING",
+                "FROCK",
+                "EPOCH",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "CRANE",
+                "THINK",
+                "GLASS",
+                "LLAMA",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "TRACE",
+                "STOOD",
+                "CHICK",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "CRANE",
+                "WROTE",
+                "RIGID",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "CRANE",
+                "OUTDO",
+                "MIGHT",
+                "HABIT",
+                "SWIFT",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "SLATE",
+                "NMFVU",
+                "COACH",
+                "BLAND",
+                "WEIGH",
+                "REPLY"
+            ],
+            "success": false
+        },
+        "SPINE": {
+            "guesses": [
+                "TRACE",
+                "HOUSE",
+                "DOZEN",
+                "BIBLE",
+                "SEINE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "SLATE",
+                "WHERE",
+                "UUCIJ",
+                "DICKY",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "SLATE",
+                "RUGBY",
+                "GROWN",
+                "WIDOW",
+                "JOINT",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "TRACE",
+                "THING",
+                "LEAST",
+                "QUAFF",
+                "ADAMS",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations02_popular": {
+        "DROOL": {
+            "guesses": [
+                "ARISE",
+                "BROWN",
+                "FLOOR",
+                "GROUP",
+                "CROOK",
+                "TROLL"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "CRATE",
+                "HOKUM",
+                "LYING",
+                "TWINE",
+                "DYING",
+                "QFXXX"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "TEARS",
+                "HOKUM",
+                "YOUNG",
+                "MUDDY",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "HOUSE",
+                "HOTEL",
+                "ONION",
+                "JIMMY",
+                "RADIO",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "TRAIN",
+                "MONEY",
+                "WRONG",
+                "SWUNG",
+                "HEDGE",
+                "CLUNG"
+            ],
+            "success": false
+        },
+        "ENDOW": {
+            "guesses": [
+                "STARE",
+                "MPOGX",
+                "VCQQU",
+                "CHIEF",
+                "LOBBY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "AISLE",
+                "OUTDO",
+                "FIGHT",
+                "TWANG",
+                "APART",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "RAISE",
+                "LEAVE",
+                "HKPBH",
+                "WAYNE",
+                "VALVE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "CRATE",
+                "IWYOB",
+                "KXNMS",
+                "QUOTH",
+                "VOLGA",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "AISLE",
+                "RIGHT",
+                "MIDDY",
+                "THING",
+                "HILLY",
+                "KWPCJ"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "STARE",
+                "HOKUM",
+                "BONNY",
+                "CLOAK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "ARISE",
+                "FNMUH",
+                "OOGCQ",
+                "WANLY",
+                "SUDAN",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "ARISE",
+                "ZJQQW",
+                "WOULD",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "RAISE",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "SALET",
+                "SORRY",
+                "FIGHT",
+                "UNCUT",
+                "CLIMB",
+                "AWAIT"
+            ],
+            "success": false
+        },
+        "PEARL": {
+            "guesses": [
+                "IRATE",
+                "QGYJO",
+                "DRESS",
+                "COACH",
+                "LINEN",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "TEARS",
+                "NFGKH",
+                "OJLIE",
+                "EXUDE",
+                "SINEW",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "STEAM",
+                "KHJQN",
+                "BPYWC",
+                "LUNCH",
+                "FORCE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "TRAIN",
+                "LYIOW",
+                "GFHVX",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "STEAM",
+                "YLTSV",
+                "OOBQU",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations02_random": {
+        "DROOL": {
+            "guesses": [
+                "GRAZE",
+                "BROWN",
+                "STOOD",
+                "CROOK",
+                "DIXON",
+                "DROOP"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "RISEN",
+                "UNZHU",
+                "NOBLY",
+                "FANNY",
+                "LYING",
+                "DYING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "STUCK",
+                "WOULD",
+                "EQUAL",
+                "CRUMB",
+                "MIAMI",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "RULER",
+                "BANJO",
+                "CATCH",
+                "KITTY",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "ABACK",
+                "P+ERE",
+                "OUTDO",
+                "FULLY",
+                "QUILL",
+                "FLUSH"
+            ],
+            "success": false
+        },
+        "ENDOW": {
+            "guesses": [
+                "BURMA",
+                "DOZEN",
+                "ISCKG",
+                "ENJOY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "CRATE",
+                "NIHJV",
+                "CARGO",
+                "TRUST",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "DIRGE",
+                "THESE",
+                "FENCE",
+                "ABOVE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "NASAL",
+                "ABOUT",
+                "HEART",
+                "INDIA",
+                "CANON",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "AFTER",
+                "HOKUM",
+                "ONION",
+                "ELOPE",
+                "CUBIC",
+                "JGQDV"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "SLANT",
+                "P+ERE",
+                "HOKUM",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "WHILE",
+                "COLOR",
+                "USUAL",
+                "SLANT",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "STREW",
+                "WOULD",
+                "WATCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "BROOK",
+                "GREAT",
+                "BLIND",
+                "BRAVO",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "STEER",
+                "XWUCK",
+                "SPAIN",
+                "MIGHT",
+                "BOOST",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "DENIM",
+                "LEAVE",
+                "JOFLB",
+                "SLEEP",
+                "CRYPT",
+                "PERRY"
+            ],
+            "success": false
+        },
+        "SPINE": {
+            "guesses": [
+                "PRATT",
+                "SPOKE",
+                "SLIMY",
+                "SPARE",
+                "CHIDE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "CHOKE",
+                "FBLWQ",
+                "HEDGE",
+                "TACIT",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "PLAID",
+                "THING",
+                "OMYFV",
+                "URINE",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "BROOK",
+                "ALONE",
+                "FAITH",
+                "QUART",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations04_vowels": {
+        "DROOL": {
+            "guesses": [
+                "ADIEU",
+                "DRINK",
+                "DRYLY",
+                "DAVIS",
+                "GROWL",
+                "PPCMQ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "BLIND",
+                "CLING",
+                "BRINE",
+                "STING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "AUDIO",
+                "HURRY",
+                "UPSET",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "ADIEU",
+                "CIGMF",
+                "FAVOR",
+                "SHORT",
+                "FATAL",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "AUDIO",
+                "NURSE",
+                "UNITE",
+                "CLUNG",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "ADIEU",
+                "RLDPT",
+                "FENCE",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "ADIEU",
+                "JIMMY",
+                "WORRY",
+                "REBEL",
+                "TRYST",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "AUDIO",
+                "LARGE",
+                "QQUNK",
+                "SPREE",
+                "TEACH",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "AUDIO",
+                "TQJHC",
+                "WANLY",
+                "BROOK",
+                "BREED",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "ADIEU",
+                "THING",
+                "BRISK",
+                "FILTH",
+                "CIVIC",
+                "MZQJZ"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "ADIEU",
+                "COMTE",
+                "CROOK",
+                "SHOWN",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "AUDIO",
+                "WATER",
+                "BLACK",
+                "SMALL",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "STRUT",
+                "LITHE",
+                "PITCH",
+                "DITCH"
+            ],
+            "success": false
+        },
+        "BROWN": {
+            "guesses": [
+                "ADIEU",
+                "CHAOS",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "TRICK",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "ADIEU",
+                "TMCHH",
+                "FAIRY",
+                "SPARE",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "STUNT",
+                "SCORE",
+                "PRIZE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "ADIEU",
+                "MYTGR",
+                "SLEPT",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "AUDIO",
+                "HPNFY",
+                "ENTER",
+                "BLINK",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "AUDIO",
+                "CARRY",
+                "THOSE",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations04_optimal": {
+        "DROOL": {
+            "guesses": [
+                "TRACE",
+                "BROWN",
+                "FLOOR",
+                "GRUEL",
+                "SMPJH",
+                "KYKVQ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "TRACE",
+                "SWUNG",
+                "THING",
+                "GOING",
+                "CLICK",
+                "DYING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "SLATE",
+                "FLOOR",
+                "CLIMB",
+                "DUMMY",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "CRANE",
+                "ABOUT",
+                "WHTXH",
+                "USUAL",
+                "PATTY",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "TRACE",
+                "SWUNG",
+                "DRUNK",
+                "FLUFF",
+                "YOUNG",
+                "FLOOR"
+            ],
+            "success": false
+        },
+        "ENDOW": {
+            "guesses": [
+                "CRANE",
+                "FIOXG",
+                "KSYWK",
+                "LENOX",
+                "WOVEN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "TRACE",
+                "IIODO",
+                "CYRUS",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "TRACE",
+                "ENEMY",
+                "UZIHU",
+                "ARGUE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "SLATE",
+                "WOMAN",
+                "LARVA",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "CRANE",
+                "OUTDO",
+                "AVOID",
+                "PILOT",
+                "FJSYX",
+                "BZMHG"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "CRANE",
+                "CHILD",
+                "SHOUT",
+                "CROCK",
+                "CHINK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "TRACE",
+                "AGAIN",
+                "BALDY",
+                "LOGAN",
+                "FLANK",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "CRANE",
+                "SCOLD",
+                "THICK",
+                "BUNCH",
+                "HITCH",
+                "PITCH"
+            ],
+            "success": false
+        },
+        "BROWN": {
+            "guesses": [
+                "SLATE",
+                "RUGBY",
+                "WRECK",
+                "ARBOR",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "TRACE",
+                "THING",
+                "POINT",
+                "BLISS",
+                "USURY",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "SLATE",
+                "GMGER",
+                "HEAVY",
+                "LEARN",
+                "BEARD",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "CRANE",
+                "YOUNG",
+                "SWEPT",
+                "SPITE",
+                "SEDGE",
+                "SPIKE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "TRACE",
+                "SPEND",
+                "UNCLE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "TRACE",
+                "SWUNG",
+                "DYING",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "CRANE",
+                "BLACK",
+                "SHALL",
+                "TOAST",
+                "MOIST",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations04_popular": {
+        "DROOL": {
+            "guesses": [
+                "STEAM",
+                "RUGBY",
+                "BROWN",
+                "PROOF",
+                "DRILL",
+                "JQXHK"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AROSE",
+                "HAVRE",
+                "VIGIL",
+                "NXXFN",
+                "DTYUY",
+                "PPBZM"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "GREAT",
+                "CHAOS",
+                "JIMMY",
+                "PLUMP",
+                "SPELL",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "IRATE",
+                "DIXYG",
+                "VOCAL",
+                "HABIT",
+                "AMMON",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "ARISE",
+                "OUTDO",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "STARE",
+                "QBCBZ",
+                "ENJOY",
+                "VENOM",
+                "PLAIN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "IRATE",
+                "GROUP",
+                "PROXY",
+                "DROOP",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "HEART",
+                "MSVKM",
+                "XBQDO",
+                "MAINE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "LEAST",
+                "BLACK",
+                "WOMAN",
+                "MARRY",
+                "AMONG",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "AISLE",
+                "RIGHT",
+                "WIDTH",
+                "POACH",
+                "ABOVE",
+                "NMZZU"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "RAISE",
+                "OUTDO",
+                "TOTAL",
+                "WRONG",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "IRATE",
+                "LEAVE",
+                "PLANK",
+                "FUNNY",
+                "BLANC",
+                "BLAND"
+            ],
+            "success": false
+        },
+        "WITCH": {
+            "guesses": [
+                "RAISE",
+                "THINK",
+                "WIDTH",
+                "MOTTO",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "STARE",
+                "WORLD",
+                "ONION",
+                "GROWN",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "ARISE",
+                "THINK",
+                "DORIS",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "HEART",
+                "BEING",
+                "PERRY",
+                "DROOP",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "STARE",
+                "SENSE",
+                "FNBXG",
+                "SMOKE",
+                "SHEEN",
+                "SWINE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "TRAIN",
+                "GOING",
+                "WINDY",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "STARE",
+                "YUCCA",
+                "DOZEN",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "RAISE",
+                "ABOUT",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations04_random": {
+        "DROOL": {
+            "guesses": [
+                "SWOOP",
+                "ABOUT",
+                "FLOOR",
+                "LEIGH",
+                "DRYLY",
+                "XXCQX"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "PETIT",
+                "GOING",
+                "DYING",
+                "LYING",
+                "ZARFR",
+                "XJCWV"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "DRAWN",
+                "COMTE",
+                "HUMOR",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "QUACK",
+                "AFTER",
+                "PATCH",
+                "PATTY",
+                "BATON",
+                "GATES"
+            ],
+            "success": false
+        },
+        "FLUNG": {
+            "guesses": [
+                "SNIFF",
+                "DEFER",
+                "NOBLY",
+                "GULCH",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "SWAMP",
+                "WOULD",
+                "ABOVE",
+                "TUTOR",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "NOBLY",
+                "HAPPY",
+                "PETER",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "INTER",
+                "GGDJA",
+                "LEAVE",
+                "FABLE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "SMART",
+                "MAPLE",
+                "AVOID",
+                "HOBBY",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "GROVE",
+                "WOULD",
+                "FORTY",
+                "OMAHA",
+                "KNOCK",
+                "HELLO"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "CLOCK",
+                "PIECE",
+                "CRASH",
+                "KNOCK",
+                "CHUCK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "TRIPE",
+                "WAYNE",
+                "ALONG",
+                "CHUNK",
+                "BLAST",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "MEDAL",
+                "RUGBY",
+                "QUOTH",
+                "PITCH",
+                "HITCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "CRAZY",
+                "DRESS",
+                "FRONT",
+                "GROWN",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "EXPEL",
+                "BANJO",
+                "STUFF",
+                "THICK",
+                "TERSE",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "REBEL",
+                "WJDNH",
+                "GROWL",
+                "PEACE",
+                "PERRY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "FRONT",
+                "BEING",
+                "SPICE",
+                "WHINE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "IRONY",
+                "FIRST",
+                "GIVEN",
+                "MINCE",
+                "TITHE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "BLARE",
+                "OUTDO",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "SINAI",
+                "MOPCY",
+                "COAST",
+                "COUCH",
+                "LEAST",
+                "TOAST"
+            ],
+            "success": false
+        }
+    },
+    "associations06_vowels": {
+        "DROOL": {
+            "guesses": [
+                "AUDIO",
+                "WHOLE",
+                "FLOOD",
+                "SPOOL",
+                "ZKJTR",
+                "YMNDY"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "FLING",
+                "SWINE",
+                "BRING",
+                "ICING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "AUDIO",
+                "UNCLE",
+                "FLUSH",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "ADIEU",
+                "HARRY",
+                "SATIN",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "AUDIO",
+                "UNCLE",
+                "FLUSH",
+                "PLUMB",
+                "FLUFF",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "AUDIO",
+                "DODGE",
+                "OTTER",
+                "JELLY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "AUDIO",
+                "RUGBY",
+                "ERASE",
+                "PETER",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "ADIEU",
+                "WATER",
+                "LAUGH",
+                "QUEEN",
+                "CAUSE",
+                "BROAD"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "ADIEU",
+                "DRAWN",
+                "CANDY",
+                "DEPOE",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "AUDIO",
+                "POINT",
+                "WILLY",
+                "MINOS",
+                "ZPKKZ",
+                "JFEGP"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "AUDIO",
+                "THOSE",
+                "WHOOP",
+                "BLOCK",
+                "FROCK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "AUDIO",
+                "WATER",
+                "BLACK",
+                "SLANT",
+                "LLAMA",
+                "GLASS"
+            ],
+            "success": false
+        },
+        "WITCH": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "WHILE",
+                "SIXTY",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "AUDIO",
+                "THOSE",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "STEEL",
+                "TOMMY",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "ADIEU",
+                "CARRY",
+                "WHERE",
+                "TENOR",
+                "ZEBRA",
+                "PEARY"
+            ],
+            "success": false
+        },
+        "SPINE": {
+            "guesses": [
+                "AUDIO",
+                "THING",
+                "PENNY",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "ADIEU",
+                "THEIR",
+                "FORCE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "AUDIO",
+                "THINK",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "AUDIO",
+                "MAYBE",
+                "LOATH",
+                "NORTH",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations06_optimal": {
+        "DROOL": {
+            "guesses": [
+                "SLATE",
+                "LYING",
+                "WOULD",
+                "FROCK",
+                "MXPDL",
+                "JQDQQ"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "SLATE",
+                "DIXON",
+                "BRING",
+                "UNIFY",
+                "DYING",
+                "QWMHQ"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "CRANE",
+                "FLOYD",
+                "BLUSH",
+                "PLUCK",
+                "PLUME",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "CRANE",
+                "WOMAN",
+                "PLATO",
+                "OUTGO",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "TRACE",
+                "DIXON",
+                "FUNNY",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "SLATE",
+                "NEVER",
+                "KNOCK",
+                "ENEMY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "TRACE",
+                "WRITE",
+                "STUDY",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "TRACE",
+                "ABOVE",
+                "FALSE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "TRACE",
+                "WOMAN",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "CRANE",
+                "FLOYD",
+                "JOINT",
+                "OPIUM",
+                "SWPQW",
+                "KHGVB"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "SLATE",
+                "DIXON",
+                "WHOLE",
+                "FROCK",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "SLATE",
+                "SHARP",
+                "ELLEN",
+                "SIEVE",
+                "CLANG",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "SLATE",
+                "ABOUT",
+                "DITCH",
+                "PITCH",
+                "FETCH",
+                "HITCH"
+            ],
+            "success": false
+        },
+        "BROWN": {
+            "guesses": [
+                "CRANE",
+                "FROWN",
+                "DROWN",
+                "BROIL",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "SLATE",
+                "TOUCH",
+                "TRESS",
+                "TIPSY",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "CRANE",
+                "BEAST",
+                "REPEL",
+                "PEARY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "SLATE",
+                "WHERE",
+                "SINCE",
+                "SPOKE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "CRANE",
+                "DANCE",
+                "EVOKE",
+                "SNIPE",
+                "NIOBE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "SLATE",
+                "DIXON",
+                "FIFTY",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "CRANE",
+                "GLASS",
+                "DIARY",
+                "STOOP",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations06_popular": {
+        "DROOL": {
+            "guesses": [
+                "TRAIN",
+                "DRESS",
+                "DADDY",
+                "CROWD",
+                "DROOP",
+                "FQFFU"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "DREAM",
+                "SWUNG",
+                "THINK",
+                "ALICE",
+                "ICING",
+                "PVYYB"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "IRATE",
+                "FLOYD",
+                "CLUNG",
+                "SLUMP",
+                "PLUMP",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "HOUSE",
+                "BOARD",
+                "MOTIF",
+                "CAVIL",
+                "CAPON",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "ARISE",
+                "FLOYD",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "TEARS",
+                "ENEMY",
+                "ELDER",
+                "EVOKE",
+                "EPSOM",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "HOUSE",
+                "DIXON",
+                "LEAVE",
+                "PUPPY",
+                "TEMPT",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "IRATE",
+                "DANCE",
+                "EAGLE",
+                "FALSE",
+                "MAYBE",
+                "MAPLE"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "RAISE",
+                "AMONG",
+                "MOLAR",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "TEARS",
+                "DIXON",
+                "FIFTH",
+                "CHOCK",
+                "ROWER",
+                "HULLO"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "STARE",
+                "DIXON",
+                "CROWD",
+                "CLOCK",
+                "COUCH",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "AISLE",
+                "MXJMZ",
+                "START",
+                "SLACK",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "STARE",
+                "THINK",
+                "LIGHT",
+                "PITCH",
+                "DITCH",
+                "HITCH"
+            ],
+            "success": false
+        },
+        "BROWN": {
+            "guesses": [
+                "RAISE",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "IRATE",
+                "LIGHT",
+                "BUILT",
+                "WAIST",
+                "SWIFT",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "RAISE",
+                "GREAT",
+                "UPPER",
+                "PERCH",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "CRATE",
+                "WHERE",
+                "ELSIE",
+                "GUIDE",
+                "JONES",
+                "SPIKE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "STEAM",
+                "NEVER",
+                "NOBLE",
+                "FUDGE",
+                "SPIRE",
+                "EXILE"
+            ],
+            "success": false
+        },
+        "GOING": {
+            "guesses": [
+                "TRAIN",
+                "WHILE",
+                "SOUND",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "GREAT",
+                "ABOUT",
+                "COMIC",
+                "FLASK",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations06_random": {
+        "DROOL": {
+            "guesses": [
+                "BASIS",
+                "FLOYD",
+                "LAUGH",
+                "DEPTH",
+                "DROLL",
+                "XZZQN"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "RIVAL",
+                "VOICE",
+                "BUILT",
+                "SWISS",
+                "KGFZZ",
+                "JHGHJ"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "ZEBRA",
+                "DOUBT",
+                "SLUMP",
+                "FLUFF",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "SPEND",
+                "PARTY",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "SINGE",
+                "OUGHT",
+                "GREEK",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "PATCH",
+                "DIXON",
+                "BLOOD",
+                "WINDY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "RUFUS",
+                "GREAT",
+                "PRINT",
+                "CROCK",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "PLUMP",
+                "HOUSE",
+                "DANCE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "LENOX",
+                "ABOUT",
+                "CARRY",
+                "OMAHA",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "MOUND",
+                "VOICE",
+                "ORBIT",
+                "SPOIL",
+                "PIANO",
+                "GYJGW"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "BOONE",
+                "OUTER",
+                "CLOSE",
+                "CHAFF",
+                "CHOCK"
+            ],
+            "success": true
+        },
+        "SLANG": {
+            "guesses": [
+                "COACH",
+                "AGAIN",
+                "GRAND",
+                "PLANE",
+                "BLANK",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "CRAIG",
+                "WHICH",
+                "PINCH",
+                "DITCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "BLAIR",
+                "BROKE",
+                "CROWD",
+                "BRONX",
+                "BRUSH",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "LEDGE",
+                "ABHOR",
+                "STUFF",
+                "THESE",
+                "TIPSY",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "ABBEY",
+                "CAUSE",
+                "DREAM",
+                "GRAND",
+                "EXALT",
+                "FLARE"
+            ],
+            "success": false
+        },
+        "SPINE": {
+            "guesses": [
+                "AUGER",
+                "BEING",
+                "EXIST",
+                "SCENE",
+                "SHINE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "SIDLE",
+                "THERE",
+                "PHONE",
+                "HINGE",
+                "WINCH",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "QUITE",
+                "CHILD",
+                "POINT",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "GUEST",
+                "ABOUT",
+                "RAYON",
+                "VOCAL",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations08_vowels": {
+        "DROOL": {
+            "guesses": [
+                "ADIEU",
+                "DOLLY",
+                "BLOOM",
+                "QXPRN",
+                "RTWJV",
+                "CRCHF"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "PAINT",
+                "BEING",
+                "LYING",
+                "RKZXM"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "ADIEU",
+                "YOUNG",
+                "STUFF",
+                "BRUCE",
+                "PLUCK",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "AUDIO",
+                "AGAIN",
+                "MAYBE",
+                "CAVIL",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "AUDIO",
+                "UPPER",
+                "STUDY",
+                "CHUCK",
+                "FLUFF",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "ADIEU",
+                "DREAM",
+                "DOZEN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "ADIEU",
+                "COMTE",
+                "CROCK",
+                "PRONG",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "ADIEU",
+                "CAUSE",
+                "GAUZE",
+                "VAULT",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "AUDIO",
+                "NANCY",
+                "DREAM",
+                "SCOUT",
+                "DROLL",
+                "OMAHA"
+            ],
+            "success": false
+        },
+        "HIPPO": {
+            "guesses": [
+                "AUDIO",
+                "WHITE",
+                "BIRCH",
+                "XPQML",
+                "YYGJS",
+                "VKZKF"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "AUDIO",
+                "CLOSE",
+                "CROCK",
+                "STOOP",
+                "QXVGX",
+                "WNMZY"
+            ],
+            "success": false
+        },
+        "SLANG": {
+            "guesses": [
+                "AUDIO",
+                "WATER",
+                "BLACK",
+                "GLASS",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "ADIEU",
+                "OWNER",
+                "ROWDY",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "AUDIO",
+                "WHICH",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "AUDIO",
+                "WATER",
+                "MARRY",
+                "OPERA",
+                "USURY",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "ADIEU",
+                "PRICE",
+                "SPITE",
+                "SPOON",
+                "SPIKE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "ADIEU",
+                "THEIR",
+                "HINGE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "AUDIO",
+                "VOICE",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "ADIEU",
+                "WATCH",
+                "TOAST",
+                "ROAST",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations08_optimal": {
+        "DROOL": {
+            "guesses": [
+                "TRACE",
+                "BROWN",
+                "GROUP",
+                "DRILL",
+                "DROSS",
+                "QJFHK"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "CRANE",
+                "THING",
+                "VOICE",
+                "LYING",
+                "SWUNG",
+                "DYING"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "SLATE",
+                "FLOOR",
+                "BLIND",
+                "PLAZA",
+                "PEACH",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "SLATE",
+                "THEIR",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "CRANE",
+                "THING",
+                "SWUNG",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "SLATE",
+                "NEVER",
+                "ENEMY",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "SLATE",
+                "THINK",
+                "DOUBT",
+                "QZZXF",
+                "VGYRG",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "TRACE",
+                "ALONE",
+                "EDDIE",
+                "GAUZE",
+                "WAYNE",
+                "FABLE"
+            ],
+            "success": false
+        },
+        "DOGMA": {
+            "guesses": [
+                "TRACE",
+                "HUMAN",
+                "SWAMP",
+                "FOAMY",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "CRANE",
+                "OUTGO",
+                "BLOOD",
+                "MOODY",
+                "ZJWSP",
+                "HIKKX"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "TRACE",
+                "KNOCK",
+                "SHOCK",
+                "CHICK",
+                "JLBGP",
+                "WXDXM"
+            ],
+            "success": false
+        },
+        "SLANG": {
+            "guesses": [
+                "TRACE",
+                "SMALL",
+                "FLASH",
+                "SLAIN",
+                "BLAND",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "SLATE",
+                "THINK",
+                "TOOTH",
+                "PITCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "TRACE",
+                "DRESS",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "SLATE",
+                "SQUAW",
+                "POINT",
+                "TWIST"
+            ],
+            "success": true
+        },
+        "PEARL": {
+            "guesses": [
+                "SLATE",
+                "HEADY",
+                "REFER",
+                "LEARN",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "TRACE",
+                "PIECE",
+                "OLIVE",
+                "WHINE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "CRANE",
+                "FENCE",
+                "SCION",
+                "HABIT",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "SLATE",
+                "DOWRY",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "CRANE",
+                "SMALL",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations08_popular": {
+        "DROOL": {
+            "guesses": [
+                "STARE",
+                "WORLD",
+                "COLOR",
+                "GLOOM",
+                "DJVUK",
+                "HRXIN"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "IRATE",
+                "MIGHT",
+                "LYING",
+                "DYING",
+                "FFZKJ",
+                "QBXWX"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "STARE",
+                "OUTGO",
+                "WOULD",
+                "BLOCK",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "ARISE",
+                "DAVID",
+                "PATCH",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "ARISE",
+                "BANJO",
+                "HELEN",
+                "GRIND",
+                "STUNG",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "STARE",
+                "BEING",
+                "MONEY",
+                "FLOWN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "ARISE",
+                "BROWN",
+                "TRULY",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "IRATE",
+                "SCENE",
+                "ABOVE",
+                "EAGLE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "SALET",
+                "AGAIN",
+                "GROAN",
+                "DOUGH",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "STARE",
+                "BANJO",
+                "CLOUD",
+                "FIVKF",
+                "MWZGP",
+                "PQXXQ"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "HEART",
+                "WHICH",
+                "CHUCK",
+                "VJFYF",
+                "MBBSM",
+                "NNNNN"
+            ],
+            "success": false
+        },
+        "SLANG": {
+            "guesses": [
+                "RAISE",
+                "PANTS",
+                "SUSAN",
+                "SLANT",
+                "SCANT",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "STARE",
+                "THINK",
+                "PITCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "HOUSE",
+                "FOAMY",
+                "TONGS",
+                "KNOWN",
+                "CROWN",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "TRAIN",
+                "BUILT",
+                "CLINK",
+                "SPICY",
+                "GRIME",
+                "VHFQF"
+            ],
+            "success": false
+        },
+        "PEARL": {
+            "guesses": [
+                "STARE",
+                "EVERY",
+                "HEARD",
+                "NIGER",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "SALET",
+                "SERVE",
+                "SHINE",
+                "GUISE",
+                "SWINE",
+                "SCENE"
+            ],
+            "success": false
+        },
+        "NICHE": {
+            "guesses": [
+                "STARE",
+                "WOMEN",
+                "HENCE",
+                "UNDUE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "LEAST",
+                "BUYER",
+                "EDWIN",
+                "PINCH",
+                "ICING",
+                "FLING"
+            ],
+            "success": false
+        },
+        "BOAST": {
+            "guesses": [
+                "STARE",
+                "FLASH",
+                "ABACK",
+                "GAUNT",
+                "BOAST"
+            ],
+            "success": true
+        }
+    },
+    "associations08_random": {
+        "DROOL": {
+            "guesses": [
+                "BRAWN",
+                "DRESS",
+                "PRICE",
+                "DRYLY",
+                "GLOOM",
+                "FUFQL"
+            ],
+            "success": false
+        },
+        "VYING": {
+            "guesses": [
+                "GROWL",
+                "AGAIN",
+                "NIGHT",
+                "JUDGE",
+                "ICING",
+                "YYKYM"
+            ],
+            "success": false
+        },
+        "PLUMB": {
+            "guesses": [
+                "VIPER",
+                "PLACE",
+                "PLUMB"
+            ],
+            "success": true
+        },
+        "PATIO": {
+            "guesses": [
+                "WREAK",
+                "PLACE",
+                "PASTE",
+                "NINTH",
+                "PATIO"
+            ],
+            "success": true
+        },
+        "FLUNG": {
+            "guesses": [
+                "NATAL",
+                "INCUR",
+                "FULLY",
+                "SLUMP",
+                "FLUNG"
+            ],
+            "success": true
+        },
+        "ENDOW": {
+            "guesses": [
+                "MARIA",
+                "NEGRO",
+                "KNOWN",
+                "ENDOW"
+            ],
+            "success": true
+        },
+        "CRYPT": {
+            "guesses": [
+                "MAINE",
+                "DOWRY",
+                "CURLY",
+                "GIVER",
+                "CRYPT"
+            ],
+            "success": true
+        },
+        "MAUVE": {
+            "guesses": [
+                "EXTOL",
+                "BEING",
+                "WHERE",
+                "PAUSE",
+                "FLAKE",
+                "MAUVE"
+            ],
+            "success": true
+        },
+        "DOGMA": {
+            "guesses": [
+                "TRACE",
+                "AGAIN",
+                "GROUP",
+                "MADLY",
+                "DOGMA"
+            ],
+            "success": true
+        },
+        "HIPPO": {
+            "guesses": [
+                "WAVER",
+                "OUTGO",
+                "BONNY",
+                "LIMBO",
+                "DIXON",
+                "CKPJF"
+            ],
+            "success": false
+        },
+        "CHOCK": {
+            "guesses": [
+                "ARGUE",
+                "SIXTH",
+                "PHONE",
+                "BOOBY",
+                "WHOSO",
+                "VJCZQ"
+            ],
+            "success": false
+        },
+        "SLANG": {
+            "guesses": [
+                "EYRIE",
+                "BANJO",
+                "KNOWN",
+                "ICING",
+                "SLANT",
+                "SLANG"
+            ],
+            "success": true
+        },
+        "WITCH": {
+            "guesses": [
+                "MARSH",
+                "TOUCH",
+                "CATCH",
+                "WITCH"
+            ],
+            "success": true
+        },
+        "BROWN": {
+            "guesses": [
+                "CROWD",
+                "BROWN"
+            ],
+            "success": true
+        },
+        "TWIST": {
+            "guesses": [
+                "DUMAS",
+                "FIRST",
+                "GLINT",
+                "HOIST",
+                "EXIST",
+                "WRIST"
+            ],
+            "success": false
+        },
+        "PEARL": {
+            "guesses": [
+                "TOUGH",
+                "MIXER",
+                "REPLY",
+                "BEARD",
+                "PEARL"
+            ],
+            "success": true
+        },
+        "SPINE": {
+            "guesses": [
+                "DWELT",
+                "NEVER",
+                "SINCE",
+                "SPITE",
+                "SPINE"
+            ],
+            "success": true
+        },
+        "NICHE": {
+            "guesses": [
+                "PECAN",
+                "DENSE",
+                "NOOSE",
+                "NICHE"
+            ],
+            "success": true
+        },
+        "GOING": {
+            "guesses": [
+                "AVOID",
+                "BUILT",
+                "GOING"
+            ],
+            "success": true
+        },
+        "BOAST": {
+            "guesses": [
+                "DEIFY",
+                "BANJO",
+                "ACTOR",
+                "GLOAT",
+                "TOAST",
+                "BOAST"
+            ],
+            "success": true
+        }
+    }
+}

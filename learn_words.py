@@ -147,7 +147,8 @@ def test():
 
 if __name__ == "__main__":
     #test()
-    learn_words_from_corpus(eta=0.0, output_path="data/word_associations_with_pos_00.json")
-    learn_words_from_corpus(eta=0.2, output_path="data/word_associations_with_pos_02.json")
-    learn_words_from_corpus(eta=0.4, output_path="data/word_associations_with_pos_04.json")
-    learn_words_from_corpus(eta=0.6, output_path="data/word_associations_with_pos_06.json")
+    learn_words_from_corpus(eta=0.0, output_path="data/word_associations_00.json")
+    learn_words_from_corpus(eta=0.2, output_path="data/word_associations_02.json")
+    learn_words_from_corpus(eta=0.4, output_path="data/word_associations_04.json")
+    learn_words_from_corpus(eta=0.6, output_path="data/word_associations_06.json")
+    learn_words_from_corpus(eta=0.8, output_path="data/word_associations_08.json")
