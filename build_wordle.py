@@ -24,10 +24,14 @@ def filter_corpus(corpus_path, min_word_length, max_word_length, min_frequency):
         (row["Frequency"] >= min_frequency)
     ]
 
-
-def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length=4, max_word_length=6, min_frequency=10, associations=None, prob_threshold=0.001, valid_threshold=1e-6, pos_penalty=0.3, start_strategy="vowels"):
+def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, 
+                min_word_length=4, max_word_length=6,
+                min_frequency=10, associations=None,
+                prob_threshold=0.001, valid_threshold=1e-6,
+                pos_penalty=0.3, start_strategy="vowels", auto=True):
     """
-    Simulates a Wordle-like game with feedback for green (exact) and yellow (present but misplaced) matches.
+    Simulates a Wordle-like game with feedback for green (exact), yellow (present but misplaced), and gray (absent) matches.
+    Includes an auto mode for fully automated gameplay.
 
     Args:
         corpus_path (str): Path to the corpus file.
@@ -38,41 +42,57 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         min_frequency (int): Minimum frequency for filtering the corpus.
         associations (dict): Precomputed word-stem associations of the model.
         prob_threshold (float): Minimum probability threshold for a word to be considered by the model.
+        valid_threshold (float): Threshold for word validity during probabilistic selection.
+        pos_penalty (float): Penalty factor for mismatched positional constraints.
+        start_strategy (str): Strategy for selecting the starting word ("vowels", "optimality", "random").
+        auto (bool): Whether the game should run in auto mode.
+
+    Returns:
+        list: List of guesses made by the model.
     """
-    # Select a target word if not provided
-    if (not ground_truth):
+    if not ground_truth:
         corpus = filter_corpus(corpus_path, min_word_length, max_word_length, min_frequency)
         ground_truth = random.choice(corpus)
-    # Record length of ground truth
+
     target_length = len(ground_truth)
-
-    # Initialize trackers
-    attempts = 0
-    green_letters = [None] * target_length # Exact matches
-    yellow_letters = dict() # Misplaced letters: {char: set(invalid_positions)}
-    gray_letters = set() # Letters not in the target word
-    searched_words = set()
-
-    # Main game loop
     print(f"The target word has {target_length} letters. You have {attempt_limit} attempts.")
+
+    attempts = 0
+    green_letters = [None] * target_length  # Exact matches
+    yellow_letters = {}  # Misplaced letters: {char: set(invalid_positions)}
+    gray_letters = set()  # Letters not in the target word
+    searched_words = set()
+    guess_list = []
+
     while attempts < attempt_limit:
-        # Update attempt counter
         attempts += 1
         print(f"\nAttempt {attempts} of {attempt_limit}")
 
-        # Get user input or model suggestion
-        guess = input(f"Enter a {target_length}-letter word or type 'ENTER' for model suggestion: ").strip().upper()
-        if (not guess):
-            if (associations):
+        if auto:
+            # Get model's suggestion
+            if associations:
                 guess, searched_words = find_answer(
                     green_letters, yellow_letters, gray_letters, ground_truth,
                     associations, searched_words, prob_threshold, valid_threshold,
                     pos_penalty, start_strategy)
-                prob_threshold /= 2 # Consider some less familiar words
+                prob_threshold /= 2  # Adjust threshold for subsequent guesses
             else:
-                print("No model associations provided. Please input manually.")
-                attempts -= 1
-                continue
+                print("No model associations provided for auto mode. Terminating.")
+                return guess_list
+        else:
+            # Get user input
+            guess = input(f"Enter a {target_length}-letter word or type 'ENTER' for model suggestion: ").strip().upper()
+            if not guess:
+                if associations:
+                    guess, searched_words = find_answer(
+                        green_letters, yellow_letters, gray_letters, ground_truth,
+                        associations, searched_words, prob_threshold, valid_threshold,
+                        pos_penalty, start_strategy)
+                    prob_threshold /= 2
+                else:
+                    print("No model associations provided. Please input manually.")
+                    attempts -= 1
+                    continue
 
         # Validate guess length
         if (len(guess) != target_length):
@@ -83,10 +103,11 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
         # Check if the guess is correct
         if (guess == ground_truth):
             print(f"Congratulations! You guessed the correct word: {ground_truth}\n")
-            return
+            return guess_list
 
         # Record guess to avoid repeating attempts
         searched_words.add(guess)
+        guess_list.append(guess)
 
         # Check for exact matches
         new_green_letters = [
@@ -107,6 +128,8 @@ def wordle_game(corpus_path, ground_truth=None, attempt_limit=6, min_word_length
     # Reveal the answer if all attempts are exhausted
     print(f"Sorry, you've used all {attempt_limit} attempts. The correct word was: {ground_truth}\n")
 
+    return guess_list
+
 
 if __name__ == "__main__":
     # Load the corpus and associations
@@ -115,6 +138,8 @@ if __name__ == "__main__":
         associations = json.load(f)
 
     # Run Wordle games with example ground truth
-    wordle_game(corpus_path, ground_truth="DROOL", associations=associations, prob_threshold=0.001)
-    wordle_game(corpus_path, ground_truth="VYING", associations=associations, prob_threshold=0.001)
+    print(wordle_game(corpus_path, ground_truth="DROOL", associations=associations, prob_threshold=0.001))
+    print()
+    print(wordle_game(corpus_path, ground_truth="VYING", associations=associations, prob_threshold=0.001))
+    print()
     #wordle_game(corpus_path, associations=associations, prob_threshold=0.01, start_strategy="random")
