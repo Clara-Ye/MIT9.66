@@ -29,12 +29,14 @@ def visualize(model_names, variable):
         success_rates[model] = success_rate
 
         # Calculate average number of turns for successful games
-        turns = [len(game['guesses']) for game in curr_model_data.values() if game['success']]
+        turns = [len(game["guesses"]) for game in curr_model_data.values() if game["success"]]
         average_turns[model] = np.mean(turns) if turns else 0
 
     # Plotting success rates
     plt.figure(figsize=(7, 4))
-    plt.barh(list(success_rates.keys()), list(success_rates.values()), alpha=0.8)
+    bars = plt.barh(list(success_rates.keys()), list(success_rates.values()), alpha=0.8)
+    for bar in bars:
+        plt.text(bar.get_width() - 8, bar.get_y() + bar.get_height()/2, f"{bar.get_width():.1f}%", va="center", color="white")
     plt.title(f"Success Rates Across {variable.capitalize()}")
     plt.xlabel("Success Rate (%)")
     plt.tight_layout()
@@ -42,8 +44,10 @@ def visualize(model_names, variable):
 
     # Plotting average turns
     plt.figure(figsize=(7, 4))
-    plt.barh(list(average_turns.keys()), list(average_turns.values()), alpha=0.8)
-    plt.title(f"Average Turns for Successful Games Across {variable.capitalize()}")
+    bars = plt.barh(list(average_turns.keys()), list(average_turns.values()), alpha=0.8)
+    for bar in bars:
+        plt.text(bar.get_width() - 0.5, bar.get_y() + bar.get_height()/2, f"{bar.get_width():.2f}", va="center", color="white")
+    plt.title(f"Average Turns Across {variable.capitalize()}")
     plt.xlabel("Average Turns")
     plt.tight_layout()
     plt.savefig(f"results/n_turns_vs_{variable}.png")
@@ -112,14 +116,46 @@ def compare_with_human_data(model_data, human_data):
 
 
 if __name__ == "__main__":
+
+    visualize(["associations00_vowels", "associations00_optimal",
+               "associations00_popular", "associations00_random"],
+               variable="strategies (eta=0.0)")
+
+    visualize(["associations02_vowels", "associations02_optimal",
+               "associations02_popular", "associations02_random"],
+               variable="strategies (eta=0.2)")
+
+    visualize(["associations04_vowels", "associations04_optimal",
+               "associations04_popular", "associations04_random"],
+               variable="strategies (eta=0.4)")
+
     visualize(["associations06_vowels", "associations06_optimal",
                "associations06_popular", "associations06_random"],
-               variable="strategies")
+               variable="strategies (eta=0.6)")
+
+    visualize(["associations08_vowels", "associations08_optimal",
+               "associations08_popular", "associations08_random"],
+               variable="strategies (eta=0.8)")
 
     visualize(["associations00_vowels", "associations02_vowels",
                "associations04_vowels", "associations06_vowels",
                "associations08_vowels"],
-               variable="associations")
+               variable="associations (vowels)")
+
+    visualize(["associations00_optimal", "associations02_optimal",
+               "associations04_optimal", "associations06_optimal",
+               "associations08_optimal"],
+               variable="associations (optimal)")
+
+    visualize(["associations00_popular", "associations02_popular",
+               "associations04_popular", "associations06_popular",
+               "associations08_popular"],
+               variable="associations (popular)")
+
+    visualize(["associations00_random", "associations02_random",
+               "associations04_random", "associations06_random",
+               "associations08_random"],
+               variable="associations (random)")
 
     create_summary_table(model_data)
     compare_with_human_data(model_data, human_data)

@@ -5,7 +5,24 @@ word_list = [
     "DROOL", "VYING", "PLUMB", "PATIO", "FLUNG",
     "ENDOW", "CRYPT", "MAUVE", "DOGMA", "HIPPO",
     "CHOCK", "SLANG", "WITCH", "BROWN", "TWIST",
-    "PEARL", "SPINE", "NICHE", "GOING", "BOAST"
+    "PEARL", "SPINE", "NICHE", "GOING", "BOAST",
+    "BOXER", "HYENA", "HILLY", "SHOVE", "SHAKY",
+    "GUILE", "JELLY", "FRAIL", "TALLY", "VISOR",
+    "TACKY", "UVULA", "PRIMP", "FLOWN", "STOIC",
+    "INNER", "SWELL", "READY", "EVENT", "TRULY",
+    "OCTET", "VINYL", "BLAZE", "SNOOP", "SIXTH",
+    "WEIRD", "EASEL", "TUNIC", "BAWDY", "SANDY",
+    "WREAK", "FROWN", "BOSSY", "GOOFY", "SHOUT",
+    "CIGAR", "REBUT", "SISSY", "HUMPH", "AWAKE", 
+    "BLUSH", "FOCAL", "EVADE", "NAVAL", "SERVE", 
+    "HEATH", "DWARF", "MODEL", "KARMA", "STINK", 
+    "GRADE", "QUIET", "BENCH", "ABATE", "FEIGN", 
+    "MAJOR", "DEATH", "FRESH", "CRUST", "STOOL", 
+    "COLON", "ABASE", "MARRY", "REACT", "BATTY", 
+    "PRIDE", "FLOSS", "HELIX", "CROAK", "STAFF", 
+    "PAPER", "UNFED", "WHELP", "TRAWL", "OUTDO", 
+    "ADOBE", "CRAZY", "SOWER", "REPAY", "DIGIT", 
+    "CRATE", "CLUCK", "SPIKE", "MIMIC", "POUND"
 ]
 
 def collect_data(corpus_path, associations, start_strategy):
